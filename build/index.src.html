@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Reading the Signals — graduate pipelines in the data</title>
+<link rel="stylesheet" href="vendor/reveal/reset.css">
+<link rel="stylesheet" href="vendor/reveal/reveal.css">
+<style>
+@font-face{font-family:BradfordLL;font-style:normal;font-weight:300;font-display:swap;src:url('vendor/fonts/bradford-light.woff2') format('woff2')}
+@font-face{font-family:BradfordLL;font-style:italic;font-weight:300;font-display:swap;src:url('vendor/fonts/bradford-lightitalic.woff2') format('woff2')}
+@font-face{font-family:BradfordLL;font-style:normal;font-weight:400;font-display:swap;src:url('vendor/fonts/bradford-regular.woff2') format('woff2')}
+@font-face{font-family:BradfordLL;font-style:italic;font-weight:400;font-display:swap;src:url('vendor/fonts/bradford-italic.woff2') format('woff2')}
+@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url('vendor/fonts/inter-regular.woff2') format('woff2')}
+@font-face{font-family:Inter;font-style:normal;font-weight:500 700;font-display:swap;src:url('vendor/fonts/inter-medium.woff2') format('woff2')}
+/* interface tokens; greys are tints of the brand black */
+:root{--orange:#FF7F48;--blue:#3C50FF;--lav:#E0E3FF;--petrol:#134550;--steel:#6C9FC6;--mocha:#DEA580;--brown:#713333;--ecru:#F9F4CA;
+ --black:#202020;--ink60:rgba(32,32,32,.6);--ink15:rgba(32,32,32,.15);--ink06:rgba(32,32,32,.06);--serif:BradfordLL,Georgia,serif;--sans:Inter,Helvetica,Arial,sans-serif}
+html{font-size:clamp(11px,min(1.02vw,1.82vh),26px)}
+html,body{height:100%;background:#fff;color:var(--black)}
+body{font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.reveal{font-family:var(--sans);font-size:1rem;color:var(--black)}
+.reveal .slides{position:absolute;inset:0;width:100%;height:100%;text-align:left;margin:0}
+.reveal .slides>section{position:absolute;inset:0;width:100%;height:100%;padding:0 3.2rem;box-sizing:border-box;flex-direction:column;top:0!important}
+.reveal .progress{background:transparent;color:var(--orange);height:4px}
+.reveal .slide-number{background:none;color:var(--ink60);font:400 .8rem var(--sans);right:3.2rem;bottom:1.3rem}
+.reveal .slide-number a{text-decoration:none;color:inherit}
+.reveal :focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0 1rem;border-bottom:1px solid var(--black);flex:none}
+.logo{display:inline-flex;align-items:center;gap:.5rem;color:var(--black)}
+.logo svg{display:block;height:1.75rem;width:auto}
+.kicker{font:500 .8rem/1.3 var(--sans);text-transform:uppercase;letter-spacing:0;margin:0}
+.kicker .sep{color:var(--orange);padding:0 .4em}
+.head{padding:1.1rem 0 .9rem;flex:none}
+.head .row{display:flex;justify-content:space-between;align-items:flex-end;gap:2.5rem}
+.reveal h2{font:300 2.5rem/1.14 var(--serif);letter-spacing:-.02em;margin:.2rem 0 0;text-transform:none}
+.reveal h2 em{font-style:italic}
+.sub{font:400 1.12rem/1.45 var(--sans);margin:.55rem 0 0;max-width:48em;min-height:2.9em;flex:1 1 20rem}
+.sub b{font-weight:500}
+.ctrl{display:flex;flex-wrap:wrap;gap:.8rem 1.4rem;align-items:center;justify-content:flex-end;flex:none}
+.ctrl label{font:500 .8rem/1 var(--sans);text-transform:uppercase;margin-right:-.7rem}
+.chiprow{display:flex}
+.chip{font:400 .92rem/1 var(--sans);padding:.65rem 1.1rem;border:1px solid var(--black);background:#fff;color:var(--black);cursor:pointer;border-radius:0;margin-left:-1px;white-space:nowrap;transition:background .2s,color .2s}
+.chip:first-child{margin-left:0}.chip:hover{background:var(--ink06)}
+.chip.on{background:var(--black);color:#fff}
+.chip:disabled{color:var(--ink60);border-color:var(--ink15);cursor:default;background:#fff}
+select.chip{appearance:auto;padding:.6rem .8rem;margin:0;max-width:17rem}
+.stage{flex:1;min-height:0;display:flex;gap:2rem;border-top:1px solid var(--black);padding-top:.8rem;overflow:hidden}
+.plot{flex:1;min-width:0;min-height:0;overflow:hidden}
+.src{flex:none;font:400 .86rem/1.45 var(--sans);color:var(--ink60);padding:.6rem 7rem 1.3rem 0;min-height:2.9em;box-sizing:content-box;max-width:92em}
+/* lines draw in from the left when a chart appears */
+@keyframes sweep{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 -5% 0 0)}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.fadeothers .scatterlayer .trace:not(:last-child){animation:fadein .7s ease-out both}
+.fadeothers .annotation{animation:fadein .5s .35s both}
+.drawin .scatterlayer,.drawin .barlayer{animation:sweep .9s cubic-bezier(.4,0,.2,1) both}
+.drawin .annotation{animation:fadein .35s .75s both}
+@media (prefers-reduced-motion:reduce){.drawin .scatterlayer,.drawin .barlayer,.drawin .annotation{animation:none}}
+/* title */
+.title{justify-content:flex-start}
+.title .hero{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:1rem}
+.reveal h1{font:300 4.6rem/1.1 var(--serif);letter-spacing:-.02em;margin:1.4rem 0 0;max-width:15em;text-transform:none}
+.reveal h1 em{font-style:italic}
+.standfirst{font:400 1.45rem/1.45 var(--sans);max-width:36em;margin:1.6rem 0 0}
+.meta{display:flex;gap:3rem;flex-wrap:wrap;margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--black)}
+.meta div{font:400 .9rem/1.4 var(--sans)}
+.meta b{display:block;font:400 2.1rem/1.1 var(--serif)}
+.mosaic{flex:none;height:5.5rem;display:grid;grid-template-columns:repeat(48,1fr);grid-template-rows:repeat(3,1fr);margin:0 -3.2rem;border-top:1px solid var(--black)}
+/* sankey */
+.flow{flex:1;min-width:0;min-height:0;display:flex;flex-direction:column}
+.cols{flex:none;display:grid;grid-template-columns:1fr 1fr 1fr;font:500 .8rem/1.3 var(--sans);text-transform:uppercase;padding:.1rem .3rem .2rem}
+.cols span:nth-child(2){text-align:center}.cols span:nth-child(3){text-align:right}
+.cols small{display:block;font:400 .8rem/1.3 var(--sans);text-transform:none;color:var(--ink60)}
+.kpis{flex:none;width:19rem;display:flex;flex-direction:column;border-left:1px solid var(--black)}
+.kpi{padding:.9rem 0 .9rem 1.4rem;border-bottom:1px solid var(--ink15)}
+.kpi:last-child{border-bottom:none}
+.kpi b{display:block;font:300 2.7rem/1.05 var(--serif);font-variant-numeric:tabular-nums}
+.kpi span{display:block;font:400 .95rem/1.35 var(--sans);margin-top:.3rem}
+.kpi small{display:block;font:400 .86rem/1.3 var(--sans);color:var(--ink60);margin-top:.25rem;min-height:1.3em}
+/* map */
+.mapwrap{position:relative;flex:1;min-width:0;min-height:0;border:1px solid var(--ink15)}
+#map{display:block;width:100%;height:100%;cursor:grab}#map.drag{cursor:grabbing}
+.zoom{position:absolute;right:.7rem;top:.7rem;display:flex;flex-direction:column;gap:.4rem}
+.zoom button{width:2.4rem;height:2.4rem;border:1px solid var(--black);background:#fff;font:500 1.1rem/1 var(--sans);cursor:pointer;color:var(--black);border-radius:0}
+.zoom button:hover{background:var(--ink06)}
+#tip{position:absolute;pointer-events:none;background:var(--black);color:#fff;padding:.7rem .85rem;font:400 .88rem/1.45 var(--sans);max-width:24rem;display:none;z-index:5}
+#tip b{font-weight:500;color:var(--orange)}#tip .tf{opacity:.7}
+.side{flex:none;width:18rem;display:flex;flex-direction:column;gap:.8rem}
+.side .chiprow .chip{flex:1}
+.searchrow{position:relative;display:flex}
+.searchrow input{flex:1;min-width:0;font:400 .92rem var(--sans);padding:.6rem .8rem;border:1px solid var(--black);border-radius:0;color:var(--black);background:#fff}
+#sug{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--black);list-style:none;margin:-1px 0 0;padding:.2rem 0;z-index:6;display:none;font-size:.88rem}
+#sug li{padding:.4rem .8rem;cursor:pointer}#sug li:hover,#sug li.hi{background:var(--lav)}
+#sug li small{color:var(--ink60);margin-left:.4rem}
+.legend{display:flex;flex-direction:column;gap:.05rem;font-size:.84rem;line-height:1.25}
+.legend .lchip{display:flex;align-items:center;gap:.5rem;cursor:pointer;background:none;border:0;padding:.08rem 0;font:inherit;color:var(--black);text-align:left}
+.legend .lchip.dim{opacity:.3}
+.legend i{width:.85rem;height:.85rem;display:inline-block;flex:none}
+.scale{font-size:.88rem}.scale .sw{display:flex;height:.9rem;margin:.3rem 0}.scale .sw i{flex:1}
+.scale .ends{display:flex;justify-content:space-between}
+.scale .nt{color:var(--ink60);font-size:.84rem;line-height:1.4;margin-top:.6rem}
+.modes{display:flex;flex-direction:column}
+.modes .chip{margin:-1px 0 0;text-align:left;white-space:normal;line-height:1.2;padding:.55rem .8rem}.modes .chip:first-child{margin-top:0}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section class="title">
+  <div class="bar"><!--LOGO--><p class="kicker">Roundtable<span class="sep">·</span>The Merode, Brussels<span class="sep">·</span>18 November 2026</p></div>
+  <div class="hero">
+    <p class="kicker">interface<span class="sep">·</span>AI Workforce &amp; Innovation</p>
+    <h1>Reading the Signals: <em>Early Career Precarity and the Future of Europe’s Workforce</em></h1>
+    <p class="standfirst">What the career histories of graduates of European and American universities since 2005 show about junior jobs, fields of study and internships.</p>
+    <div class="meta">
+      <div><b>110.3M</b>graduates followed</div>
+      <div><b id="m-int"></b>first internships followed</div>
+      <div><b>2005–2026</b>graduation years</div>
+      <div><b>31 + US</b>European countries and the US</div>
+      <div><b>Ruggero Marino Lazzaroni</b>AI Workforce &amp; Innovation, interface</div>
+    </div>
+  </div>
+  <div class="mosaic" id="mosaic"></div>
+</section>
+
+<section data-chart="s1">
+  <div class="bar"><!--LOGO--><p class="kicker">Reading the Signals<span class="sep">·</span>01 junior roles over time</p></div>
+  <div class="head">
+    <h2>Since 2021 early-career graduates hold fewer junior roles, <em>AI talent most of all</em></h2>
+    <div class="row"><p class="sub" id="s1-sub"></p>
+    <div class="ctrl"><div class="chiprow" id="s1-chips">
+      <button class="chip on" data-v="share">First five years of work</button>
+      <button class="chip" data-v="gap">The gap</button>
+      <button class="chip" data-v="old">Everyone since 2005</button></div></div></div>
+  </div>
+  <div class="stage"><div class="plot" id="s1-plot"></div></div>
+  <p class="src" id="s1-src"></p>
+</section>
+
+<section data-chart="s2">
+  <div class="bar"><!--LOGO--><p class="kicker">Reading the Signals<span class="sep">·</span>02 fields of study</p></div>
+  <div class="head">
+    <h2>Computer science and law lose junior roles <em>faster than other degrees</em></h2>
+    <div class="row"><p class="sub" id="s2-sub"></p>
+    <div class="ctrl">
+      <div class="chiprow" id="s2-measure">
+        <button class="chip on" data-v="stock">First five years of work</button>
+        <button class="chip" data-v="entry">First job after graduating</button></div>
+      <div class="chiprow" id="s2-view">
+        <button class="chip on" data-v="cs">Computer science vs the rest</button>
+        <button class="chip" data-v="all">All 15 fields</button></div>
+    </div></div>
+  </div>
+  <div class="stage"><div class="plot" id="s2-plot"></div></div>
+  <p class="src" id="s2-src"></p>
+</section>
+
+<section data-chart="s3">
+  <div class="bar"><!--LOGO--><p class="kicker">Reading the Signals<span class="sep">·</span>03 internships</p></div>
+  <div class="head">
+    <h2>Where does an internship <em>lead</em>?</h2>
+    <div class="row"><p class="sub" id="s3-sub"></p>
+    <div class="ctrl">
+      <select class="chip" id="s3-where" aria-label="Region or country"></select>
+      <div class="chiprow" id="s3-period">
+        <button class="chip on" data-v="2015-2023">2015–23</button>
+        <button class="chip" data-v="2015-2019">2015–19</button>
+        <button class="chip" data-v="2020-2023">2020–23</button></div>
+      <label>Then</label>
+      <div class="chiprow" id="s3-third">
+        <button class="chip on" data-v="later">Did junior hires move up?</button>
+        <button class="chip" data-v="employer">Who hired them?</button></div>
+    </div></div>
+  </div>
+  <div class="stage">
+    <div class="flow">
+      <div class="cols"><span>Internship</span><span>What comes next<small>within 12 months of the internship ending · % of all internships</small></span><span id="s3-h3"></span></div>
+      <div class="plot" id="s3-plot"></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><b id="k-n"></b><span>first internships</span><small id="k-n-c"></small></div>
+      <div class="kpi"><b id="k-job"></b><span>have a job within 12 months</span><small id="k-job-c"></small></div>
+      <div class="kpi"><b id="k-same"></b><span>of those jobs are with the employer where they interned</span><small id="k-same-c"></small></div>
+      <div class="kpi"><b id="k-up"></b><span>of junior hires move above junior level within two years</span><small id="k-up-c"></small></div>
+    </div>
+  </div>
+  <p class="src" id="s3-src"></p>
+</section>
+
+<section data-chart="s4">
+  <div class="bar"><!--LOGO--><p class="kicker">Reading the Signals<span class="sep">·</span>04 the map of degrees</p></div>
+  <div class="head">
+    <h2>Every degree, in graduates’ own words, <em>on one map</em></h2>
+    <div class="row"><p class="sub" id="s4-sub"></p></div>
+  </div>
+  <div class="stage">
+    <div class="mapwrap"><canvas id="map"></canvas>
+      <div class="zoom"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="zreset" aria-label="Whole map">⤢</button></div>
+      <div id="tip"></div></div>
+    <div class="side">
+      <div class="searchrow"><input id="q" type="search" placeholder="Find a degree, e.g. computer science" autocomplete="off" aria-label="Find a degree"><ul id="sug"></ul></div>
+      <div class="chiprow" id="s4-shape">
+        <button class="chip on" data-v="hex">Neighbourhoods</button>
+        <button class="chip" data-v="pts">Single names</button></div>
+      <div class="modes" id="s4-modes"></div>
+      <div id="maplegend"></div>
+    </div>
+  </div>
+  <p class="src" id="s4-src"></p>
+</section>
+
+</div></div>
+<script src="vendor/plotly.min.js"></script>
+<script src="vendor/reveal/reveal.js"></script>
+<script src="data/deck_data.js"></script>
+<script src="deck.js"></script>
+</body>
+</html>
