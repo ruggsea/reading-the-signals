@@ -51,7 +51,15 @@ function chips(id, fn) {
   const box = $(id);
   box.querySelectorAll('.chip').forEach(b => b.onclick = () => { box.querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x === b)); fn(b.dataset.v); });
 }
-function fitPlot(el) { requestAnimationFrame(() => { if (el && el.data) Plotly.Plots.resize(el); }); }
+function fitPlot(el) { requestAnimationFrame(() => { if (!el || !el.data || !el._fullLayout) return;
+  if (Math.abs(el._fullLayout.width - el.clientWidth) > 1 || Math.abs(el._fullLayout.height - el.clientHeight) > 1) Plotly.Plots.resize(el); }); }
+/* switching between views: a short fade out, redraw, fade in */
+function crossfade(el, draw) {
+  if (!el.data) { draw(); return; }
+  el.classList.remove('drawin', 'fadeothers', 'morph'); el.style.transition = 'opacity .16s ease'; el.style.opacity = 0; clearTimeout(el._cf);
+  el._cf = setTimeout(() => { draw(); requestAnimationFrame(() => { el.style.transition = 'opacity .34s ease'; el.style.opacity = 1; }); }, 170);
+}
+const MORPH = {duration: 600, easing: 'cubic-in-out'};
 /* lines draw in from the left when a chart first appears or changes shape */
 function drawIn(el) { el.classList.remove('drawin'); void el.offsetWidth; el.classList.add('drawin'); }
 function countTo(el, to, fmt) {
@@ -75,8 +83,8 @@ $('m-int').textContent = mil(D.meta.internships).replace(' million', 'M');
 
 /* ------------------------------------------------------------ 1: junior share, AI talent vs other graduates */
 /* default: the report's like-for-like measure (jobs held in the first five years after graduating); 'old' = the earlier measure, kept to show why it misleads */
-const S1 = {view: 'share', shape: null}, PIVOT = 2021;
-function drawS1() {
+const S1 = {view: 'share'}, PIVOT = 2021;
+function drawS1(morph) {
   const old = S1.view === 'old', src = old ? D.junior_ai : D.first5_ai, el = $('s1-plot'), r = rem();
   const ai = src.filter(d => d.grp === 'AI talent').sort(by('cal_year')), ot = src.filter(d => d.grp === 'Other graduates').sort(by('cal_year'));
   const a0 = ai[0], a1 = ai[ai.length - 1], o0 = ot[0], o1 = ot[ot.length - 1], y0 = a0.cal_year, y1 = a1.cal_year;
@@ -96,31 +104,32 @@ function drawS1() {
       : `Graduates in their first five years at work: out of every 100 in work, how many are in a junior role (the two lowest of seven seniority levels). Steady until ${PIVOT}; since then down <b>${Math.abs(a1.junior_pct - at(ai, PIVOT)).toFixed(1)} percentage points</b> for AI talent and <b>${Math.abs(o1.junior_pct - at(ot, PIVOT)).toFixed(1)}</b> for other graduates.`;
     const marks = old ? [] : [{type: 'line', xref: 'x', yref: 'paper', x0: PIVOT, x1: PIVOT, y0: 0, y1: 1, line: {color: P.ink30, width: 1, dash: 'dot'}}];
     Plotly.react(el, [line(ot, 'cal_year', 'Other graduates', P.steel, null, 'jobs'), line(ai, 'cal_year', 'AI talent', P.orange, null, 'jobs')],
-      lay({span: [y0, y1], ytitle, yaxis: {range: rng}, shapes: marks, annotations: endLabels([{x: y1, y: o1.junior_pct, text: 'Other graduates <b>' + p1(o1.junior_pct) + '</b>', color: P.steel, big: 1},
+      lay({span: [y0, y1], ytitle, yaxis: {range: rng}, shapes: marks, transition: morph === true ? MORPH : undefined, annotations: endLabels([{x: y1, y: o1.junior_pct, text: 'Other graduates <b>' + p1(o1.junior_pct) + '</b>', color: P.steel, big: 1},
         {x: y1, y: a1.junior_pct, text: 'AI talent <b>' + p1(a1.junior_pct) + '</b>', color: P.orange, big: 1}], rng).concat([startLabel(o0, 'cal_year', P.steel, a0), startLabel(a0, 'cal_year', P.orange, o0)])}), CFG);
   }
   $('s1-src').textContent = `${SOURCE}. ` + (old ? `Every job started since 2015 is counted, for all graduates since 2005. ` : `Every job held in the first five years after graduating is counted (${mil(a1.n + o1.n)} jobs in ${y1}). `) +
     `Junior role: the two lowest of seven seniority levels. AI talent: people whose profile today matches interface's AI-talent definition, counted as such in earlier years too. ${y1} covers January to 1 October.` + (S1.view === 'gap' ? '' : ` The vertical axis starts at ${rng[0]}%.`);
-  const shape = S1.view === 'gap' ? 'bar' : 'line'; if (S1.shape !== shape) { S1.shape = shape; drawIn(el); }
+  if (morph === true) { el.classList.remove('drawin', 'morph'); void el.offsetWidth; el.classList.add('morph'); }
   fitPlot(el);
 }
-chips('s1-chips', v => { S1.view = v; drawS1(); });
+chips('s1-chips', v => { const prev = S1.view, el = $('s1-plot'); if (v === prev) return; S1.view = v;
+  if (v === 'gap' || prev === 'gap') crossfade(el, () => drawS1()); else { clearTimeout(el._cf); el.style.opacity = 1; drawS1(true); } });
 
 /* ------------------------------------------------------------ 2: CS vs other fields */
-const S2 = {measure: 'stock', view: 'cs', shape: null};
-function drawS2() {
+const S2 = {measure: 'stock', view: 'cs'};
+function drawS2(fadeOthers) {
   const stock = S2.measure === 'stock', xk = stock ? 'cal_year' : 'cohort', el = $('s2-plot'), r = rem(), unit = stock ? 'jobs' : 'graduates';
   const csRows = stock ? D.stock_cs : D.entry_cs, fld = stock ? D.stock_field : D.entry_field;
   const ytitle = stock ? 'Share of early-career graduates in work who are in a junior role' : 'Share of new graduates whose first job is a junior role';
   const lead = stock ? 'Graduates in their first five years at work: out of every 100 in work, how many are in a junior role.' : 'Graduates who found work: out of every 100, how many started in a junior role.';
   const xs = fld.map(d => d[xk]), first = Math.min(...xs), last = Math.max(...xs);
-  /* change window: since 2021 for people in work (flat before); 2019 to 2024 graduates for first jobs (the series peaks around 2019; 2025 graduates are not yet followed for two years) */
+  /* change window: since 2021 for people in work (flat before); 2019 to 2024 graduates for first jobs (the series peaks around 2019; 2024 is the last year with a complete two-year window) */
   const from = stock ? PIVOT : 2019, to = stock ? last : 2024;
   const rng = [Math.floor(Math.min(...fld.map(d => d.junior_pct)) / 5) * 5, Math.ceil(Math.max(...fld.map(d => d.junior_pct)) / 5) * 5];
   const xt = stock ? {title: {text: 'Year', font: {size: r * 0.9}}} : {dtick: 2, title: {text: 'Year of graduation', font: {size: r * 0.9}}};
   const shapes = stock ? [{type: 'line', xref: 'x', yref: 'paper', x0: PIVOT, x1: PIVOT, y0: 0, y1: 1, line: {color: P.ink30, width: 1, dash: 'dot'}}]
-    : [{type: 'rect', xref: 'x', yref: 'paper', x0: 2023.5, x1: last + 0.5, y0: 0, y1: 1, fillcolor: rgba(P.mocha, .22), line: {width: 0}, layer: 'below'}];
-  const partial = stock ? [] : [{x: 2024.5, y: 1, xref: 'x', yref: 'paper', yanchor: 'bottom', text: 'under 2 years of history so far', showarrow: false, font: {size: r * 0.8, color: P.brown}}];
+    : [{type: 'rect', xref: 'x', yref: 'paper', x0: Math.min(...D.meta.partial_cohorts) - 0.5, x1: last + 0.5, y0: 0, y1: 1, fillcolor: rgba(P.mocha, .22), line: {width: 0}, layer: 'below'}];
+  const partial = stock ? [] : [{x: last + 0.5, xanchor: 'right', y: 1, xref: 'x', yref: 'paper', yanchor: 'bottom', text: D.meta.partial_cohorts.join(' and ') + ' graduates: under 2 years of history so far', showarrow: false, font: {size: r * 0.8, color: P.brown}}];
   if (el.removeAllListeners) { el.removeAllListeners('plotly_hover'); el.removeAllListeners('plotly_unhover'); }
   el.classList.remove('fadeothers');
   if (S2.view === 'cs') {
@@ -150,14 +159,14 @@ function drawS2() {
   const win = D.meta.last_cohort_months;
   $('s2-src').textContent = `${SOURCE}. Degrees are sorted into 15 groups by the degree name each graduate entered, in any language; each person counts under their highest degree. Junior role: the two lowest of seven seniority levels. ` +
     (stock ? `Every job held in the first five years after graduating is counted; ${D.meta.unclassified_pct}% belong to people with no usable degree name and are left out. `
-           : `First job: the lowest-level position held from 6 months before to 2 years after graduating, internships included. 2025 graduates have ${win[0]} to ${win[1]} months of history so far. `) + `The vertical axis starts at ${rng[0]}%.`;
+           : `First job: the lowest-level position held from 6 months before to 2 years after graduating, internships included. ${D.meta.partial_cohorts.join(' and ')} graduates have ${win[0]} to ${win[1]} months of history so far. `) + `The vertical axis starts at ${rng[0]}%.`;
   /* arriving on the 15-field view from the two-line view of the same measure: computer science stays put, the other 14 fade in */
-  const shape = S2.measure + S2.view, prev = S2.shape; S2.shape = shape;
-  if (prev === S2.measure + 'cs' && S2.view === 'all') { el.classList.remove('drawin'); void el.offsetWidth; el.classList.add('fadeothers'); } else if (prev !== shape) drawIn(el);
+  if (fadeOthers === true) { el.classList.remove('drawin', 'morph'); void el.offsetWidth; el.classList.add('fadeothers'); }
   fitPlot(el);
 }
-chips('s2-measure', v => { S2.measure = v; drawS2(); });
-chips('s2-view', v => { S2.view = v; drawS2(); });
+chips('s2-measure', v => { if (v === S2.measure) return; S2.measure = v; crossfade($('s2-plot'), () => drawS2()); });
+chips('s2-view', v => { if (v === S2.view) return; S2.view = v; const el = $('s2-plot');
+  if (v === 'all') { clearTimeout(el._cf); el.style.opacity = 1; drawS2(true); } else crossfade(el, () => drawS2()); });
 
 /* ------------------------------------------------------------ 3: internships */
 const F = D.flows, S3 = {where: 'r:EU31', period: [2015, 2023], third: 'later'};

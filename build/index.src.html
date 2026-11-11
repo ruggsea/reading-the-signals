@@ -57,9 +57,10 @@ select.chip{appearance:auto;padding:.6rem .8rem;margin:0;max-width:14rem}
 @keyframes fadein{from{opacity:0}to{opacity:1}}
 .fadeothers .scatterlayer .trace:not(:last-child){animation:fadein .7s ease-out both}
 .fadeothers .annotation{animation:fadein .5s .35s both}
+.morph .annotation{animation:fadein .35s .5s both}
 .drawin .scatterlayer,.drawin .barlayer{animation:sweep .9s cubic-bezier(.4,0,.2,1) both}
 .drawin .annotation{animation:fadein .35s .75s both}
-@media (prefers-reduced-motion:reduce){.drawin .scatterlayer,.drawin .barlayer,.drawin .annotation{animation:none}}
+@media (prefers-reduced-motion:reduce){.drawin .scatterlayer,.drawin .barlayer,.drawin .annotation,.fadeothers .trace,.fadeothers .annotation,.morph .annotation{animation:none!important}}
 /* title */
 .title{justify-content:flex-start}
 .title .hero{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:1rem}
@@ -91,7 +92,7 @@ select.chip{appearance:auto;padding:.6rem .8rem;margin:0;max-width:14rem}
 #tip{position:absolute;pointer-events:none;background:var(--black);color:#fff;padding:.7rem .85rem;font:400 .88rem/1.45 var(--sans);max-width:24rem;display:none;z-index:5}
 #tip b{font-weight:500;color:var(--orange)}#tip .tf{opacity:.7}
 .side{flex:none;width:18rem;display:flex;flex-direction:column;gap:.6rem}
-.side .chiprow .chip{flex:1}
+.side .chiprow .chip{flex:1 1 0;min-width:0;padding:.6rem .3rem;text-align:center;white-space:normal;font-size:.86rem;line-height:1.15}
 .searchrow{position:relative;display:flex}
 .searchrow input{flex:1;min-width:0;font:400 .92rem var(--sans);padding:.6rem .8rem;border:1px solid var(--black);border-radius:0;color:var(--black);background:#fff}
 #sug{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--black);list-style:none;margin:-1px 0 0;padding:.2rem 0;z-index:6;display:none;font-size:.88rem}

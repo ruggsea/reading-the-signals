@@ -62,7 +62,10 @@ entry_field = pd.read_csv(os.path.join(FIG, "entry_by_fieldgroup_cohort.csv")).d
 entry_field["junior_n"] = entry_field.junior_pct * entry_field.n / 100
 entry_cs = cs_split(entry_field, ["cohort"])
 windows = pd.read_csv(os.path.join(FIG, "cohort_observation_windows_2026.csv")).set_index("cohort")
-last_window = [int(windows.loc[2025, "min_months_observed"]), int(windows.loc[2025, "max_months_observed"])]
+# graduation years whose two-year first-job window is not complete at the data end (shaded on the chart)
+partial = [int(c) for c in windows.index[(windows.complete_2y_pct < 100) & (windows.index <= entry_field.cohort.max())]]
+assert partial and partial == list(range(partial[0], int(entry_field.cohort.max()) + 1)), partial
+last_window = [int(windows.loc[partial, "min_months_observed"].min()), int(windows.loc[partial, "max_months_observed"].max())]
 
 # ---- slide 3: internships
 fl = pd.read_csv(os.path.join(DATA, "internship_flows_country_year.csv"))
@@ -108,7 +111,7 @@ points = dict(groups=pgroups, rows=[[round(float(px[i]), 3), round(float(py[i]),
 
 out = dict(
     points=points,
-    meta=dict(rep["meta"], unclassified_pct=round(unclassified_pct, 1), internships=int(fl.n.sum()), last_cohort_months=last_window),
+    meta=dict(rep["meta"], unclassified_pct=round(unclassified_pct, 1), internships=int(fl.n.sum()), last_cohort_months=last_window, partial_cohorts=partial),
     junior_ai=rec(junior_ai),                    # older measure, kept for the comparison view on slide 1
     first5_ai=rec(first5_ai),
     stock_cs=rec(cs),

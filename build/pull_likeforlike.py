@@ -38,7 +38,7 @@ d = con.execute(f"""
       SELECT s.USER_ID, s.SENIORITY, g.fgroup, g.grp, g.grad_date,
              unnest(generate_series(year(s.sd), year(s.ed))) AS yr
       FROM spans s JOIN person g USING (USER_ID))
-    SELECT yr AS cal_year, fgroup, grp,
+    SELECT yr AS cal_year, yr - year(grad_date) AS stage, fgroup, grp,
            SUM(CASE WHEN SENIORITY IN (1,2) THEN 1 ELSE 0 END) AS junior_n, COUNT(*) AS n
     FROM py
     WHERE yr BETWEEN 2015 AND {jf.END_YEAR} AND yr - year(grad_date) BETWEEN {lo} AND {hi}
