@@ -118,6 +118,31 @@ px, py = (np.polyval(fit[k], circ[:, k]) for k in (0, 1))
 order = sorted(range(len(pdata)), key=lambda i: pdata[i]["n"])            # common names drawn last, on top
 points = dict(groups=pgroups, rows=[[round(float(px[i]), 3), round(float(py[i]), 3), pdata[i]["g"], pdata[i]["n"], pdata[i]["f"]] for i in order])
 
+# ---- slide 4: per-hexagon counts with every degree name of the Oct-2026 delivery placed (map_place_cortex.py)
+fm = dict(rep["field_map"])
+MAP_CSV = os.path.join(DATA, "hex_metrics_2026.csv")
+if os.path.exists(MAP_CSV):
+    hm = pd.read_csv(MAP_CSV)
+    tot = json.load(open(os.path.join(DATA, "hex_metrics_totals.json")))
+    hold = json.load(open(os.path.join(DATA, "hex_holdout.json")))
+    lay = hm[hm.in_layout].set_index("hex")
+    old_n = pd.Series([h["n26"] for h in fm["hexes"]])
+    # the names already in the layout must still carry the report's graduates, hexagon by hexagon
+    assert (lay.users.reindex(old_n.index).fillna(0).astype(int) == old_n).all(), "layout names no longer reproduce the report's hexagon counts"
+    allh = hm.groupby("hex")[["users", "names", "n_pre", "j_pre", "n_post", "j_post", "ai"]].sum() \
+             .reindex(range(len(fm["hexes"]))).fillna(0)          # hexagons none of whose names occur in this population
+    hexes = []
+    for i, h in enumerate(fm["hexes"]):
+        r = allh.loc[i]
+        hexes.append(dict(h, fields=int(r.names), n26=int(r.users),
+                          j_pre=round(100 * r.j_pre / r.n_pre, 1) if r.n_pre >= 30 else None,
+                          j_post=round(100 * r.j_post / r.n_post, 1) if r.n_post >= 30 else None,
+                          ai=round(100 * r.ai / r.users, 2) if r.users >= 30 else None))
+    fm.update(hexes=hexes, n_fields=int(tot["names"]), n_layout=int(rep["field_map"]["n_fields"]), graduates=int(tot["graduates"]),
+              graduates_named=int(tot["graduates_with_name"]), graduates_on_map=int(allh.users.sum()), holdout=hold)
+    print(f"map: {tot['names']:,} names ({tot['names_in_layout']:,} in the layout), {int(allh.users.sum()):,} of {tot['graduates']:,} graduates; "
+          f"hold-out within one hexagon {100*hold['within1']:.1f}%")
+
 out = dict(
     points=points,
     meta=dict(rep["meta"], unclassified_pct=round(unclassified_pct, 1), internships=int(fl.n.sum()), last_cohort_months=last_window, partial_cohorts=partial,
@@ -129,7 +154,7 @@ out = dict(
     entry_cs=rec(entry_cs[["cohort", "grp", "junior_pct", "n"]]),
     entry_field=rec(entry_field[["cohort", "fgroup", "junior_pct", "n"]]),
     flows=dict(countries=names, eu31=EU31, eu27=[c for c in EU31 if c not in NON_EU27], s2=S2, co=CO, s3=S3, rows=flows),
-    field_map=rep["field_map"],
+    field_map=fm,
 )
 js = "window.D=" + json.dumps(out, allow_nan=False, separators=(",", ":"), ensure_ascii=False) + ";\n"
 tmp = os.path.join(DATA, "deck_data.js.tmp")

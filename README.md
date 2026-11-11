@@ -40,5 +40,16 @@ The scripts stop if the new files do not reproduce the released ones:
 - the like-for-like totals equal the report's "age-adjusted (0-5 years after graduation)" series in `junior_stock_measures.csv` for every year;
 - the point cloud lines up with the hexagon layout (worst misplacement 0.004 layout units; one hexagon is 0.130).
 
+## Map coverage (slide 4)
+
+The layout was drawn in September 2025 from 629,991 degree names, which cover 61.8 of the 110.3 million graduates.
+The other 11.8 million names of the Oct-2026 population are placed on Snowflake (`build/map_prepare.py`, then
+`build/map_place_cortex.py upload|embed|holdout|place|aggregate`): Snowflake's `multilingual-e5-large` embeds every
+name, the five hexagons with the closest average are shortlisted, and the name takes the hexagon of its most similar
+laid-out name among them. Test on 29,606 laid-out names left out of the averages: 59% same hexagon, 79% within one,
+83% within two, 87% same field colour. (The report's own model, MiniLM, reaches 84% within one with nearest average
+alone, but uploading it from the laptop was not possible on the day.) `build_data.py` stops unless the names already
+in the layout still give the report's count in every hexagon. Results: `data/hex_metrics_2026.csv`.
+
 `node build/qa_shots.cjs <path to playwright>` renders every slide and interaction to `qa/` (needs the local server on port 8765).
 Edit `build/index.src.html`, not `index.html`.

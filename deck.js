@@ -369,9 +369,9 @@ function initMap() {
   function text() {
     $('s4-sub').innerHTML = shape === 'hex'
       ? `Graduates write their degree in their own words, in any language: <b>${nf(FM.n_fields)}</b> different names, ignoring capitals and spacing. Names with similar wording and meaning sit close together; each hexagon groups nearby names.`
-      : `Each dot is one degree name as graduates wrote it; bigger dots are used by more people. <b>${nf(PT.length)}</b> of the ${nf(FM.n_fields)} names are shown, with common names more likely to appear.`;
+      : `Each dot is one degree name as graduates wrote it; bigger dots are used by more people. <b>${nf(PT.length)}</b> names are shown, with common names more likely to appear.`;
     $('s4-src').textContent = `Source: ${DATA_NAME}. A language model reads each degree name and places similar names together: closeness means similar wording and meaning, not similar careers. ` +
-      (shape === 'hex' ? `The map is drawn from degree names in the Sept. 2025 data release and covers ${mil(tot)} of the ${GRADS} graduates; counts and shares use the Oct. 2026 data.` : 'Dot positions and sizes come from the Sept. 2025 data release.'); }
+      (shape === 'hex' ? (FM.holdout ? `The map was drawn from the ${nf(FM.n_layout)} most common names. Every other name was then added to the neighbourhood it most resembles; in a test on names with a known place, ${Math.round(100 * FM.holdout.within1)}% landed within one hexagon. Counts and shares use the Oct. 2026 data and cover all ${mil(FM.graduates)} graduates except ${nf(FM.graduates - tot)} who list no usable degree name.` : `The map is drawn from degree names in the Sept. 2025 data release and covers ${mil(tot)} of the ${GRADS} graduates; counts and shares use the Oct. 2026 data.`) : 'Dots are a sample of the most common names; their positions and sizes come from the Sept. 2025 data release.'); }
   text(); mapResize = resize; new ResizeObserver(resize).observe(cv); resize(); colour();
 }
 
