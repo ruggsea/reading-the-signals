@@ -1,385 +1,2305 @@
-cal_year,fgroup,grp,junior_n,n
-2015,Agriculture & Environment,AI talent,5302,7364
-2015,Agriculture & Environment,Other graduates,383630,506183
-2015,Architecture & Built Environment,AI talent,4137,7340
-2015,Architecture & Built Environment,Other graduates,449573,700836
-2015,"Arts, Media & Design",AI talent,9546,15397
-2015,"Arts, Media & Design",Other graduates,1443056,1901199
-2015,Business & Economics,AI talent,33388,81309
-2015,Business & Economics,Other graduates,3332187,5626025
-2015,CS / IT,AI talent,82408,134736
-2015,CS / IT,Other graduates,957188,1426870
-2015,Education & Teaching,AI talent,2969,4933
-2015,Education & Teaching,Other graduates,729777,948863
-2015,Engineering & Technology,AI talent,47072,70980
-2015,Engineering & Technology,Other graduates,960263,1326019
-2015,Health & Medicine,AI talent,7208,11083
-2015,Health & Medicine,Other graduates,1025987,1404118
-2015,Humanities & Languages,AI talent,7361,11537
-2015,Humanities & Languages,Other graduates,789352,1037881
-2015,Law,AI talent,2286,4461
-2015,Law,Other graduates,534939,774996
-2015,Natural Sciences & Math,AI talent,42562,59527
-2015,Natural Sciences & Math,Other graduates,765398,965858
-2015,Other / Non-degree,AI talent,1569,3024
-2015,Other / Non-degree,Other graduates,226466,319827
-2015,Psychology & Social Work,AI talent,5641,8518
-2015,Psychology & Social Work,Other graduates,783277,1011988
-2015,Skills & Short Courses,AI talent,830,1550
-2015,Skills & Short Courses,Other graduates,36573,57909
-2015,Social Sciences,AI talent,6988,12476
-2015,Social Sciences,Other graduates,978237,1388486
-2015,,AI talent,10770,17907
-2015,,Other graduates,1017574,1432638
-2016,Agriculture & Environment,AI talent,6078,8535
-2016,Agriculture & Environment,Other graduates,420094,553193
-2016,Architecture & Built Environment,AI talent,4566,8122
-2016,Architecture & Built Environment,Other graduates,477044,742837
-2016,"Arts, Media & Design",AI talent,10111,16437
-2016,"Arts, Media & Design",Other graduates,1532214,2017324
-2016,Business & Economics,AI talent,37363,90009
-2016,Business & Economics,Other graduates,3565002,5992446
-2016,CS / IT,AI talent,96661,156880
-2016,CS / IT,Other graduates,1038617,1539903
-2016,Education & Teaching,AI talent,3286,5530
-2016,Education & Teaching,Other graduates,769246,1002364
-2016,Engineering & Technology,AI talent,54438,81855
-2016,Engineering & Technology,Other graduates,1062763,1461841
-2016,Health & Medicine,AI talent,8324,12730
-2016,Health & Medicine,Other graduates,1153829,1578514
-2016,Humanities & Languages,AI talent,8026,12446
-2016,Humanities & Languages,Other graduates,825521,1085209
-2016,Law,AI talent,2488,4848
-2016,Law,Other graduates,573203,830343
-2016,Natural Sciences & Math,AI talent,48544,68532
-2016,Natural Sciences & Math,Other graduates,832857,1049026
-2016,Other / Non-degree,AI talent,1848,3547
-2016,Other / Non-degree,Other graduates,248196,350918
-2016,Psychology & Social Work,AI talent,6360,9680
-2016,Psychology & Social Work,Other graduates,859198,1110445
-2016,Skills & Short Courses,AI talent,931,1768
-2016,Skills & Short Courses,Other graduates,40369,63584
-2016,Social Sciences,AI talent,7711,13791
-2016,Social Sciences,Other graduates,1046781,1486067
-2016,,AI talent,12446,20604
-2016,,Other graduates,1096328,1541692
-2017,Agriculture & Environment,AI talent,7091,9942
-2017,Agriculture & Environment,Other graduates,459135,602422
-2017,Architecture & Built Environment,AI talent,5226,9183
-2017,Architecture & Built Environment,Other graduates,507519,789575
-2017,"Arts, Media & Design",AI talent,10865,17543
-2017,"Arts, Media & Design",Other graduates,1611753,2120279
-2017,Business & Economics,AI talent,42943,101695
-2017,Business & Economics,Other graduates,3824498,6405638
-2017,CS / IT,AI talent,115111,186734
-2017,CS / IT,Other graduates,1129621,1670241
-2017,Education & Teaching,AI talent,3669,6197
-2017,Education & Teaching,Other graduates,806276,1052596
-2017,Engineering & Technology,AI talent,64156,96512
-2017,Engineering & Technology,Other graduates,1180829,1618648
-2017,Health & Medicine,AI talent,9528,14646
-2017,Health & Medicine,Other graduates,1279933,1752216
-2017,Humanities & Languages,AI talent,8905,13727
-2017,Humanities & Languages,Other graduates,861075,1130916
-2017,Law,AI talent,2741,5342
-2017,Law,Other graduates,609572,882456
-2017,Natural Sciences & Math,AI talent,55473,79283
-2017,Natural Sciences & Math,Other graduates,905341,1138566
-2017,Other / Non-degree,AI talent,2222,4211
-2017,Other / Non-degree,Other graduates,268119,379081
-2017,Psychology & Social Work,AI talent,7188,11015
-2017,Psychology & Social Work,Other graduates,929521,1202598
-2017,Skills & Short Courses,AI talent,1083,2113
-2017,Skills & Short Courses,Other graduates,44056,69450
-2017,Social Sciences,AI talent,8456,15075
-2017,Social Sciences,Other graduates,1113798,1580196
-2017,,AI talent,14292,23822
-2017,,Other graduates,1169655,1644990
-2018,Agriculture & Environment,AI talent,7897,11288
-2018,Agriculture & Environment,Other graduates,497458,650447
-2018,Architecture & Built Environment,AI talent,5890,10360
-2018,Architecture & Built Environment,Other graduates,536084,833315
-2018,"Arts, Media & Design",AI talent,11297,18433
-2018,"Arts, Media & Design",Other graduates,1690326,2216516
-2018,Business & Economics,AI talent,50260,116723
-2018,Business & Economics,Other graduates,4091898,6829736
-2018,CS / IT,AI talent,139996,226848
-2018,CS / IT,Other graduates,1223604,1808187
-2018,Education & Teaching,AI talent,4024,6815
-2018,Education & Teaching,Other graduates,838266,1096020
-2018,Engineering & Technology,AI talent,75661,113778
-2018,Engineering & Technology,Other graduates,1293715,1769630
-2018,Health & Medicine,AI talent,10962,16973
-2018,Health & Medicine,Other graduates,1403555,1922414
-2018,Humanities & Languages,AI talent,9719,14871
-2018,Humanities & Languages,Other graduates,890294,1165679
-2018,Law,AI talent,2957,5878
-2018,Law,Other graduates,641850,927638
-2018,Natural Sciences & Math,AI talent,63387,91297
-2018,Natural Sciences & Math,Other graduates,978966,1227687
-2018,Other / Non-degree,AI talent,2556,4806
-2018,Other / Non-degree,Other graduates,286228,405370
-2018,Psychology & Social Work,AI talent,7907,12335
-2018,Psychology & Social Work,Other graduates,997941,1290185
-2018,Skills & Short Courses,AI talent,1349,2585
-2018,Skills & Short Courses,Other graduates,47084,74613
-2018,Social Sciences,AI talent,9326,16812
-2018,Social Sciences,Other graduates,1184675,1679809
-2018,,AI talent,16395,27780
-2018,,Other graduates,1242568,1745386
-2019,Agriculture & Environment,AI talent,8838,12607
-2019,Agriculture & Environment,Other graduates,531968,695232
-2019,Architecture & Built Environment,AI talent,6542,11450
-2019,Architecture & Built Environment,Other graduates,562765,872892
-2019,"Arts, Media & Design",AI talent,11723,19302
-2019,"Arts, Media & Design",Other graduates,1759659,2299429
-2019,Business & Economics,AI talent,57894,132377
-2019,Business & Economics,Other graduates,4334672,7226320
-2019,CS / IT,AI talent,167542,272499
-2019,CS / IT,Other graduates,1311238,1939944
-2019,Education & Teaching,AI talent,4442,7558
-2019,Education & Teaching,Other graduates,868200,1136513
-2019,Engineering & Technology,AI talent,86815,130112
-2019,Engineering & Technology,Other graduates,1383225,1892957
-2019,Health & Medicine,AI talent,12534,19378
-2019,Health & Medicine,Other graduates,1532273,2098471
-2019,Humanities & Languages,AI talent,10499,15960
-2019,Humanities & Languages,Other graduates,913434,1192851
-2019,Law,AI talent,3153,6260
-2019,Law,Other graduates,670536,965393
-2019,Natural Sciences & Math,AI talent,70897,102785
-2019,Natural Sciences & Math,Other graduates,1046581,1307766
-2019,Other / Non-degree,AI talent,2854,5293
-2019,Other / Non-degree,Other graduates,301633,426844
-2019,Psychology & Social Work,AI talent,8675,13603
-2019,Psychology & Social Work,Other graduates,1060513,1370002
-2019,Skills & Short Courses,AI talent,1606,3130
-2019,Skills & Short Courses,Other graduates,49439,78332
-2019,Social Sciences,AI talent,10200,18453
-2019,Social Sciences,Other graduates,1250595,1769021
-2019,,AI talent,18784,31976
-2019,,Other graduates,1305004,1831669
-2020,Agriculture & Environment,AI talent,9193,13227
-2020,Agriculture & Environment,Other graduates,536004,701726
-2020,Architecture & Built Environment,AI talent,6973,12163
-2020,Architecture & Built Environment,Other graduates,560702,873104
-2020,"Arts, Media & Design",AI talent,11905,19532
-2020,"Arts, Media & Design",Other graduates,1686597,2219302
-2020,Business & Economics,AI talent,63248,144232
-2020,Business & Economics,Other graduates,4360874,7310154
-2020,CS / IT,AI talent,193626,317033
-2020,CS / IT,Other graduates,1339936,1991845
-2020,Education & Teaching,AI talent,4617,8005
-2020,Education & Teaching,Other graduates,869247,1141499
-2020,Engineering & Technology,AI talent,94340,141964
-2020,Engineering & Technology,Other graduates,1393139,1911683
-2020,Health & Medicine,AI talent,13787,21477
-2020,Health & Medicine,Other graduates,1624821,2227122
-2020,Humanities & Languages,AI talent,10420,16045
-2020,Humanities & Languages,Other graduates,883964,1158274
-2020,Law,AI talent,3263,6503
-2020,Law,Other graduates,668940,965125
-2020,Natural Sciences & Math,AI talent,74165,108133
-2020,Natural Sciences & Math,Other graduates,1066557,1330146
-2020,Other / Non-degree,AI talent,2936,5597
-2020,Other / Non-degree,Other graduates,297355,423724
-2020,Psychology & Social Work,AI talent,9240,14596
-2020,Psychology & Social Work,Other graduates,1078612,1398793
-2020,Skills & Short Courses,AI talent,1847,3571
-2020,Skills & Short Courses,Other graduates,49729,79777
-2020,Social Sciences,AI talent,10321,18927
-2020,Social Sciences,Other graduates,1249111,1774713
-2020,,AI talent,20508,35226
-2020,,Other graduates,1304787,1838180
-2021,Agriculture & Environment,AI talent,10253,14907
-2021,Agriculture & Environment,Other graduates,585950,767852
-2021,Architecture & Built Environment,AI talent,7906,13831
-2021,Architecture & Built Environment,Other graduates,615523,954829
-2021,"Arts, Media & Design",AI talent,12725,20913
-2021,"Arts, Media & Design",Other graduates,1817997,2391288
-2021,Business & Economics,AI talent,73675,168575
-2021,Business & Economics,Other graduates,4818028,8064879
-2021,CS / IT,AI talent,239102,396565
-2021,CS / IT,Other graduates,1489100,2221732
-2021,Education & Teaching,AI talent,5152,9003
-2021,Education & Teaching,Other graduates,916325,1205828
-2021,Engineering & Technology,AI talent,110156,166159
-2021,Engineering & Technology,Other graduates,1530699,2097578
-2021,Health & Medicine,AI talent,16167,25432
-2021,Health & Medicine,Other graduates,1780587,2453366
-2021,Humanities & Languages,AI talent,11385,17529
-2021,Humanities & Languages,Other graduates,938597,1229064
-2021,Law,AI talent,3760,7493
-2021,Law,Other graduates,736152,1058981
-2021,Natural Sciences & Math,AI talent,82781,121885
-2021,Natural Sciences & Math,Other graduates,1166975,1455992
-2021,Other / Non-degree,AI talent,3258,6319
-2021,Other / Non-degree,Other graduates,322587,460654
-2021,Psychology & Social Work,AI talent,10258,16464
-2021,Psychology & Social Work,Other graduates,1179393,1534181
-2021,Skills & Short Courses,AI talent,2229,4359
-2021,Skills & Short Courses,Other graduates,53502,85709
-2021,Social Sciences,AI talent,11464,21252
-2021,Social Sciences,Other graduates,1365498,1942749
-2021,,AI talent,24059,41954
-2021,,Other graduates,1417488,1996082
-2022,Agriculture & Environment,AI talent,11158,16364
-2022,Agriculture & Environment,Other graduates,626200,827992
-2022,Architecture & Built Environment,AI talent,8633,15297
-2022,Architecture & Built Environment,Other graduates,656730,1018751
-2022,"Arts, Media & Design",AI talent,13497,22099
-2022,"Arts, Media & Design",Other graduates,1905192,2509801
-2022,Business & Economics,AI talent,80783,189128
-2022,Business & Economics,Other graduates,5101320,8602164
-2022,CS / IT,AI talent,281145,475241
-2022,CS / IT,Other graduates,1603114,2415659
-2022,Education & Teaching,AI talent,5683,9925
-2022,Education & Teaching,Other graduates,953848,1265225
-2022,Engineering & Technology,AI talent,120485,184391
-2022,Engineering & Technology,Other graduates,1621224,2236972
-2022,Health & Medicine,AI talent,18468,29367
-2022,Health & Medicine,Other graduates,1877414,2619556
-2022,Humanities & Languages,AI talent,12194,18932
-2022,Humanities & Languages,Other graduates,975878,1281876
-2022,Law,AI talent,4028,8066
-2022,Law,Other graduates,782457,1131608
-2022,Natural Sciences & Math,AI talent,88897,133151
-2022,Natural Sciences & Math,Other graduates,1252467,1568361
-2022,Other / Non-degree,AI talent,3480,6827
-2022,Other / Non-degree,Other graduates,335675,481799
-2022,Psychology & Social Work,AI talent,10990,17929
-2022,Psychology & Social Work,Other graduates,1269832,1666549
-2022,Skills & Short Courses,AI talent,2556,5157
-2022,Skills & Short Courses,Other graduates,55990,89905
-2022,Social Sciences,AI talent,12335,23067
-2022,Social Sciences,Other graduates,1445603,2071715
-2022,,AI talent,27488,48603
-2022,,Other graduates,1516998,2142427
-2023,Agriculture & Environment,AI talent,11897,17827
-2023,Agriculture & Environment,Other graduates,631338,850232
-2023,Architecture & Built Environment,AI talent,9104,16470
-2023,Architecture & Built Environment,Other graduates,665881,1045280
-2023,"Arts, Media & Design",AI talent,14221,23339
-2023,"Arts, Media & Design",Other graduates,1869577,2483796
-2023,Business & Economics,AI talent,84484,203227
-2023,Business & Economics,Other graduates,5050864,8697127
-2023,CS / IT,AI talent,318363,559416
-2023,CS / IT,Other graduates,1606238,2484843
-2023,Education & Teaching,AI talent,5982,10709
-2023,Education & Teaching,Other graduates,939729,1261299
-2023,Engineering & Technology,AI talent,126014,197330
-2023,Engineering & Technology,Other graduates,1601579,2250019
-2023,Health & Medicine,AI talent,20202,32969
-2023,Health & Medicine,Other graduates,1886769,2688265
-2023,Humanities & Languages,AI talent,12711,19880
-2023,Humanities & Languages,Other graduates,951911,1265290
-2023,Law,AI talent,4110,8555
-2023,Law,Other graduates,779226,1147439
-2023,Natural Sciences & Math,AI talent,90094,138673
-2023,Natural Sciences & Math,Other graduates,1268236,1604615
-2023,Other / Non-degree,AI talent,3751,7253
-2023,Other / Non-degree,Other graduates,330128,480128
-2023,Psychology & Social Work,AI talent,11726,19492
-2023,Psychology & Social Work,Other graduates,1308415,1743350
-2023,Skills & Short Courses,AI talent,2876,5900
-2023,Skills & Short Courses,Other graduates,54697,89385
-2023,Social Sciences,AI talent,12745,24207
-2023,Social Sciences,Other graduates,1433451,2091144
-2023,,AI talent,30515,55451
-2023,,Other graduates,1558490,2219944
-2024,Agriculture & Environment,AI talent,12615,19173
-2024,Agriculture & Environment,Other graduates,642792,873728
-2024,Architecture & Built Environment,AI talent,10109,18413
-2024,Architecture & Built Environment,Other graduates,681601,1076767
-2024,"Arts, Media & Design",AI talent,15339,25487
-2024,"Arts, Media & Design",Other graduates,1861134,2483677
-2024,Business & Economics,AI talent,95038,231717
-2024,Business & Economics,Other graduates,5114503,8947648
-2024,CS / IT,AI talent,395055,708505
-2024,CS / IT,Other graduates,1681256,2642879
-2024,Education & Teaching,AI talent,6489,11929
-2024,Education & Teaching,Other graduates,918622,1242197
-2024,Engineering & Technology,AI talent,137918,218661
-2024,Engineering & Technology,Other graduates,1603767,2270113
-2024,Health & Medicine,AI talent,23109,38041
-2024,Health & Medicine,Other graduates,1925620,2756605
-2024,Humanities & Languages,AI talent,13779,22116
-2024,Humanities & Languages,Other graduates,936269,1251549
-2024,Law,AI talent,4543,9770
-2024,Law,Other graduates,775128,1182341
-2024,Natural Sciences & Math,AI talent,94585,148065
-2024,Natural Sciences & Math,Other graduates,1305777,1655482
-2024,Other / Non-degree,AI talent,4461,8624
-2024,Other / Non-degree,Other graduates,336520,492355
-2024,Psychology & Social Work,AI talent,12852,21510
-2024,Psychology & Social Work,Other graduates,1369768,1831279
-2024,Skills & Short Courses,AI talent,3326,7009
-2024,Skills & Short Courses,Other graduates,54651,90222
-2024,Social Sciences,AI talent,14108,27395
-2024,Social Sciences,Other graduates,1449125,2134340
-2024,,AI talent,36206,66900
-2024,,Other graduates,1618933,2314046
-2025,Agriculture & Environment,AI talent,13321,20659
-2025,Agriculture & Environment,Other graduates,644615,879991
-2025,Architecture & Built Environment,AI talent,10765,20128
-2025,Architecture & Built Environment,Other graduates,685476,1089015
-2025,"Arts, Media & Design",AI talent,16003,27601
-2025,"Arts, Media & Design",Other graduates,1818221,2428255
-2025,Business & Economics,AI talent,105693,263170
-2025,Business & Economics,Other graduates,5199615,9163503
-2025,CS / IT,AI talent,475876,870078
-2025,CS / IT,Other graduates,1754641,2783507
-2025,Education & Teaching,AI talent,7007,13214
-2025,Education & Teaching,Other graduates,881516,1200442
-2025,Engineering & Technology,AI talent,150794,241711
-2025,Engineering & Technology,Other graduates,1613907,2290877
-2025,Health & Medicine,AI talent,25993,43285
-2025,Health & Medicine,Other graduates,1934943,2771682
-2025,Humanities & Languages,AI talent,14263,23517
-2025,Humanities & Languages,Other graduates,906533,1213943
-2025,Law,AI talent,5016,11199
-2025,Law,Other graduates,762027,1202571
-2025,Natural Sciences & Math,AI talent,98745,156584
-2025,Natural Sciences & Math,Other graduates,1329761,1683246
-2025,Other / Non-degree,AI talent,5612,10682
-2025,Other / Non-degree,Other graduates,351911,512679
-2025,Psychology & Social Work,AI talent,14361,24544
-2025,Psychology & Social Work,Other graduates,1424318,1905918
-2025,Skills & Short Courses,AI talent,3912,8178
-2025,Skills & Short Courses,Other graduates,54943,90874
-2025,Social Sciences,AI talent,15642,31044
-2025,Social Sciences,Other graduates,1472464,2172331
-2025,,AI talent,42611,79690
-2025,,Other graduates,1685234,2409181
-2026,Agriculture & Environment,AI talent,11607,18345
-2026,Agriculture & Environment,Other graduates,543570,745649
-2026,Architecture & Built Environment,AI talent,9511,18268
-2026,Architecture & Built Environment,Other graduates,589055,934467
-2026,"Arts, Media & Design",AI talent,13803,24292
-2026,"Arts, Media & Design",Other graduates,1486758,1988979
-2026,Business & Economics,AI talent,97776,246598
-2026,Business & Economics,Other graduates,4561704,8043324
-2026,CS / IT,AI talent,452680,842177
-2026,CS / IT,Other graduates,1590424,2528682
-2026,Education & Teaching,AI talent,6449,12462
-2026,Education & Teaching,Other graduates,740064,1013773
-2026,Engineering & Technology,AI talent,136819,220152
-2026,Engineering & Technology,Other graduates,1414309,1995642
-2026,Health & Medicine,AI talent,23380,40000
-2026,Health & Medicine,Other graduates,1678595,2397204
-2026,Humanities & Languages,AI talent,12211,20459
-2026,Humanities & Languages,Other graduates,732749,987605
-2026,Law,AI talent,4748,10799
-2026,Law,Other graduates,647020,1037225
-2026,Natural Sciences & Math,AI talent,85493,137024
-2026,Natural Sciences & Math,Other graduates,1139300,1441371
-2026,Other / Non-degree,AI talent,5710,10944
-2026,Other / Non-degree,Other graduates,320535,466385
-2026,Psychology & Social Work,AI talent,13142,22743
-2026,Psychology & Social Work,Other graduates,1246905,1674150
-2026,Skills & Short Courses,AI talent,3642,7819
-2026,Skills & Short Courses,Other graduates,48336,79712
-2026,Social Sciences,AI talent,14486,29124
-2026,Social Sciences,Other graduates,1275948,1885929
-2026,,AI talent,39870,75653
-2026,,Other graduates,1470237,2108277
+cal_year,stage,fgroup,grp,junior_n,n
+2015,0,Agriculture & Environment,AI talent,1415,1708
+2015,0,Agriculture & Environment,Other graduates,90352,106297
+2015,0,Architecture & Built Environment,AI talent,1139,1626
+2015,0,Architecture & Built Environment,Other graduates,99493,131684
+2015,0,"Arts, Media & Design",AI talent,2091,2835
+2015,0,"Arts, Media & Design",Other graduates,311354,371576
+2015,0,Business & Economics,AI talent,9089,16483
+2015,0,Business & Economics,Other graduates,754283,1068573
+2015,0,CS / IT,AI talent,23909,31675
+2015,0,CS / IT,Other graduates,219736,285603
+2015,0,Education & Teaching,AI talent,694,1006
+2015,0,Education & Teaching,Other graduates,149021,182163
+2015,0,Engineering & Technology,AI talent,14118,17633
+2015,0,Engineering & Technology,Other graduates,228200,277625
+2015,0,Health & Medicine,AI talent,1993,2547
+2015,0,Health & Medicine,Other graduates,249493,308708
+2015,0,Humanities & Languages,AI talent,1547,2075
+2015,0,Humanities & Languages,Other graduates,149509,179415
+2015,0,Law,AI talent,513,787
+2015,0,Law,Other graduates,116677,147828
+2015,0,Natural Sciences & Math,AI talent,11981,14431
+2015,0,Natural Sciences & Math,Other graduates,172685,197200
+2015,0,Other / Non-degree,AI talent,474,692
+2015,0,Other / Non-degree,Other graduates,57741,71570
+2015,0,Psychology & Social Work,AI talent,1504,1881
+2015,0,Psychology & Social Work,Other graduates,183680,216847
+2015,0,Skills & Short Courses,AI talent,245,385
+2015,0,Skills & Short Courses,Other graduates,9279,12829
+2015,0,Social Sciences,AI talent,1732,2501
+2015,0,Social Sciences,Other graduates,217602,272924
+2015,0,,AI talent,2829,3926
+2015,0,,Other graduates,212643,269076
+2015,1,Agriculture & Environment,AI talent,1082,1480
+2015,1,Agriculture & Environment,Other graduates,77867,97455
+2015,1,Architecture & Built Environment,AI talent,846,1380
+2015,1,Architecture & Built Environment,Other graduates,88201,126990
+2015,1,"Arts, Media & Design",AI talent,1798,2701
+2015,1,"Arts, Media & Design",Other graduates,286186,355860
+2015,1,Business & Economics,AI talent,6965,14936
+2015,1,Business & Economics,Other graduates,658350,1014596
+2015,1,CS / IT,AI talent,16176,24916
+2015,1,CS / IT,Other graduates,183758,256424
+2015,1,Education & Teaching,AI talent,546,861
+2015,1,Education & Teaching,Other graduates,137142,172668
+2015,1,Engineering & Technology,AI talent,9689,13789
+2015,1,Engineering & Technology,Other graduates,190179,247181
+2015,1,Health & Medicine,AI talent,1437,2128
+2015,1,Health & Medicine,Other graduates,212987,280437
+2015,1,Humanities & Languages,AI talent,1426,2082
+2015,1,Humanities & Languages,Other graduates,150179,186390
+2015,1,Law,AI talent,453,822
+2015,1,Law,Other graduates,105860,143205
+2015,1,Natural Sciences & Math,AI talent,8563,11394
+2015,1,Natural Sciences & Math,Other graduates,149155,178801
+2015,1,Other / Non-degree,AI talent,301,573
+2015,1,Other / Non-degree,Other graduates,46026,61621
+2015,1,Psychology & Social Work,AI talent,1115,1572
+2015,1,Psychology & Social Work,Other graduates,156231,193935
+2015,1,Skills & Short Courses,AI talent,177,288
+2015,1,Skills & Short Courses,Other graduates,7292,10831
+2015,1,Social Sciences,AI talent,1500,2473
+2015,1,Social Sciences,Other graduates,193555,257756
+2015,1,,AI talent,2146,3313
+2015,1,,Other graduates,197831,264407
+2015,2,Agriculture & Environment,AI talent,915,1267
+2015,2,Agriculture & Environment,Other graduates,67807,88831
+2015,2,Architecture & Built Environment,AI talent,664,1195
+2015,2,Architecture & Built Environment,Other graduates,80226,123445
+2015,2,"Arts, Media & Design",AI talent,1632,2588
+2015,2,"Arts, Media & Design",Other graduates,255244,332481
+2015,2,Business & Economics,AI talent,5791,13992
+2015,2,Business & Economics,Other graduates,580080,962308
+2015,2,CS / IT,AI talent,14269,23257
+2015,2,CS / IT,Other graduates,163821,240920
+2015,2,Education & Teaching,AI talent,488,806
+2015,2,Education & Teaching,Other graduates,126995,164628
+2015,2,Engineering & Technology,AI talent,7949,12068
+2015,2,Engineering & Technology,Other graduates,168395,228892
+2015,2,Health & Medicine,AI talent,1293,1985
+2015,2,Health & Medicine,Other graduates,180430,247677
+2015,2,Humanities & Languages,AI talent,1335,2026
+2015,2,Humanities & Languages,Other graduates,142848,184594
+2015,2,Law,AI talent,428,770
+2015,2,Law,Other graduates,97092,139520
+2015,2,Natural Sciences & Math,AI talent,7280,10270
+2015,2,Natural Sciences & Math,Other graduates,135387,169040
+2015,2,Other / Non-degree,AI talent,312,558
+2015,2,Other / Non-degree,Other graduates,39203,55482
+2015,2,Psychology & Social Work,AI talent,1012,1554
+2015,2,Psychology & Social Work,Other graduates,140143,180129
+2015,2,Skills & Short Courses,AI talent,130,254
+2015,2,Skills & Short Courses,Other graduates,6224,9861
+2015,2,Social Sciences,AI talent,1142,2021
+2015,2,Social Sciences,Other graduates,174515,244956
+2015,2,,AI talent,1845,3058
+2015,2,,Other graduates,182207,253252
+2015,3,Agriculture & Environment,AI talent,804,1165
+2015,3,Agriculture & Environment,Other graduates,60419,83747
+2015,3,Architecture & Built Environment,AI talent,625,1264
+2015,3,Architecture & Built Environment,Other graduates,72059,118935
+2015,3,"Arts, Media & Design",AI talent,1600,2712
+2015,3,"Arts, Media & Design",Other graduates,232098,317495
+2015,3,Business & Economics,AI talent,4662,13127
+2015,3,Business & Economics,Other graduates,526290,945472
+2015,3,CS / IT,AI talent,11560,20933
+2015,3,CS / IT,Other graduates,152683,238183
+2015,3,Education & Teaching,AI talent,459,806
+2015,3,Education & Teaching,Other graduates,122080,161518
+2015,3,Engineering & Technology,AI talent,6475,10765
+2015,3,Engineering & Technology,Other graduates,150474,217278
+2015,3,Health & Medicine,AI talent,1017,1711
+2015,3,Health & Medicine,Other graduates,157778,224815
+2015,3,Humanities & Languages,AI talent,1208,1980
+2015,3,Humanities & Languages,Other graduates,134929,182390
+2015,3,Law,AI talent,379,768
+2015,3,Law,Other graduates,87109,132244
+2015,3,Natural Sciences & Math,AI talent,6055,9153
+2015,3,Natural Sciences & Math,Other graduates,121892,159255
+2015,3,Other / Non-degree,AI talent,188,473
+2015,3,Other / Non-degree,Other graduates,34370,51216
+2015,3,Psychology & Social Work,AI talent,824,1366
+2015,3,Psychology & Social Work,Other graduates,123388,165759
+2015,3,Skills & Short Courses,AI talent,107,247
+2015,3,Skills & Short Courses,Other graduates,5448,9053
+2015,3,Social Sciences,AI talent,1016,2028
+2015,3,Social Sciences,Other graduates,155273,230826
+2015,3,,AI talent,1679,3003
+2015,3,,Other graduates,166770,242614
+2015,4,Agriculture & Environment,AI talent,618,981
+2015,4,Agriculture & Environment,Other graduates,47621,69404
+2015,4,Architecture & Built Environment,AI talent,468,991
+2015,4,Architecture & Built Environment,Other graduates,59098,104353
+2015,4,"Arts, Media & Design",AI talent,1280,2358
+2015,4,"Arts, Media & Design",Other graduates,191997,275130
+2015,4,Business & Economics,AI talent,3789,11962
+2015,4,Business & Economics,Other graduates,434238,844406
+2015,4,CS / IT,AI talent,9092,17861
+2015,4,CS / IT,Other graduates,127696,211247
+2015,4,Education & Teaching,AI talent,431,795
+2015,4,Education & Teaching,Other graduates,102826,139671
+2015,4,Engineering & Technology,AI talent,4917,8929
+2015,4,Engineering & Technology,Other graduates,121045,186538
+2015,4,Health & Medicine,AI talent,843,1461
+2015,4,Health & Medicine,Other graduates,121991,181743
+2015,4,Humanities & Languages,AI talent,982,1735
+2015,4,Humanities & Languages,Other graduates,112886,159566
+2015,4,Law,AI talent,289,701
+2015,4,Law,Other graduates,68977,111182
+2015,4,Natural Sciences & Math,AI talent,4838,7691
+2015,4,Natural Sciences & Math,Other graduates,99438,136169
+2015,4,Other / Non-degree,AI talent,161,398
+2015,4,Other / Non-degree,Other graduates,27077,42939
+2015,4,Psychology & Social Work,AI talent,657,1149
+2015,4,Psychology & Social Work,Other graduates,97516,135795
+2015,4,Skills & Short Courses,AI talent,110,218
+2015,4,Skills & Short Courses,Other graduates,4623,8200
+2015,4,Social Sciences,AI talent,901,1846
+2015,4,Social Sciences,Other graduates,127098,200282
+2015,4,,AI talent,1269,2461
+2015,4,,Other graduates,137010,209391
+2015,5,Agriculture & Environment,AI talent,468,763
+2015,5,Agriculture & Environment,Other graduates,39564,60449
+2015,5,Architecture & Built Environment,AI talent,395,884
+2015,5,Architecture & Built Environment,Other graduates,50496,95429
+2015,5,"Arts, Media & Design",AI talent,1145,2203
+2015,5,"Arts, Media & Design",Other graduates,166177,248657
+2015,5,Business & Economics,AI talent,3092,10809
+2015,5,Business & Economics,Other graduates,378946,790670
+2015,5,CS / IT,AI talent,7402,16094
+2015,5,CS / IT,Other graduates,109494,194493
+2015,5,Education & Teaching,AI talent,351,659
+2015,5,Education & Teaching,Other graduates,91713,128215
+2015,5,Engineering & Technology,AI talent,3924,7796
+2015,5,Engineering & Technology,Other graduates,101970,168505
+2015,5,Health & Medicine,AI talent,625,1251
+2015,5,Health & Medicine,Other graduates,103308,160738
+2015,5,Humanities & Languages,AI talent,863,1639
+2015,5,Humanities & Languages,Other graduates,99001,145526
+2015,5,Law,AI talent,224,613
+2015,5,Law,Other graduates,59224,101017
+2015,5,Natural Sciences & Math,AI talent,3845,6588
+2015,5,Natural Sciences & Math,Other graduates,86841,125393
+2015,5,Other / Non-degree,AI talent,133,330
+2015,5,Other / Non-degree,Other graduates,22049,36999
+2015,5,Psychology & Social Work,AI talent,529,996
+2015,5,Psychology & Social Work,Other graduates,82319,119523
+2015,5,Skills & Short Courses,AI talent,61,158
+2015,5,Skills & Short Courses,Other graduates,3707,7135
+2015,5,Social Sciences,AI talent,697,1607
+2015,5,Social Sciences,Other graduates,110194,181742
+2015,5,,AI talent,1002,2146
+2015,5,,Other graduates,121113,193898
+2016,0,Agriculture & Environment,AI talent,1639,1952
+2016,0,Agriculture & Environment,Other graduates,95103,111426
+2016,0,Architecture & Built Environment,AI talent,1139,1637
+2016,0,Architecture & Built Environment,Other graduates,102216,135630
+2016,0,"Arts, Media & Design",AI talent,2264,3125
+2016,0,"Arts, Media & Design",Other graduates,319601,381144
+2016,0,Business & Economics,AI talent,10354,18222
+2016,0,Business & Economics,Other graduates,804739,1136676
+2016,0,CS / IT,AI talent,29529,39238
+2016,0,CS / IT,Other graduates,237403,307881
+2016,0,Education & Teaching,AI talent,826,1196
+2016,0,Education & Teaching,Other graduates,150633,184377
+2016,0,Engineering & Technology,AI talent,15697,19490
+2016,0,Engineering & Technology,Other graduates,245538,298546
+2016,0,Health & Medicine,AI talent,2301,2934
+2016,0,Health & Medicine,Other graduates,269031,333384
+2016,0,Humanities & Languages,AI talent,1693,2206
+2016,0,Humanities & Languages,Other graduates,151423,182291
+2016,0,Law,AI talent,583,909
+2016,0,Law,Other graduates,119264,151442
+2016,0,Natural Sciences & Math,AI talent,13387,16152
+2016,0,Natural Sciences & Math,Other graduates,181912,207116
+2016,0,Other / Non-degree,AI talent,552,808
+2016,0,Other / Non-degree,Other graduates,60949,75934
+2016,0,Psychology & Social Work,AI talent,1713,2254
+2016,0,Psychology & Social Work,Other graduates,192057,226400
+2016,0,Skills & Short Courses,AI talent,276,418
+2016,0,Skills & Short Courses,Other graduates,9505,13500
+2016,0,Social Sciences,AI talent,1864,2691
+2016,0,Social Sciences,Other graduates,227533,285152
+2016,0,,AI talent,3358,4609
+2016,0,,Other graduates,223174,282188
+2016,1,Agriculture & Environment,AI talent,1147,1548
+2016,1,Agriculture & Environment,Other graduates,82195,102739
+2016,1,Architecture & Built Environment,AI talent,977,1585
+2016,1,Architecture & Built Environment,Other graduates,91603,132531
+2016,1,"Arts, Media & Design",AI talent,1918,2814
+2016,1,"Arts, Media & Design",Other graduates,288737,359793
+2016,1,Business & Economics,AI talent,7668,16587
+2016,1,Business & Economics,Other graduates,696279,1072234
+2016,1,CS / IT,AI talent,19042,29074
+2016,1,CS / IT,Other graduates,201425,281312
+2016,1,Education & Teaching,AI talent,620,1000
+2016,1,Education & Teaching,Other graduates,141411,179067
+2016,1,Engineering & Technology,AI talent,11250,16038
+2016,1,Engineering & Technology,Other graduates,209344,271935
+2016,1,Health & Medicine,AI talent,1679,2380
+2016,1,Health & Medicine,Other graduates,229386,302727
+2016,1,Humanities & Languages,AI talent,1553,2288
+2016,1,Humanities & Languages,Other graduates,150400,187219
+2016,1,Law,AI talent,496,855
+2016,1,Law,Other graduates,109716,148728
+2016,1,Natural Sciences & Math,AI talent,9544,12907
+2016,1,Natural Sciences & Math,Other graduates,158864,190739
+2016,1,Other / Non-degree,AI talent,381,655
+2016,1,Other / Non-degree,Other graduates,49026,65452
+2016,1,Psychology & Social Work,AI talent,1273,1756
+2016,1,Psychology & Social Work,Other graduates,165819,206012
+2016,1,Skills & Short Courses,AI talent,171,340
+2016,1,Skills & Short Courses,Other graduates,8430,12449
+2016,1,Social Sciences,AI talent,1563,2522
+2016,1,Social Sciences,Other graduates,200571,267741
+2016,1,,AI talent,2434,3861
+2016,1,,Other graduates,204793,274482
+2016,2,Agriculture & Environment,AI talent,1063,1537
+2016,2,Agriculture & Environment,Other graduates,74701,97704
+2016,2,Architecture & Built Environment,AI talent,806,1403
+2016,2,Architecture & Built Environment,Other graduates,83950,128540
+2016,2,"Arts, Media & Design",AI talent,1684,2792
+2016,2,"Arts, Media & Design",Other graduates,272786,353782
+2016,2,Business & Economics,AI talent,6368,15611
+2016,2,Business & Economics,Other graduates,623050,1031585
+2016,2,CS / IT,AI talent,15668,26041
+2016,2,CS / IT,Other graduates,177889,260639
+2016,2,Education & Teaching,AI talent,535,895
+2016,2,Education & Teaching,Other graduates,132857,171979
+2016,2,Engineering & Technology,AI talent,9326,14208
+2016,2,Engineering & Technology,Other graduates,187680,255289
+2016,2,Health & Medicine,AI talent,1324,2120
+2016,2,Health & Medicine,Other graduates,205677,281071
+2016,2,Humanities & Languages,AI talent,1408,2152
+2016,2,Humanities & Languages,Other graduates,146773,189236
+2016,2,Law,AI talent,426,850
+2016,2,Law,Other graduates,102344,145815
+2016,2,Natural Sciences & Math,AI talent,8366,11892
+2016,2,Natural Sciences & Math,Other graduates,146876,182919
+2016,2,Other / Non-degree,AI talent,293,605
+2016,2,Other / Non-degree,Other graduates,43422,61274
+2016,2,Psychology & Social Work,AI talent,1053,1605
+2016,2,Psychology & Social Work,Other graduates,151873,195409
+2016,2,Skills & Short Courses,AI talent,166,293
+2016,2,Skills & Short Courses,Other graduates,6940,10787
+2016,2,Social Sciences,AI talent,1437,2565
+2016,2,Social Sciences,Other graduates,184742,259533
+2016,2,,AI talent,2063,3445
+2016,2,,Other graduates,195356,271849
+2016,3,Agriculture & Environment,AI talent,870,1291
+2016,3,Agriculture & Environment,Other graduates,64703,88279
+2016,3,Architecture & Built Environment,AI talent,646,1236
+2016,3,Architecture & Built Environment,Other graduates,75484,123250
+2016,3,"Arts, Media & Design",AI talent,1548,2600
+2016,3,"Arts, Media & Design",Other graduates,244055,331518
+2016,3,Business & Economics,AI talent,5302,14330
+2016,3,Business & Economics,Other graduates,541579,962597
+2016,3,CS / IT,AI talent,13372,23600
+2016,3,CS / IT,Other graduates,156305,241744
+2016,3,Education & Teaching,AI talent,441,804
+2016,3,Education & Teaching,Other graduates,123939,164810
+2016,3,Engineering & Technology,AI talent,7526,12256
+2016,3,Engineering & Technology,Other graduates,161730,230900
+2016,3,Health & Medicine,AI talent,1239,2074
+2016,3,Health & Medicine,Other graduates,176442,250561
+2016,3,Humanities & Languages,AI talent,1299,2074
+2016,3,Humanities & Languages,Other graduates,137546,184423
+2016,3,Law,AI talent,399,798
+2016,3,Law,Other graduates,92838,140303
+2016,3,Natural Sciences & Math,AI talent,6986,10524
+2016,3,Natural Sciences & Math,Other graduates,131259,170561
+2016,3,Other / Non-degree,AI talent,285,590
+2016,3,Other / Non-degree,Other graduates,36747,54763
+2016,3,Psychology & Social Work,AI talent,949,1589
+2016,3,Psychology & Social Work,Other graduates,135738,180784
+2016,3,Skills & Short Courses,AI talent,121,263
+2016,3,Skills & Short Courses,Other graduates,5942,9822
+2016,3,Social Sciences,AI talent,1083,2100
+2016,3,Social Sciences,Other graduates,165080,244103
+2016,3,,AI talent,1800,3205
+2016,3,,Other graduates,178110,257420
+2016,4,Agriculture & Environment,AI talent,794,1215
+2016,4,Agriculture & Environment,Other graduates,57489,83460
+2016,4,Architecture & Built Environment,AI talent,575,1264
+2016,4,Architecture & Built Environment,Other graduates,67860,118620
+2016,4,"Arts, Media & Design",AI talent,1520,2733
+2016,4,"Arts, Media & Design",Other graduates,222517,316862
+2016,4,Business & Economics,AI talent,4258,13263
+2016,4,Business & Economics,Other graduates,492176,944752
+2016,4,CS / IT,AI talent,10786,21066
+2016,4,CS / IT,Other graduates,144520,237237
+2016,4,Education & Teaching,AI talent,449,843
+2016,4,Education & Teaching,Other graduates,119305,161865
+2016,4,Engineering & Technology,AI talent,6071,10854
+2016,4,Engineering & Technology,Other graduates,143484,218467
+2016,4,Health & Medicine,AI talent,992,1726
+2016,4,Health & Medicine,Other graduates,153602,227031
+2016,4,Humanities & Languages,AI talent,1135,1976
+2016,4,Humanities & Languages,Other graduates,130186,182452
+2016,4,Law,AI talent,337,754
+2016,4,Law,Other graduates,83386,132940
+2016,4,Natural Sciences & Math,AI talent,5670,9242
+2016,4,Natural Sciences & Math,Other graduates,118009,160669
+2016,4,Other / Non-degree,AI talent,194,504
+2016,4,Other / Non-degree,Other graduates,32386,50791
+2016,4,Psychology & Social Work,AI talent,759,1330
+2016,4,Psychology & Social Work,Other graduates,119456,166052
+2016,4,Skills & Short Courses,AI talent,99,246
+2016,4,Skills & Short Courses,Other graduates,5226,9011
+2016,4,Social Sciences,AI talent,915,2044
+2016,4,Social Sciences,Other graduates,147637,229908
+2016,4,,AI talent,1598,3037
+2016,4,,Other graduates,162233,245073
+2016,5,Agriculture & Environment,AI talent,565,992
+2016,5,Agriculture & Environment,Other graduates,45903,69585
+2016,5,Architecture & Built Environment,AI talent,423,997
+2016,5,Architecture & Built Environment,Other graduates,55931,104266
+2016,5,"Arts, Media & Design",AI talent,1177,2373
+2016,5,"Arts, Media & Design",Other graduates,184518,274225
+2016,5,Business & Economics,AI talent,3413,11996
+2016,5,Business & Economics,Other graduates,407179,844602
+2016,5,CS / IT,AI talent,8264,17861
+2016,5,CS / IT,Other graduates,121075,211090
+2016,5,Education & Teaching,AI talent,415,792
+2016,5,Education & Teaching,Other graduates,101101,140266
+2016,5,Engineering & Technology,AI talent,4568,9009
+2016,5,Engineering & Technology,Other graduates,114987,186704
+2016,5,Health & Medicine,AI talent,789,1496
+2016,5,Health & Medicine,Other graduates,119691,183740
+2016,5,Humanities & Languages,AI talent,938,1750
+2016,5,Humanities & Languages,Other graduates,109193,159588
+2016,5,Law,AI talent,247,682
+2016,5,Law,Other graduates,65655,111115
+2016,5,Natural Sciences & Math,AI talent,4591,7815
+2016,5,Natural Sciences & Math,Other graduates,95937,137022
+2016,5,Other / Non-degree,AI talent,143,385
+2016,5,Other / Non-degree,Other graduates,25666,42704
+2016,5,Psychology & Social Work,AI talent,613,1146
+2016,5,Psychology & Social Work,Other graduates,94255,135788
+2016,5,Skills & Short Courses,AI talent,98,208
+2016,5,Skills & Short Courses,Other graduates,4326,8015
+2016,5,Social Sciences,AI talent,849,1869
+2016,5,Social Sciences,Other graduates,121218,199630
+2016,5,,AI talent,1193,2447
+2016,5,,Other graduates,132662,210680
+2017,0,Agriculture & Environment,AI talent,1911,2311
+2017,0,Agriculture & Environment,Other graduates,102697,119945
+2017,0,Architecture & Built Environment,AI talent,1387,1931
+2017,0,Architecture & Built Environment,Other graduates,106864,141697
+2017,0,"Arts, Media & Design",AI talent,2368,3252
+2017,0,"Arts, Media & Design",Other graduates,327897,390966
+2017,0,Business & Economics,AI talent,12384,21434
+2017,0,Business & Economics,Other graduates,854078,1203414
+2017,0,CS / IT,AI talent,35585,47541
+2017,0,CS / IT,Other graduates,252072,327117
+2017,0,Education & Teaching,AI talent,867,1306
+2017,0,Education & Teaching,Other graduates,155618,190664
+2017,0,Engineering & Technology,AI talent,18511,23005
+2017,0,Engineering & Technology,Other graduates,266674,322209
+2017,0,Health & Medicine,AI talent,2571,3339
+2017,0,Health & Medicine,Other graduates,288548,356727
+2017,0,Humanities & Languages,AI talent,1965,2585
+2017,0,Humanities & Languages,Other graduates,157431,189066
+2017,0,Law,AI talent,619,930
+2017,0,Law,Other graduates,123364,156188
+2017,0,Natural Sciences & Math,AI talent,14948,18104
+2017,0,Natural Sciences & Math,Other graduates,193157,219367
+2017,0,Other / Non-degree,AI talent,632,958
+2017,0,Other / Non-degree,Other graduates,62725,77892
+2017,0,Psychology & Social Work,AI talent,1779,2303
+2017,0,Psychology & Social Work,Other graduates,200231,236047
+2017,0,Skills & Short Courses,AI talent,322,520
+2017,0,Skills & Short Courses,Other graduates,9956,13914
+2017,0,Social Sciences,AI talent,2023,2874
+2017,0,Social Sciences,Other graduates,239980,299975
+2017,0,,AI talent,3756,5262
+2017,0,,Other graduates,228884,289853
+2017,1,Agriculture & Environment,AI talent,1396,1821
+2017,1,Agriculture & Environment,Other graduates,87276,108472
+2017,1,Architecture & Built Environment,AI talent,968,1610
+2017,1,Architecture & Built Environment,Other graduates,95030,137588
+2017,1,"Arts, Media & Design",AI talent,2007,2980
+2017,1,"Arts, Media & Design",Other graduates,297315,369434
+2017,1,Business & Economics,AI talent,8684,18302
+2017,1,Business & Economics,Other graduates,742591,1140030
+2017,1,CS / IT,AI talent,23631,36436
+2017,1,CS / IT,Other graduates,220089,306752
+2017,1,Education & Teaching,AI talent,745,1186
+2017,1,Education & Teaching,Other graduates,143176,181672
+2017,1,Engineering & Technology,AI talent,12844,18073
+2017,1,Engineering & Technology,Other graduates,229246,296797
+2017,1,Health & Medicine,AI talent,1859,2658
+2017,1,Health & Medicine,Other graduates,246434,325876
+2017,1,Humanities & Languages,AI talent,1667,2333
+2017,1,Humanities & Languages,Other graduates,152372,189978
+2017,1,Law,AI talent,548,960
+2017,1,Law,Other graduates,113089,152768
+2017,1,Natural Sciences & Math,AI talent,10818,14669
+2017,1,Natural Sciences & Math,Other graduates,168490,201392
+2017,1,Other / Non-degree,AI talent,509,834
+2017,1,Other / Non-degree,Other graduates,51625,69345
+2017,1,Psychology & Social Work,AI talent,1456,2135
+2017,1,Psychology & Social Work,Other graduates,173250,214930
+2017,1,Skills & Short Courses,AI talent,248,428
+2017,1,Skills & Short Courses,Other graduates,8646,13194
+2017,1,Social Sciences,AI talent,1657,2716
+2017,1,Social Sciences,Other graduates,207607,277254
+2017,1,,AI talent,2890,4519
+2017,1,,Other graduates,214597,287105
+2017,2,Agriculture & Environment,AI talent,1148,1658
+2017,2,Agriculture & Environment,Other graduates,79390,103573
+2017,2,Architecture & Built Environment,AI talent,954,1690
+2017,2,Architecture & Built Environment,Other graduates,88443,136105
+2017,2,"Arts, Media & Design",AI talent,1865,2931
+2017,2,"Arts, Media & Design",Other graduates,276735,359411
+2017,2,Business & Economics,AI talent,7297,17831
+2017,2,Business & Economics,Other graduates,665001,1099405
+2017,2,CS / IT,AI talent,18621,30757
+2017,2,CS / IT,Other graduates,197355,289597
+2017,2,Education & Teaching,AI talent,619,1060
+2017,2,Education & Teaching,Other graduates,138137,179454
+2017,2,Engineering & Technology,AI talent,10996,16849
+2017,2,Engineering & Technology,Other graduates,209020,284396
+2017,2,Health & Medicine,AI talent,1644,2469
+2017,2,Health & Medicine,Other graduates,222080,303959
+2017,2,Humanities & Languages,AI talent,1542,2414
+2017,2,Humanities & Languages,Other graduates,148075,191289
+2017,2,Law,AI talent,475,906
+2017,2,Law,Other graduates,106498,151933
+2017,2,Natural Sciences & Math,AI talent,9471,13714
+2017,2,Natural Sciences & Math,Other graduates,157401,196118
+2017,2,Other / Non-degree,AI talent,365,681
+2017,2,Other / Non-degree,Other graduates,46500,65273
+2017,2,Psychology & Social Work,AI talent,1234,1857
+2017,2,Psychology & Social Work,Other graduates,161418,207858
+2017,2,Skills & Short Courses,AI talent,163,359
+2017,2,Skills & Short Courses,Other graduates,8032,12550
+2017,2,Social Sciences,AI talent,1495,2637
+2017,2,Social Sciences,Other graduates,191351,269268
+2017,2,,AI talent,2366,4025
+2017,2,,Other graduates,202870,283309
+2017,3,Agriculture & Environment,AI talent,1012,1551
+2017,3,Agriculture & Environment,Other graduates,71647,97861
+2017,3,Architecture & Built Environment,AI talent,727,1416
+2017,3,Architecture & Built Environment,Other graduates,80441,130290
+2017,3,"Arts, Media & Design",AI talent,1658,2897
+2017,3,"Arts, Media & Design",Other graduates,261017,352735
+2017,3,Business & Economics,AI talent,5862,16049
+2017,3,Business & Economics,Other graduates,584878,1039063
+2017,3,CS / IT,AI talent,14835,26715
+2017,3,CS / IT,Other graduates,171555,264169
+2017,3,Education & Teaching,AI talent,537,954
+2017,3,Education & Teaching,Other graduates,130092,172528
+2017,3,Engineering & Technology,AI talent,8937,14803
+2017,3,Engineering & Technology,Other graduates,182229,260448
+2017,3,Health & Medicine,AI talent,1309,2214
+2017,3,Health & Medicine,Other graduates,200981,284148
+2017,3,Humanities & Languages,AI talent,1359,2211
+2017,3,Humanities & Languages,Other graduates,142691,190948
+2017,3,Law,AI talent,402,905
+2017,3,Law,Other graduates,97847,146819
+2017,3,Natural Sciences & Math,AI talent,8066,12397
+2017,3,Natural Sciences & Math,Other graduates,143416,185808
+2017,3,Other / Non-degree,AI talent,283,617
+2017,3,Other / Non-degree,Other graduates,41058,60948
+2017,3,Psychology & Social Work,AI talent,1037,1662
+2017,3,Psychology & Social Work,Other graduates,147331,196153
+2017,3,Skills & Short Courses,AI talent,159,302
+2017,3,Skills & Short Courses,Other graduates,6606,10809
+2017,3,Social Sciences,AI talent,1386,2654
+2017,3,Social Sciences,Other graduates,176032,259634
+2017,3,,AI talent,2031,3621
+2017,3,,Other graduates,190913,276144
+2017,4,Agriculture & Environment,AI talent,866,1378
+2017,4,Agriculture & Environment,Other graduates,62491,88594
+2017,4,Architecture & Built Environment,AI talent,619,1260
+2017,4,Architecture & Built Environment,Other graduates,71849,124413
+2017,4,"Arts, Media & Design",AI talent,1489,2665
+2017,4,"Arts, Media & Design",Other graduates,234274,330788
+2017,4,Business & Economics,AI talent,4775,14456
+2017,4,Business & Economics,Other graduates,510518,968793
+2017,4,CS / IT,AI talent,12408,23918
+2017,4,CS / IT,Other graduates,149707,243221
+2017,4,Education & Teaching,AI talent,454,845
+2017,4,Education & Teaching,Other graduates,121871,165456
+2017,4,Engineering & Technology,AI talent,7152,12648
+2017,4,Engineering & Technology,Other graduates,155616,233968
+2017,4,Health & Medicine,AI talent,1167,2143
+2017,4,Health & Medicine,Other graduates,171714,252364
+2017,4,Humanities & Languages,AI talent,1251,2135
+2017,4,Humanities & Languages,Other graduates,133676,185794
+2017,4,Law,AI talent,396,853
+2017,4,Law,Other graduates,88815,141073
+2017,4,Natural Sciences & Math,AI talent,6711,10867
+2017,4,Natural Sciences & Math,Other graduates,127996,172903
+2017,4,Other / Non-degree,AI talent,253,606
+2017,4,Other / Non-degree,Other graduates,35016,54652
+2017,4,Psychology & Social Work,AI talent,938,1653
+2017,4,Psychology & Social Work,Other graduates,131076,180734
+2017,4,Skills & Short Courses,AI talent,109,257
+2017,4,Skills & Short Courses,Other graduates,5762,9890
+2017,4,Social Sciences,AI talent,1001,2104
+2017,4,Social Sciences,Other graduates,157613,244046
+2017,4,,AI talent,1731,3312
+2017,4,,Other graduates,173681,260181
+2017,5,Agriculture & Environment,AI talent,758,1223
+2017,5,Agriculture & Environment,Other graduates,55634,83977
+2017,5,Architecture & Built Environment,AI talent,571,1276
+2017,5,Architecture & Built Environment,Other graduates,64892,119482
+2017,5,"Arts, Media & Design",AI talent,1478,2818
+2017,5,"Arts, Media & Design",Other graduates,214515,316945
+2017,5,Business & Economics,AI talent,3941,13623
+2017,5,Business & Economics,Other graduates,467432,954933
+2017,5,CS / IT,AI talent,10031,21367
+2017,5,CS / IT,Other graduates,138843,239385
+2017,5,Education & Teaching,AI talent,447,846
+2017,5,Education & Teaching,Other graduates,117382,162822
+2017,5,Engineering & Technology,AI talent,5716,11134
+2017,5,Engineering & Technology,Other graduates,138044,220830
+2017,5,Health & Medicine,AI talent,978,1823
+2017,5,Health & Medicine,Other graduates,150176,229142
+2017,5,Humanities & Languages,AI talent,1121,2049
+2017,5,Humanities & Languages,Other graduates,126830,183841
+2017,5,Law,AI talent,301,788
+2017,5,Law,Other graduates,79959,133675
+2017,5,Natural Sciences & Math,AI talent,5459,9532
+2017,5,Natural Sciences & Math,Other graduates,114881,162978
+2017,5,Other / Non-degree,AI talent,180,515
+2017,5,Other / Non-degree,Other graduates,31195,50971
+2017,5,Psychology & Social Work,AI talent,744,1405
+2017,5,Psychology & Social Work,Other graduates,116215,166876
+2017,5,Skills & Short Courses,AI talent,82,247
+2017,5,Skills & Short Courses,Other graduates,5054,9093
+2017,5,Social Sciences,AI talent,894,2090
+2017,5,Social Sciences,Other graduates,141215,230019
+2017,5,,AI talent,1518,3083
+2017,5,,Other graduates,158710,248398
+2018,0,Agriculture & Environment,AI talent,2090,2554
+2018,0,Agriculture & Environment,Other graduates,111134,129665
+2018,0,Architecture & Built Environment,AI talent,1502,2144
+2018,0,Architecture & Built Environment,Other graduates,114519,151789
+2018,0,"Arts, Media & Design",AI talent,2415,3334
+2018,0,"Arts, Media & Design",Other graduates,348068,414712
+2018,0,Business & Economics,AI talent,15226,25915
+2018,0,Business & Economics,Other graduates,915648,1291953
+2018,0,CS / IT,AI talent,45678,60969
+2018,0,CS / IT,Other graduates,270808,352291
+2018,0,Education & Teaching,AI talent,893,1308
+2018,0,Education & Teaching,Other graduates,163221,199568
+2018,0,Engineering & Technology,AI talent,22430,27749
+2018,0,Engineering & Technology,Other graduates,288318,347757
+2018,0,Health & Medicine,AI talent,3016,3957
+2018,0,Health & Medicine,Other graduates,310526,384408
+2018,0,Humanities & Languages,AI talent,2144,2756
+2018,0,Humanities & Languages,Other graduates,166595,198884
+2018,0,Law,AI talent,680,1043
+2018,0,Law,Other graduates,130679,165525
+2018,0,Natural Sciences & Math,AI talent,17311,20832
+2018,0,Natural Sciences & Math,Other graduates,210213,238196
+2018,0,Other / Non-degree,AI talent,706,1059
+2018,0,Other / Non-degree,Other graduates,65232,81102
+2018,0,Psychology & Social Work,AI talent,2064,2668
+2018,0,Psychology & Social Work,Other graduates,214897,253706
+2018,0,Skills & Short Courses,AI talent,437,660
+2018,0,Skills & Short Courses,Other graduates,10111,14187
+2018,0,Social Sciences,AI talent,2250,3298
+2018,0,Social Sciences,Other graduates,258562,323392
+2018,0,,AI talent,4530,6460
+2018,0,,Other graduates,247966,313430
+2018,1,Agriculture & Environment,AI talent,1592,2157
+2018,1,Agriculture & Environment,Other graduates,94355,116968
+2018,1,Architecture & Built Environment,AI talent,1193,1896
+2018,1,Architecture & Built Environment,Other graduates,99136,143368
+2018,1,"Arts, Media & Design",AI talent,2108,3191
+2018,1,"Arts, Media & Design",Other graduates,308197,381908
+2018,1,Business & Economics,AI talent,10248,21486
+2018,1,Business & Economics,Other graduates,789161,1209441
+2018,1,CS / IT,AI talent,28348,44219
+2018,1,CS / IT,Other graduates,233821,326182
+2018,1,Education & Teaching,AI talent,782,1264
+2018,1,Education & Teaching,Other graduates,148385,188507
+2018,1,Engineering & Technology,AI talent,14967,21161
+2018,1,Engineering & Technology,Other graduates,246892,317172
+2018,1,Health & Medicine,AI talent,2127,3086
+2018,1,Health & Medicine,Other graduates,264438,349593
+2018,1,Humanities & Languages,AI talent,1866,2631
+2018,1,Humanities & Languages,Other graduates,158084,196727
+2018,1,Law,AI talent,571,992
+2018,1,Law,Other graduates,116670,157787
+2018,1,Natural Sciences & Math,AI talent,12194,16686
+2018,1,Natural Sciences & Math,Other graduates,179819,214119
+2018,1,Other / Non-degree,AI talent,532,916
+2018,1,Other / Non-degree,Other graduates,53919,71987
+2018,1,Psychology & Social Work,AI talent,1420,2088
+2018,1,Psychology & Social Work,Other graduates,181984,225661
+2018,1,Skills & Short Courses,AI talent,266,502
+2018,1,Skills & Short Courses,Other graduates,8935,13424
+2018,1,Social Sciences,AI talent,1803,2963
+2018,1,Social Sciences,Other graduates,221180,294039
+2018,1,,AI talent,3191,5118
+2018,1,,Other graduates,222002,296489
+2018,2,Agriculture & Environment,AI talent,1326,1856
+2018,2,Agriculture & Environment,Other graduates,85007,110439
+2018,2,Architecture & Built Environment,AI talent,956,1721
+2018,2,Architecture & Built Environment,Other graduates,91832,141482
+2018,2,"Arts, Media & Design",AI talent,1934,3095
+2018,2,"Arts, Media & Design",Other graduates,287601,372250
+2018,2,Business & Economics,AI talent,8240,19651
+2018,2,Business & Economics,Other graduates,712932,1176178
+2018,2,CS / IT,AI talent,23021,38574
+2018,2,CS / IT,Other graduates,217055,318862
+2018,2,Education & Teaching,AI talent,749,1272
+2018,2,Education & Teaching,Other graduates,140484,183652
+2018,2,Engineering & Technology,AI talent,12644,19308
+2018,2,Engineering & Technology,Other graduates,228461,310099
+2018,2,Health & Medicine,AI talent,1818,2807
+2018,2,Health & Medicine,Other graduates,240985,330869
+2018,2,Humanities & Languages,AI talent,1678,2489
+2018,2,Humanities & Languages,Other graduates,150752,195082
+2018,2,Law,AI talent,515,1041
+2018,2,Law,Other graduates,110320,156951
+2018,2,Natural Sciences & Math,AI talent,10656,15540
+2018,2,Natural Sciences & Math,Other graduates,168174,208557
+2018,2,Other / Non-degree,AI talent,487,853
+2018,2,Other / Non-degree,Other graduates,49359,70172
+2018,2,Psychology & Social Work,AI talent,1388,2248
+2018,2,Psychology & Social Work,Other graduates,170071,218692
+2018,2,Skills & Short Courses,AI talent,234,455
+2018,2,Skills & Short Courses,Other graduates,8329,13351
+2018,2,Social Sciences,AI talent,1619,2889
+2018,2,Social Sciences,Other graduates,199952,281767
+2018,2,,AI talent,2789,4740
+2018,2,,Other graduates,214559,298612
+2018,3,Agriculture & Environment,AI talent,1123,1721
+2018,3,Agriculture & Environment,Other graduates,76777,104524
+2018,3,Architecture & Built Environment,AI talent,936,1794
+2018,3,Architecture & Built Environment,Other graduates,84502,138323
+2018,3,"Arts, Media & Design",AI talent,1760,3040
+2018,3,"Arts, Media & Design",Other graduates,266665,360617
+2018,3,Business & Economics,AI talent,6697,18156
+2018,3,Business & Economics,Other graduates,629078,1113837
+2018,3,CS / IT,AI talent,17478,31423
+2018,3,CS / IT,Other graduates,191264,295240
+2018,3,Education & Teaching,AI talent,617,1103
+2018,3,Education & Teaching,Other graduates,136388,181679
+2018,3,Engineering & Technology,AI talent,10528,17415
+2018,3,Engineering & Technology,Other graduates,203864,291578
+2018,3,Health & Medicine,AI talent,1608,2572
+2018,3,Health & Medicine,Other graduates,219799,311308
+2018,3,Humanities & Languages,AI talent,1470,2481
+2018,3,Humanities & Languages,Other graduates,144707,193788
+2018,3,Law,AI talent,436,953
+2018,3,Law,Other graduates,103394,154929
+2018,3,Natural Sciences & Math,AI talent,9219,14343
+2018,3,Natural Sciences & Math,Other graduates,154599,200200
+2018,3,Other / Non-degree,AI talent,344,709
+2018,3,Other / Non-degree,Other graduates,44438,65577
+2018,3,Psychology & Social Work,AI talent,1181,1906
+2018,3,Psychology & Social Work,Other graduates,157931,210340
+2018,3,Skills & Short Courses,AI talent,150,375
+2018,3,Skills & Short Courses,Other graduates,7715,12701
+2018,3,Social Sciences,AI talent,1397,2752
+2018,3,Social Sciences,Other graduates,183502,272056
+2018,3,,AI talent,2298,4217
+2018,3,,Other graduates,200040,290490
+2018,4,Agriculture & Environment,AI talent,961,1601
+2018,4,Agriculture & Environment,Other graduates,69424,99094
+2018,4,Architecture & Built Environment,AI talent,696,1485
+2018,4,Architecture & Built Environment,Other graduates,76948,132451
+2018,4,"Arts, Media & Design",AI talent,1594,3000
+2018,4,"Arts, Media & Design",Other graduates,252183,354154
+2018,4,Business & Economics,AI talent,5402,16541
+2018,4,Business & Economics,Other graduates,556527,1053576
+2018,4,CS / IT,AI talent,13842,27214
+2018,4,CS / IT,Other graduates,165762,268458
+2018,4,Education & Teaching,AI talent,526,976
+2018,4,Education & Teaching,Other graduates,128802,174890
+2018,4,Engineering & Technology,AI talent,8330,15081
+2018,4,Engineering & Technology,Other graduates,175918,264899
+2018,4,Health & Medicine,AI talent,1247,2290
+2018,4,Health & Medicine,Other graduates,197758,289097
+2018,4,Humanities & Languages,AI talent,1312,2296
+2018,4,Humanities & Languages,Other graduates,139377,193249
+2018,4,Law,AI talent,390,939
+2018,4,Law,Other graduates,94817,149089
+2018,4,Natural Sciences & Math,AI talent,7685,12751
+2018,4,Natural Sciences & Math,Other graduates,140678,189946
+2018,4,Other / Non-degree,AI talent,246,644
+2018,4,Other / Non-degree,Other graduates,39495,61243
+2018,4,Psychology & Social Work,AI talent,961,1717
+2018,4,Psychology & Social Work,Other graduates,144694,199052
+2018,4,Skills & Short Courses,AI talent,163,330
+2018,4,Skills & Short Courses,Other graduates,6421,10965
+2018,4,Social Sciences,AI talent,1301,2694
+2018,4,Social Sciences,Other graduates,169505,262125
+2018,4,,AI talent,1947,3816
+2018,4,,Other graduates,187425,281248
+2018,5,Agriculture & Environment,AI talent,805,1399
+2018,5,Agriculture & Environment,Other graduates,60761,89757
+2018,5,Architecture & Built Environment,AI talent,607,1320
+2018,5,Architecture & Built Environment,Other graduates,69147,125902
+2018,5,"Arts, Media & Design",AI talent,1486,2773
+2018,5,"Arts, Media & Design",Other graduates,227612,332875
+2018,5,Business & Economics,AI talent,4447,14974
+2018,5,Business & Economics,Other graduates,488552,984751
+2018,5,CS / IT,AI talent,11629,24449
+2018,5,CS / IT,Other graduates,144894,247154
+2018,5,Education & Teaching,AI talent,457,892
+2018,5,Education & Teaching,Other graduates,120986,167724
+2018,5,Engineering & Technology,AI talent,6762,13064
+2018,5,Engineering & Technology,Other graduates,150262,238125
+2018,5,Health & Medicine,AI talent,1146,2261
+2018,5,Health & Medicine,Other graduates,170049,257139
+2018,5,Humanities & Languages,AI talent,1249,2218
+2018,5,Humanities & Languages,Other graduates,130779,187949
+2018,5,Law,AI talent,365,910
+2018,5,Law,Other graduates,85970,143357
+2018,5,Natural Sciences & Math,AI talent,6322,11145
+2018,5,Natural Sciences & Math,Other graduates,125483,176669
+2018,5,Other / Non-degree,AI talent,241,625
+2018,5,Other / Non-degree,Other graduates,33785,55289
+2018,5,Psychology & Social Work,AI talent,893,1708
+2018,5,Psychology & Social Work,Other graduates,128364,182734
+2018,5,Skills & Short Courses,AI talent,99,263
+2018,5,Skills & Short Courses,Other graduates,5573,9985
+2018,5,Social Sciences,AI talent,956,2216
+2018,5,Social Sciences,Other graduates,151974,246430
+2018,5,,AI talent,1640,3429
+2018,5,,Other graduates,170576,265117
+2019,0,Agriculture & Environment,AI talent,2298,2770
+2019,0,Agriculture & Environment,Other graduates,120120,140371
+2019,0,Architecture & Built Environment,AI talent,1714,2374
+2019,0,Architecture & Built Environment,Other graduates,123734,163386
+2019,0,"Arts, Media & Design",AI talent,2485,3481
+2019,0,"Arts, Media & Design",Other graduates,368772,438495
+2019,0,Business & Economics,AI talent,17799,29630
+2019,0,Business & Economics,Other graduates,977196,1374956
+2019,0,CS / IT,AI talent,54458,73149
+2019,0,CS / IT,Other graduates,292986,381384
+2019,0,Education & Teaching,AI talent,1031,1512
+2019,0,Education & Teaching,Other graduates,170434,208234
+2019,0,Engineering & Technology,AI talent,25587,31563
+2019,0,Engineering & Technology,Other graduates,305565,367762
+2019,0,Health & Medicine,AI talent,3447,4425
+2019,0,Health & Medicine,Other graduates,344844,424973
+2019,0,Humanities & Languages,AI talent,2309,2937
+2019,0,Humanities & Languages,Other graduates,176071,209362
+2019,0,Law,AI talent,764,1171
+2019,0,Law,Other graduates,141444,178799
+2019,0,Natural Sciences & Math,AI talent,19010,22969
+2019,0,Natural Sciences & Math,Other graduates,228289,258240
+2019,0,Other / Non-degree,AI talent,765,1106
+2019,0,Other / Non-degree,Other graduates,68170,84738
+2019,0,Psychology & Social Work,AI talent,2295,3013
+2019,0,Psychology & Social Work,Other graduates,231695,273008
+2019,0,Skills & Short Courses,AI talent,503,815
+2019,0,Skills & Short Courses,Other graduates,10643,14722
+2019,0,Social Sciences,AI talent,2575,3638
+2019,0,Social Sciences,Other graduates,277640,346444
+2019,0,,AI talent,5205,7279
+2019,0,,Other graduates,263658,333220
+2019,1,Agriculture & Environment,AI talent,1702,2314
+2019,1,Agriculture & Environment,Other graduates,100266,123953
+2019,1,Architecture & Built Environment,AI talent,1227,2006
+2019,1,Architecture & Built Environment,Other graduates,103716,149829
+2019,1,"Arts, Media & Design",AI talent,2165,3280
+2019,1,"Arts, Media & Design",Other graduates,322539,398831
+2019,1,Business & Economics,AI talent,11958,24818
+2019,1,Business & Economics,Other graduates,828866,1271247
+2019,1,CS / IT,AI talent,35344,55130
+2019,1,CS / IT,Other graduates,243810,340974
+2019,1,Education & Teaching,AI talent,772,1261
+2019,1,Education & Teaching,Other graduates,154070,195332
+2019,1,Engineering & Technology,AI talent,17517,24460
+2019,1,Engineering & Technology,Other graduates,257124,330468
+2019,1,Health & Medicine,AI talent,2533,3755
+2019,1,Health & Medicine,Other graduates,281910,373916
+2019,1,Humanities & Languages,AI talent,1983,2767
+2019,1,Humanities & Languages,Other graduates,163379,202167
+2019,1,Law,AI talent,606,1043
+2019,1,Law,Other graduates,121137,163412
+2019,1,Natural Sciences & Math,AI talent,13964,18891
+2019,1,Natural Sciences & Math,Other graduates,191402,226886
+2019,1,Other / Non-degree,AI talent,574,966
+2019,1,Other / Non-degree,Other graduates,55261,73746
+2019,1,Psychology & Social Work,AI talent,1663,2401
+2019,1,Psychology & Social Work,Other graduates,193186,239954
+2019,1,Skills & Short Courses,AI talent,365,635
+2019,1,Skills & Short Courses,Other graduates,8879,13475
+2019,1,Social Sciences,AI talent,1987,3243
+2019,1,Social Sciences,Other graduates,233437,310492
+2019,1,,AI talent,3794,6218
+2019,1,,Other graduates,236305,315175
+2019,2,Agriculture & Environment,AI talent,1511,2207
+2019,2,Agriculture & Environment,Other graduates,90322,117205
+2019,2,Architecture & Built Environment,AI talent,1158,2012
+2019,2,Architecture & Built Environment,Other graduates,95255,146187
+2019,2,"Arts, Media & Design",AI talent,2091,3325
+2019,2,"Arts, Media & Design",Other graduates,293998,379111
+2019,2,Business & Economics,AI talent,9545,22640
+2019,2,Business & Economics,Other graduates,746599,1229683
+2019,2,CS / IT,AI talent,27187,46053
+2019,2,CS / IT,Other graduates,226425,332513
+2019,2,Education & Teaching,AI talent,801,1323
+2019,2,Education & Teaching,Other graduates,144438,189049
+2019,2,Engineering & Technology,AI talent,14325,21754
+2019,2,Engineering & Technology,Other graduates,241270,325431
+2019,2,Health & Medicine,AI talent,2103,3255
+2019,2,Health & Medicine,Other graduates,257207,353286
+2019,2,Humanities & Languages,AI talent,1843,2794
+2019,2,Humanities & Languages,Other graduates,154382,199327
+2019,2,Law,AI talent,548,1045
+2019,2,Law,Other graduates,112471,160276
+2019,2,Natural Sciences & Math,AI talent,11845,17429
+2019,2,Natural Sciences & Math,Other graduates,176556,218060
+2019,2,Other / Non-degree,AI talent,501,962
+2019,2,Other / Non-degree,Other graduates,51136,71904
+2019,2,Psychology & Social Work,AI talent,1398,2201
+2019,2,Psychology & Social Work,Other graduates,177014,227529
+2019,2,Skills & Short Courses,AI talent,256,531
+2019,2,Skills & Short Courses,Other graduates,8406,13296
+2019,2,Social Sciences,AI talent,1670,3105
+2019,2,Social Sciences,Other graduates,210970,295470
+2019,2,,AI talent,3091,5373
+2019,2,,Other graduates,218975,304412
+2019,3,Agriculture & Environment,AI talent,1333,1959
+2019,3,Agriculture & Environment,Other graduates,81319,110184
+2019,3,Architecture & Built Environment,AI talent,924,1770
+2019,3,Architecture & Built Environment,Other graduates,87070,142356
+2019,3,"Arts, Media & Design",AI talent,1823,3095
+2019,3,"Arts, Media & Design",Other graduates,274702,369477
+2019,3,Business & Economics,AI talent,7425,19848
+2019,3,Business & Economics,Other graduates,664647,1175113
+2019,3,CS / IT,AI talent,21370,39050
+2019,3,CS / IT,Other graduates,207213,320446
+2019,3,Education & Teaching,AI talent,710,1289
+2019,3,Education & Teaching,Other graduates,137940,184767
+2019,3,Engineering & Technology,AI talent,11762,19475
+2019,3,Engineering & Technology,Other graduates,218660,312101
+2019,3,Health & Medicine,AI talent,1741,2909
+2019,3,Health & Medicine,Other graduates,237839,337922
+2019,3,Humanities & Languages,AI talent,1596,2534
+2019,3,Humanities & Languages,Other graduates,145637,195613
+2019,3,Law,AI talent,493,1093
+2019,3,Law,Other graduates,105977,158152
+2019,3,Natural Sciences & Math,AI talent,10164,15946
+2019,3,Natural Sciences & Math,Other graduates,163535,210354
+2019,3,Other / Non-degree,AI talent,467,879
+2019,3,Other / Non-degree,Other graduates,46704,69761
+2019,3,Psychology & Social Work,AI talent,1315,2292
+2019,3,Psychology & Social Work,Other graduates,164814,219210
+2019,3,Skills & Short Courses,AI talent,210,437
+2019,3,Skills & Short Courses,Other graduates,7939,13302
+2019,3,Social Sciences,AI talent,1449,2893
+2019,3,Social Sciences,Other graduates,190407,281869
+2019,3,,AI talent,2610,4841
+2019,3,,Other graduates,209085,302072
+2019,4,Agriculture & Environment,AI talent,1080,1754
+2019,4,Agriculture & Environment,Other graduates,73560,104563
+2019,4,Architecture & Built Environment,AI talent,868,1796
+2019,4,Architecture & Built Environment,Other graduates,80094,138775
+2019,4,"Arts, Media & Design",AI talent,1667,3102
+2019,4,"Arts, Media & Design",Other graduates,256254,359563
+2019,4,Business & Economics,AI talent,6097,18567
+2019,4,Business & Economics,Other graduates,591197,1116280
+2019,4,CS / IT,AI talent,16322,31672
+2019,4,CS / IT,Other graduates,182206,295468
+2019,4,Education & Teaching,AI talent,596,1120
+2019,4,Education & Teaching,Other graduates,134360,183058
+2019,4,Engineering & Technology,AI talent,9782,17543
+2019,4,Engineering & Technology,Other graduates,193490,291734
+2019,4,Health & Medicine,AI talent,1512,2648
+2019,4,Health & Medicine,Other graduates,215468,315155
+2019,4,Humanities & Languages,AI talent,1467,2571
+2019,4,Humanities & Languages,Other graduates,139705,193697
+2019,4,Law,AI talent,393,969
+2019,4,Law,Other graduates,98489,155144
+2019,4,Natural Sciences & Math,AI talent,8755,14628
+2019,4,Natural Sciences & Math,Other graduates,150810,202970
+2019,4,Other / Non-degree,AI talent,320,742
+2019,4,Other / Non-degree,Other graduates,42554,65579
+2019,4,Psychology & Social Work,AI talent,1095,1932
+2019,4,Psychology & Social Work,Other graduates,153363,211038
+2019,4,Skills & Short Courses,AI talent,134,381
+2019,4,Skills & Short Courses,Other graduates,7361,12614
+2019,4,Social Sciences,AI talent,1284,2766
+2019,4,Social Sciences,Other graduates,175608,272293
+2019,4,,AI talent,2206,4365
+2019,4,,Other graduates,194342,292924
+2019,5,Agriculture & Environment,AI talent,914,1603
+2019,5,Agriculture & Environment,Other graduates,66381,98956
+2019,5,Architecture & Built Environment,AI talent,651,1492
+2019,5,Architecture & Built Environment,Other graduates,72896,132359
+2019,5,"Arts, Media & Design",AI talent,1492,3019
+2019,5,"Arts, Media & Design",Other graduates,243394,353952
+2019,5,Business & Economics,AI talent,5070,16874
+2019,5,Business & Economics,Other graduates,526167,1059041
+2019,5,CS / IT,AI talent,12861,27445
+2019,5,CS / IT,Other graduates,158598,269159
+2019,5,Education & Teaching,AI talent,532,1053
+2019,5,Education & Teaching,Other graduates,126958,176073
+2019,5,Engineering & Technology,AI talent,7842,15317
+2019,5,Engineering & Technology,Other graduates,167116,265461
+2019,5,Health & Medicine,AI talent,1198,2386
+2019,5,Health & Medicine,Other graduates,195005,293219
+2019,5,Humanities & Languages,AI talent,1301,2357
+2019,5,Humanities & Languages,Other graduates,134260,192685
+2019,5,Law,AI talent,349,939
+2019,5,Law,Other graduates,91018,149610
+2019,5,Natural Sciences & Math,AI talent,7159,12922
+2019,5,Natural Sciences & Math,Other graduates,135989,191256
+2019,5,Other / Non-degree,AI talent,227,638
+2019,5,Other / Non-degree,Other graduates,37808,61116
+2019,5,Psychology & Social Work,AI talent,909,1764
+2019,5,Psychology & Social Work,Other graduates,140441,199263
+2019,5,Skills & Short Courses,AI talent,138,331
+2019,5,Skills & Short Courses,Other graduates,6211,10923
+2019,5,Social Sciences,AI talent,1235,2808
+2019,5,Social Sciences,Other graduates,162533,262453
+2019,5,,AI talent,1878,3900
+2019,5,,Other graduates,182639,283866
+2020,0,Agriculture & Environment,AI talent,2220,2750
+2020,0,Agriculture & Environment,Other graduates,117955,138962
+2020,0,Architecture & Built Environment,AI talent,1846,2564
+2020,0,Architecture & Built Environment,Other graduates,121139,161461
+2020,0,"Arts, Media & Design",AI talent,2685,3712
+2020,0,"Arts, Media & Design",Other graduates,344622,416228
+2020,0,Business & Economics,AI talent,19077,32244
+2020,0,Business & Economics,Other graduates,979434,1398338
+2020,0,CS / IT,AI talent,62388,84864
+2020,0,CS / IT,Other graduates,302558,397080
+2020,0,Education & Teaching,AI talent,1074,1624
+2020,0,Education & Teaching,Other graduates,176346,216366
+2020,0,Engineering & Technology,AI talent,26477,32911
+2020,0,Engineering & Technology,Other graduates,294316,356946
+2020,0,Health & Medicine,AI talent,3719,4880
+2020,0,Health & Medicine,Other graduates,374340,460747
+2020,0,Humanities & Languages,AI talent,2105,2820
+2020,0,Humanities & Languages,Other graduates,170883,205306
+2020,0,Law,AI talent,830,1275
+2020,0,Law,Other graduates,145983,185372
+2020,0,Natural Sciences & Math,AI talent,19033,23028
+2020,0,Natural Sciences & Math,Other graduates,233700,264788
+2020,0,Other / Non-degree,AI talent,730,1124
+2020,0,Other / Non-degree,Other graduates,65807,82842
+2020,0,Psychology & Social Work,AI talent,2412,3207
+2020,0,Psychology & Social Work,Other graduates,241946,286908
+2020,0,Skills & Short Courses,AI talent,593,915
+2020,0,Skills & Short Courses,Other graduates,10653,15222
+2020,0,Social Sciences,AI talent,2574,3755
+2020,0,Social Sciences,Other graduates,278939,351267
+2020,0,,AI talent,5585,8017
+2020,0,,Other graduates,265279,338070
+2020,1,Agriculture & Environment,AI talent,1785,2387
+2020,1,Agriculture & Environment,Other graduates,100368,124600
+2020,1,Architecture & Built Environment,AI talent,1332,2133
+2020,1,Architecture & Built Environment,Other graduates,105141,152023
+2020,1,"Arts, Media & Design",AI talent,2139,3273
+2020,1,"Arts, Media & Design",Other graduates,307583,383853
+2020,1,Business & Economics,AI talent,13090,26755
+2020,1,Business & Economics,Other graduates,827778,1274384
+2020,1,CS / IT,AI talent,40187,62603
+2020,1,CS / IT,Other graduates,247017,346638
+2020,1,Education & Teaching,AI talent,887,1421
+2020,1,Education & Teaching,Other graduates,152190,193815
+2020,1,Engineering & Technology,AI talent,18996,26509
+2020,1,Engineering & Technology,Other graduates,256582,329309
+2020,1,Health & Medicine,AI talent,2698,3885
+2020,1,Health & Medicine,Other graduates,300682,397470
+2020,1,Humanities & Languages,AI talent,1954,2749
+2020,1,Humanities & Languages,Other graduates,158116,196089
+2020,1,Law,AI talent,619,1095
+2020,1,Law,Other graduates,120602,163966
+2020,1,Natural Sciences & Math,AI talent,14423,19531
+2020,1,Natural Sciences & Math,Other graduates,194168,229931
+2020,1,Other / Non-degree,AI talent,543,935
+2020,1,Other / Non-degree,Other graduates,53653,72107
+2020,1,Psychology & Social Work,AI talent,1750,2564
+2020,1,Psychology & Social Work,Other graduates,194957,243050
+2020,1,Skills & Short Courses,AI talent,358,701
+2020,1,Skills & Short Courses,Other graduates,8871,13243
+2020,1,Social Sciences,AI talent,2003,3297
+2020,1,Social Sciences,Other graduates,232743,311010
+2020,1,,AI talent,4166,6628
+2020,1,,Other graduates,233720,313902
+2020,2,Agriculture & Environment,AI talent,1577,2282
+2020,2,Agriculture & Environment,Other graduates,91340,118467
+2020,2,Architecture & Built Environment,AI talent,1115,1985
+2020,2,Architecture & Built Environment,Other graduates,95117,146410
+2020,2,"Arts, Media & Design",AI talent,2010,3273
+2020,2,"Arts, Media & Design",Other graduates,285236,370257
+2020,2,Business & Economics,AI talent,10655,25145
+2020,2,Business & Economics,Other graduates,747306,1238588
+2020,2,CS / IT,AI talent,32663,55391
+2020,2,CS / IT,Other graduates,225636,333084
+2020,2,Education & Teaching,AI talent,735,1266
+2020,2,Education & Teaching,Other graduates,144106,188416
+2020,2,Engineering & Technology,AI talent,16142,24530
+2020,2,Engineering & Technology,Other graduates,240948,325636
+2020,2,Health & Medicine,AI talent,2361,3788
+2020,2,Health & Medicine,Other graduates,266990,368382
+2020,2,Humanities & Languages,AI talent,1857,2742
+2020,2,Humanities & Languages,Other graduates,149631,192981
+2020,2,Law,AI talent,528,1011
+2020,2,Law,Other graduates,110609,157589
+2020,2,Natural Sciences & Math,AI talent,12743,18674
+2020,2,Natural Sciences & Math,Other graduates,179430,221094
+2020,2,Other / Non-degree,AI talent,534,996
+2020,2,Other / Non-degree,Other graduates,49736,70408
+2020,2,Psychology & Social Work,AI talent,1533,2377
+2020,2,Psychology & Social Work,Other graduates,178269,230684
+2020,2,Skills & Short Courses,AI talent,325,601
+2020,2,Skills & Short Courses,Other graduates,8126,13001
+2020,2,Social Sciences,AI talent,1777,3239
+2020,2,Social Sciences,Other graduates,210510,297233
+2020,2,,AI talent,3575,6319
+2020,2,,Other graduates,221326,308625
+2020,3,Agriculture & Environment,AI talent,1390,2184
+2020,3,Agriculture & Environment,Other graduates,82875,112250
+2020,3,Architecture & Built Environment,AI talent,1074,1990
+2020,3,Architecture & Built Environment,Other graduates,86302,141191
+2020,3,"Arts, Media & Design",AI talent,1887,3213
+2020,3,"Arts, Media & Design",Other graduates,263892,355787
+2020,3,Business & Economics,AI talent,8322,22111
+2020,3,Business & Economics,Other graduates,666443,1180276
+2020,3,CS / IT,AI talent,24606,45196
+2020,3,CS / IT,Other graduates,206773,320160
+2020,3,Education & Teaching,AI talent,726,1333
+2020,3,Education & Teaching,Other graduates,136499,183527
+2020,3,Engineering & Technology,AI talent,13141,21521
+2020,3,Engineering & Technology,Other graduates,221911,314875
+2020,3,Health & Medicine,AI talent,1966,3268
+2020,3,Health & Medicine,Other graduates,247338,352116
+2020,3,Humanities & Languages,AI talent,1700,2766
+2020,3,Humanities & Languages,Other graduates,141119,190018
+2020,3,Law,AI talent,511,1080
+2020,3,Law,Other graduates,102853,154916
+2020,3,Natural Sciences & Math,AI talent,10852,17120
+2020,3,Natural Sciences & Math,Other graduates,164611,211414
+2020,3,Other / Non-degree,AI talent,468,967
+2020,3,Other / Non-degree,Other graduates,46197,68427
+2020,3,Psychology & Social Work,AI talent,1289,2209
+2020,3,Psychology & Social Work,Other graduates,164586,219703
+2020,3,Skills & Short Courses,AI talent,240,537
+2020,3,Skills & Short Courses,Other graduates,7671,12913
+2020,3,Social Sciences,AI talent,1514,3078
+2020,3,Social Sciences,Other graduates,190452,281686
+2020,3,,AI talent,2825,5280
+2020,3,,Other graduates,204818,296780
+2020,4,Agriculture & Environment,AI talent,1220,1915
+2020,4,Agriculture & Environment,Other graduates,74926,106100
+2020,4,Architecture & Built Environment,AI talent,826,1753
+2020,4,Architecture & Built Environment,Other graduates,79541,137735
+2020,4,"Arts, Media & Design",AI talent,1663,3049
+2020,4,"Arts, Media & Design",Other graduates,249715,349727
+2020,4,Business & Economics,AI talent,6663,19726
+2020,4,Business & Economics,Other graduates,600479,1135257
+2020,4,CS / IT,AI talent,19110,38026
+2020,4,CS / IT,Other graduates,189703,308719
+2020,4,Education & Teaching,AI talent,640,1267
+2020,4,Education & Teaching,Other graduates,131152,179895
+2020,4,Engineering & Technology,AI talent,10717,19188
+2020,4,Engineering & Technology,Other graduates,200815,301711
+2020,4,Health & Medicine,AI talent,1642,2951
+2020,4,Health & Medicine,Other graduates,227724,335093
+2020,4,Humanities & Languages,AI talent,1498,2497
+2020,4,Humanities & Languages,Other graduates,134522,187604
+2020,4,Law,AI talent,424,1076
+2020,4,Law,Other graduates,97661,153078
+2020,4,Natural Sciences & Math,AI talent,9241,15572
+2020,4,Natural Sciences & Math,Other graduates,153276,205042
+2020,4,Other / Non-degree,AI talent,387,867
+2020,4,Other / Non-degree,Other graduates,42820,66935
+2020,4,Psychology & Social Work,AI talent,1240,2298
+2020,4,Psychology & Social Work,Other graduates,154443,213106
+2020,4,Skills & Short Courses,AI talent,199,445
+2020,4,Skills & Short Courses,Other graduates,7455,12993
+2020,4,Social Sciences,AI talent,1297,2852
+2020,4,Social Sciences,Other graduates,174142,270523
+2020,4,,AI talent,2391,4795
+2020,4,,Other graduates,195874,294207
+2020,5,Agriculture & Environment,AI talent,1001,1709
+2020,5,Agriculture & Environment,Other graduates,68540,101347
+2020,5,Architecture & Built Environment,AI talent,780,1738
+2020,5,Architecture & Built Environment,Other graduates,73462,134284
+2020,5,"Arts, Media & Design",AI talent,1521,3012
+2020,5,"Arts, Media & Design",Other graduates,235549,343450
+2020,5,Business & Economics,AI talent,5441,18251
+2020,5,Business & Economics,Other graduates,539434,1083311
+2020,5,CS / IT,AI talent,14672,30953
+2020,5,CS / IT,Other graduates,168249,286164
+2020,5,Education & Teaching,AI talent,555,1094
+2020,5,Education & Teaching,Other graduates,128954,179480
+2020,5,Engineering & Technology,AI talent,8867,17305
+2020,5,Engineering & Technology,Other graduates,178567,283206
+2020,5,Health & Medicine,AI talent,1401,2705
+2020,5,Health & Medicine,Other graduates,207747,313314
+2020,5,Humanities & Languages,AI talent,1306,2471
+2020,5,Humanities & Languages,Other graduates,129693,186276
+2020,5,Law,AI talent,351,966
+2020,5,Law,Other graduates,91232,150204
+2020,5,Natural Sciences & Math,AI talent,7873,14208
+2020,5,Natural Sciences & Math,Other graduates,141372,197877
+2020,5,Other / Non-degree,AI talent,274,708
+2020,5,Other / Non-degree,Other graduates,39142,63005
+2020,5,Psychology & Social Work,AI talent,1016,1941
+2020,5,Psychology & Social Work,Other graduates,144411,205342
+2020,5,Skills & Short Courses,AI talent,132,372
+2020,5,Skills & Short Courses,Other graduates,6953,12405
+2020,5,Social Sciences,AI talent,1156,2706
+2020,5,Social Sciences,Other graduates,162325,262994
+2020,5,,AI talent,1966,4187
+2020,5,,Other graduates,183770,286596
+2021,0,Agriculture & Environment,AI talent,2561,3097
+2021,0,Agriculture & Environment,Other graduates,132153,157095
+2021,0,Architecture & Built Environment,AI talent,2017,2859
+2021,0,Architecture & Built Environment,Other graduates,138087,184700
+2021,0,"Arts, Media & Design",AI talent,2727,3757
+2021,0,"Arts, Media & Design",Other graduates,377668,456844
+2021,0,Business & Economics,AI talent,20691,35905
+2021,0,Business & Economics,Other graduates,1107503,1586111
+2021,0,CS / IT,AI talent,74940,104650
+2021,0,CS / IT,Other graduates,342246,455815
+2021,0,Education & Teaching,AI talent,1192,1772
+2021,0,Education & Teaching,Other graduates,187956,230883
+2021,0,Engineering & Technology,AI talent,30199,37826
+2021,0,Engineering & Technology,Other graduates,331186,403260
+2021,0,Health & Medicine,AI talent,4578,6077
+2021,0,Health & Medicine,Other graduates,410870,509809
+2021,0,Humanities & Languages,AI talent,2383,3216
+2021,0,Humanities & Languages,Other graduates,183672,221521
+2021,0,Law,AI talent,973,1548
+2021,0,Law,Other graduates,167897,214389
+2021,0,Natural Sciences & Math,AI talent,20950,25758
+2021,0,Natural Sciences & Math,Other graduates,263235,299674
+2021,0,Other / Non-degree,AI talent,796,1247
+2021,0,Other / Non-degree,Other graduates,72745,91730
+2021,0,Psychology & Social Work,AI talent,2691,3592
+2021,0,Psychology & Social Work,Other graduates,272407,325362
+2021,0,Skills & Short Courses,AI talent,681,1072
+2021,0,Skills & Short Courses,Other graduates,12176,16838
+2021,0,Social Sciences,AI talent,2799,4194
+2021,0,Social Sciences,Other graduates,309130,392428
+2021,0,,AI talent,6415,9538
+2021,0,,Other graduates,300745,384012
+2021,1,Agriculture & Environment,AI talent,1885,2565
+2021,1,Agriculture & Environment,Other graduates,109219,135791
+2021,1,Architecture & Built Environment,AI talent,1608,2526
+2021,1,Architecture & Built Environment,Other graduates,115903,167302
+2021,1,"Arts, Media & Design",AI talent,2468,3710
+2021,1,"Arts, Media & Design",Other graduates,337128,421305
+2021,1,Business & Economics,AI talent,15374,31391
+2021,1,Business & Economics,Other graduates,924808,1423481
+2021,1,CS / IT,AI talent,50536,79325
+2021,1,CS / IT,Other graduates,283571,397778
+2021,1,Education & Teaching,AI talent,961,1611
+2021,1,Education & Teaching,Other graduates,167456,213672
+2021,1,Engineering & Technology,AI talent,21822,30497
+2021,1,Engineering & Technology,Other graduates,278724,357673
+2021,1,Health & Medicine,AI talent,3148,4596
+2021,1,Health & Medicine,Other graduates,336869,446687
+2021,1,Humanities & Languages,AI talent,2064,2935
+2021,1,Humanities & Languages,Other graduates,172670,213794
+2021,1,Law,AI talent,744,1341
+2021,1,Law,Other graduates,138750,187498
+2021,1,Natural Sciences & Math,AI talent,15377,21000
+2021,1,Natural Sciences & Math,Other graduates,214781,254160
+2021,1,Other / Non-degree,AI talent,646,1070
+2021,1,Other / Non-degree,Other graduates,58898,79042
+2021,1,Psychology & Social Work,AI talent,1937,2905
+2021,1,Psychology & Social Work,Other graduates,219671,274497
+2021,1,Skills & Short Courses,AI talent,492,893
+2021,1,Skills & Short Courses,Other graduates,9552,14748
+2021,1,Social Sciences,AI talent,2238,3726
+2021,1,Social Sciences,Other graduates,259113,346060
+2021,1,,AI talent,4853,7863
+2021,1,,Other graduates,259084,347550
+2021,2,Agriculture & Environment,AI talent,1728,2484
+2021,2,Agriculture & Environment,Other graduates,99403,129170
+2021,2,Architecture & Built Environment,AI talent,1292,2307
+2021,2,Architecture & Built Environment,Other graduates,105077,160860
+2021,2,"Arts, Media & Design",AI talent,2088,3399
+2021,2,"Arts, Media & Design",Other graduates,309756,401796
+2021,2,Business & Economics,AI talent,12900,29661
+2021,2,Business & Economics,Other graduates,819820,1353457
+2021,2,CS / IT,AI talent,40200,67873
+2021,2,CS / IT,Other graduates,249379,368385
+2021,2,Education & Teaching,AI talent,865,1505
+2021,2,Education & Teaching,Other graduates,150586,197417
+2021,2,Engineering & Technology,AI talent,19053,28677
+2021,2,Engineering & Technology,Other graduates,263714,353802
+2021,2,Health & Medicine,AI talent,2682,4238
+2021,2,Health & Medicine,Other graduates,296947,410311
+2021,2,Humanities & Languages,AI talent,2020,3009
+2021,2,Humanities & Languages,Other graduates,160035,205771
+2021,2,Law,AI talent,610,1222
+2021,2,Law,Other graduates,121135,173077
+2021,2,Natural Sciences & Math,AI talent,14349,20926
+2021,2,Natural Sciences & Math,Other graduates,195297,240791
+2021,2,Other / Non-degree,AI talent,517,1032
+2021,2,Other / Non-degree,Other graduates,53428,75657
+2021,2,Psychology & Social Work,AI talent,1773,2776
+2021,2,Psychology & Social Work,Other graduates,194087,251550
+2021,2,Skills & Short Courses,AI talent,329,746
+2021,2,Skills & Short Courses,Other graduates,8705,13795
+2021,2,Social Sciences,AI talent,1947,3553
+2021,2,Social Sciences,Other graduates,230320,324911
+2021,2,,AI talent,4124,7109
+2021,2,,Other graduates,237516,332382
+2021,3,Agriculture & Environment,AI talent,1509,2397
+2021,3,Agriculture & Environment,Other graduates,89843,121756
+2021,3,Architecture & Built Environment,AI talent,1110,2158
+2021,3,Architecture & Built Environment,Other graduates,93769,152906
+2021,3,"Arts, Media & Design",AI talent,1976,3476
+2021,3,"Arts, Media & Design",Other graduates,283956,383439
+2021,3,Business & Economics,AI talent,10186,27026
+2021,3,Business & Economics,Other graduates,725781,1290146
+2021,3,CS / IT,AI talent,31704,58214
+2021,3,CS / IT,Other graduates,223859,347863
+2021,3,Education & Teaching,AI talent,761,1367
+2021,3,Education & Teaching,Other graduates,143325,192491
+2021,3,Engineering & Technology,AI talent,15893,26070
+2021,3,Engineering & Technology,Other graduates,240436,341465
+2021,3,Health & Medicine,AI talent,2308,3961
+2021,3,Health & Medicine,Other graduates,266495,382621
+2021,3,Humanities & Languages,AI talent,1833,2922
+2021,3,Humanities & Languages,Other graduates,149447,200270
+2021,3,Law,AI talent,502,1084
+2021,3,Law,Other graduates,110122,164895
+2021,3,Natural Sciences & Math,AI talent,12615,20031
+2021,3,Natural Sciences & Math,Other graduates,178760,229764
+2021,3,Other / Non-degree,AI talent,522,1059
+2021,3,Other / Non-degree,Other graduates,49178,73257
+2021,3,Psychology & Social Work,AI talent,1479,2519
+2021,3,Psychology & Social Work,Other graduates,177074,238180
+2021,3,Skills & Short Courses,AI talent,302,620
+2021,3,Skills & Short Courses,Other graduates,8081,13564
+2021,3,Social Sciences,AI talent,1777,3535
+2021,3,Social Sciences,Other graduates,207625,308154
+2021,3,,AI talent,3600,6786
+2021,3,,Other graduates,221345,321579
+2021,4,Agriculture & Environment,AI talent,1351,2299
+2021,4,Agriculture & Environment,Other graduates,81710,115385
+2021,4,Architecture & Built Environment,AI talent,1048,2118
+2021,4,Architecture & Built Environment,Other graduates,84560,146316
+2021,4,"Arts, Media & Design",AI talent,1818,3355
+2021,4,"Arts, Media & Design",Other graduates,261799,367290
+2021,4,Business & Economics,AI talent,8063,23588
+2021,4,Business & Economics,Other graduates,651568,1229416
+2021,4,CS / IT,AI talent,23467,46810
+2021,4,CS / IT,Other graduates,203395,331856
+2021,4,Education & Teaching,AI talent,731,1422
+2021,4,Education & Teaching,Other graduates,136005,187397
+2021,4,Engineering & Technology,AI talent,12870,22936
+2021,4,Engineering & Technology,Other graduates,218846,327495
+2021,4,Health & Medicine,AI talent,1855,3397
+2021,4,Health & Medicine,Other graduates,244038,361044
+2021,4,Humanities & Languages,AI talent,1610,2842
+2021,4,Humanities & Languages,Other graduates,139591,194975
+2021,4,Law,AI talent,500,1128
+2021,4,Law,Other graduates,101716,160919
+2021,4,Natural Sciences & Math,AI talent,10570,17964
+2021,4,Natural Sciences & Math,Other graduates,163007,219024
+2021,4,Other / Non-degree,AI talent,418,994
+2021,4,Other / Non-degree,Other graduates,45810,71190
+2021,4,Psychology & Social Work,AI talent,1208,2294
+2021,4,Psychology & Social Work,Other graduates,163431,226273
+2021,4,Skills & Short Courses,AI talent,230,574
+2021,4,Skills & Short Courses,Other graduates,7551,13273
+2021,4,Social Sciences,AI talent,1414,3207
+2021,4,Social Sciences,Other graduates,187276,291280
+2021,4,,AI talent,2745,5584
+2021,4,,Other graduates,203769,307028
+2021,5,Agriculture & Environment,AI talent,1219,2065
+2021,5,Agriculture & Environment,Other graduates,73622,108655
+2021,5,Architecture & Built Environment,AI talent,831,1863
+2021,5,Architecture & Built Environment,Other graduates,78127,142745
+2021,5,"Arts, Media & Design",AI talent,1648,3216
+2021,5,"Arts, Media & Design",Other graduates,247690,360614
+2021,5,Business & Economics,AI talent,6461,21004
+2021,5,Business & Economics,Other graduates,588548,1182268
+2021,5,CS / IT,AI talent,18255,39693
+2021,5,CS / IT,Other graduates,186650,320035
+2021,5,Education & Teaching,AI talent,642,1326
+2021,5,Education & Teaching,Other graduates,130997,183968
+2021,5,Engineering & Technology,AI talent,10319,20153
+2021,5,Engineering & Technology,Other graduates,197793,313883
+2021,5,Health & Medicine,AI talent,1596,3163
+2021,5,Health & Medicine,Other graduates,225368,342894
+2021,5,Humanities & Languages,AI talent,1475,2605
+2021,5,Humanities & Languages,Other graduates,133182,192733
+2021,5,Law,AI talent,431,1170
+2021,5,Law,Other graduates,96532,158203
+2021,5,Natural Sciences & Math,AI talent,8920,16206
+2021,5,Natural Sciences & Math,Other graduates,151895,212579
+2021,5,Other / Non-degree,AI talent,359,917
+2021,5,Other / Non-degree,Other graduates,42528,69778
+2021,5,Psychology & Social Work,AI talent,1170,2378
+2021,5,Psychology & Social Work,Other graduates,152723,218319
+2021,5,Skills & Short Courses,AI talent,195,454
+2021,5,Skills & Short Courses,Other graduates,7437,13491
+2021,5,Social Sciences,AI talent,1289,3037
+2021,5,Social Sciences,Other graduates,172034,279916
+2021,5,,AI talent,2322,5074
+2021,5,,Other graduates,195029,303531
+2022,0,Agriculture & Environment,AI talent,2953,3759
+2022,0,Agriculture & Environment,Other graduates,146687,176631
+2022,0,Architecture & Built Environment,AI talent,2284,3349
+2022,0,Architecture & Built Environment,Other graduates,152455,204598
+2022,0,"Arts, Media & Design",AI talent,3010,4187
+2022,0,"Arts, Media & Design",Other graduates,403249,489950
+2022,0,Business & Economics,AI talent,23404,42055
+2022,0,Business & Economics,Other graduates,1201826,1741263
+2022,0,CS / IT,AI talent,89214,126720
+2022,0,CS / IT,Other graduates,382415,517789
+2022,0,Education & Teaching,AI talent,1425,2143
+2022,0,Education & Teaching,Other graduates,192767,240240
+2022,0,Engineering & Technology,AI talent,31826,40566
+2022,0,Engineering & Technology,Other graduates,355860,439744
+2022,0,Health & Medicine,AI talent,5491,7218
+2022,0,Health & Medicine,Other graduates,432889,544521
+2022,0,Humanities & Languages,AI talent,2746,3672
+2022,0,Humanities & Languages,Other graduates,195026,236392
+2022,0,Law,AI talent,1063,1749
+2022,0,Law,Other graduates,184431,238696
+2022,0,Natural Sciences & Math,AI talent,23166,28888
+2022,0,Natural Sciences & Math,Other graduates,292877,334949
+2022,0,Other / Non-degree,AI talent,894,1397
+2022,0,Other / Non-degree,Other graduates,78265,99362
+2022,0,Psychology & Social Work,AI talent,2933,3993
+2022,0,Psychology & Social Work,Other graduates,304753,368522
+2022,0,Skills & Short Courses,AI talent,840,1375
+2022,0,Skills & Short Courses,Other graduates,13398,18694
+2022,0,Social Sciences,AI talent,3254,4893
+2022,0,Social Sciences,Other graduates,332347,426353
+2022,0,,AI talent,7789,11757
+2022,0,,Other graduates,336274,432800
+2022,1,Agriculture & Environment,AI talent,2003,2720
+2022,1,Agriculture & Environment,Other graduates,117087,147891
+2022,1,Architecture & Built Environment,AI talent,1686,2715
+2022,1,Architecture & Built Environment,Other graduates,124190,179894
+2022,1,"Arts, Media & Design",AI talent,2491,3729
+2022,1,"Arts, Media & Design",Other graduates,354325,443687
+2022,1,Business & Economics,AI talent,15732,33420
+2022,1,Business & Economics,Other graduates,990190,1538962
+2022,1,CS / IT,AI talent,57552,93764
+2022,1,CS / IT,Other graduates,306564,439467
+2022,1,Education & Teaching,AI talent,1080,1764
+2022,1,Education & Teaching,Other graduates,174329,223980
+2022,1,Engineering & Technology,AI talent,23358,33216
+2022,1,Engineering & Technology,Other graduates,298375,386196
+2022,1,Health & Medicine,AI talent,3643,5463
+2022,1,Health & Medicine,Other graduates,352670,473691
+2022,1,Humanities & Languages,AI talent,2204,3282
+2022,1,Humanities & Languages,Other graduates,178856,223789
+2022,1,Law,AI talent,808,1437
+2022,1,Law,Other graduates,148965,202763
+2022,1,Natural Sciences & Math,AI talent,16423,22862
+2022,1,Natural Sciences & Math,Other graduates,234810,280178
+2022,1,Other / Non-degree,AI talent,620,1134
+2022,1,Other / Non-degree,Other graduates,62020,83993
+2022,1,Psychology & Social Work,AI talent,2170,3271
+2022,1,Psychology & Social Work,Other graduates,241602,305694
+2022,1,Skills & Short Courses,AI talent,483,956
+2022,1,Skills & Short Courses,Other graduates,10322,15606
+2022,1,Social Sciences,AI talent,2349,3945
+2022,1,Social Sciences,Other graduates,276067,373180
+2022,1,,AI talent,5337,9005
+2022,1,,Other graduates,283233,381448
+2022,2,Agriculture & Environment,AI talent,1785,2608
+2022,2,Agriculture & Environment,Other graduates,103449,135586
+2022,2,Architecture & Built Environment,AI talent,1475,2588
+2022,2,Architecture & Built Environment,Other graduates,110281,169207
+2022,2,"Arts, Media & Design",AI talent,2394,3855
+2022,2,"Arts, Media & Design",Other graduates,324624,421456
+2022,2,Business & Economics,AI talent,13697,32344
+2022,2,Business & Economics,Other graduates,867726,1444654
+2022,2,CS / IT,AI talent,46948,81033
+2022,2,CS / IT,Other graduates,273416,406579
+2022,2,Education & Teaching,AI talent,926,1663
+2022,2,Education & Teaching,Other graduates,162134,214164
+2022,2,Engineering & Technology,AI talent,20688,31644
+2022,2,Engineering & Technology,Other graduates,273614,370197
+2022,2,Health & Medicine,AI talent,2945,4737
+2022,2,Health & Medicine,Other graduates,316758,442416
+2022,2,Humanities & Languages,AI talent,2031,3046
+2022,2,Humanities & Languages,Other graduates,168258,216881
+2022,2,Law,AI talent,654,1322
+2022,2,Law,Other graduates,132162,189031
+2022,2,Natural Sciences & Math,AI talent,14477,21764
+2022,2,Natural Sciences & Math,Other graduates,208122,257647
+2022,2,Other / Non-degree,AI talent,596,1099
+2022,2,Other / Non-degree,Other graduates,55372,78971
+2022,2,Psychology & Social Work,AI talent,1831,3048
+2022,2,Psychology & Social Work,Other graduates,210063,274712
+2022,2,Skills & Short Courses,AI talent,427,846
+2022,2,Skills & Short Courses,Other graduates,8947,14664
+2022,2,Social Sciences,AI talent,2030,3837
+2022,2,Social Sciences,Other graduates,244715,346643
+2022,2,,AI talent,4524,8051
+2022,2,,Other graduates,254185,356115
+2022,3,Agriculture & Environment,AI talent,1678,2534
+2022,3,Agriculture & Environment,Other graduates,94698,129577
+2022,3,Architecture & Built Environment,AI talent,1224,2369
+2022,3,Architecture & Built Environment,Other graduates,100356,162969
+2022,3,"Arts, Media & Design",AI talent,2029,3503
+2022,3,"Arts, Media & Design",Other graduates,297569,402661
+2022,3,Business & Economics,AI talent,11462,30229
+2022,3,Business & Economics,Other graduates,756022,1352129
+2022,3,CS / IT,AI talent,37037,68493
+2022,3,CS / IT,Other graduates,237446,371502
+2022,3,Education & Teaching,AI talent,817,1516
+2022,3,Education & Teaching,Other graduates,148318,200421
+2022,3,Engineering & Technology,AI talent,18041,29552
+2022,3,Engineering & Technology,Other graduates,255519,362596
+2022,3,Health & Medicine,AI talent,2499,4380
+2022,3,Health & Medicine,Other graduates,284524,412193
+2022,3,Humanities & Languages,AI talent,1904,3019
+2022,3,Humanities & Languages,Other graduates,154619,207511
+2022,3,Law,AI talent,573,1235
+2022,3,Law,Other graduates,115294,174270
+2022,3,Natural Sciences & Math,AI talent,13463,21415
+2022,3,Natural Sciences & Math,Other graduates,188573,243207
+2022,3,Other / Non-degree,AI talent,470,1056
+2022,3,Other / Non-degree,Other graduates,50213,75266
+2022,3,Psychology & Social Work,AI talent,1622,2781
+2022,3,Psychology & Social Work,Other graduates,185755,252173
+2022,3,Skills & Short Courses,AI talent,328,792
+2022,3,Skills & Short Courses,Other graduates,8256,13844
+2022,3,Social Sciences,AI talent,1740,3556
+2022,3,Social Sciences,Other graduates,216989,324530
+2022,3,,AI talent,3858,7297
+2022,3,,Other graduates,230676,336891
+2022,4,Agriculture & Environment,AI talent,1454,2422
+2022,4,Agriculture & Environment,Other graduates,85712,122145
+2022,4,Architecture & Built Environment,AI talent,1006,2177
+2022,4,Architecture & Built Environment,Other graduates,88947,154332
+2022,4,"Arts, Media & Design",AI talent,1895,3523
+2022,4,"Arts, Media & Design",Other graduates,272599,383208
+2022,4,Business & Economics,AI talent,9194,27350
+2022,4,Business & Economics,Other graduates,674598,1290281
+2022,4,CS / IT,AI talent,28860,58133
+2022,4,CS / IT,Other graduates,210852,347830
+2022,4,Education & Teaching,AI talent,753,1413
+2022,4,Education & Teaching,Other graduates,141547,195880
+2022,4,Engineering & Technology,AI talent,14851,26458
+2022,4,Engineering & Technology,Other graduates,229611,346322
+2022,4,Health & Medicine,AI talent,2159,4040
+2022,4,Health & Medicine,Other graduates,254740,383397
+2022,4,Humanities & Languages,AI talent,1754,2995
+2022,4,Humanities & Languages,Other graduates,144177,201231
+2022,4,Law,AI talent,457,1166
+2022,4,Law,Other graduates,104627,165544
+2022,4,Natural Sciences & Math,AI talent,11652,20172
+2022,4,Natural Sciences & Math,Other graduates,171901,231812
+2022,4,Other / Non-degree,AI talent,501,1081
+2022,4,Other / Non-degree,Other graduates,46342,72941
+2022,4,Psychology & Social Work,AI talent,1327,2516
+2022,4,Psychology & Social Work,Other graduates,170264,238532
+2022,4,Skills & Short Courses,AI talent,270,625
+2022,4,Skills & Short Courses,Other graduates,7798,13716
+2022,4,Social Sciences,AI talent,1643,3561
+2022,4,Social Sciences,Other graduates,196458,308285
+2022,4,,AI talent,3373,6831
+2022,4,,Other graduates,214705,325042
+2022,5,Agriculture & Environment,AI talent,1285,2321
+2022,5,Agriculture & Environment,Other graduates,78567,116162
+2022,5,Architecture & Built Environment,AI talent,958,2099
+2022,5,Architecture & Built Environment,Other graduates,80501,147751
+2022,5,"Arts, Media & Design",AI talent,1678,3302
+2022,5,"Arts, Media & Design",Other graduates,252826,368839
+2022,5,Business & Economics,AI talent,7294,23730
+2022,5,Business & Economics,Other graduates,610958,1234875
+2022,5,CS / IT,AI talent,21534,47098
+2022,5,CS / IT,Other graduates,192421,332492
+2022,5,Education & Teaching,AI talent,682,1426
+2022,5,Education & Teaching,Other graduates,134753,190540
+2022,5,Engineering & Technology,AI talent,11721,22955
+2022,5,Engineering & Technology,Other graduates,208245,331917
+2022,5,Health & Medicine,AI talent,1731,3529
+2022,5,Health & Medicine,Other graduates,235833,363338
+2022,5,Humanities & Languages,AI talent,1555,2918
+2022,5,Humanities & Languages,Other graduates,134942,196072
+2022,5,Law,AI talent,473,1157
+2022,5,Law,Other graduates,96978,161304
+2022,5,Natural Sciences & Math,AI talent,9716,18050
+2022,5,Natural Sciences & Math,Other graduates,156184,220568
+2022,5,Other / Non-degree,AI talent,399,1060
+2022,5,Other / Non-degree,Other graduates,43463,71266
+2022,5,Psychology & Social Work,AI talent,1107,2320
+2022,5,Psychology & Social Work,Other graduates,157395,226916
+2022,5,Skills & Short Courses,AI talent,208,563
+2022,5,Skills & Short Courses,Other graduates,7269,13381
+2022,5,Social Sciences,AI talent,1319,3275
+2022,5,Social Sciences,Other graduates,179027,292724
+2022,5,,AI talent,2607,5662
+2022,5,,Other graduates,197925,310131
+2023,0,Agriculture & Environment,AI talent,3448,4435
+2023,0,Agriculture & Environment,Other graduates,149278,182391
+2023,0,Architecture & Built Environment,AI talent,2591,3789
+2023,0,Architecture & Built Environment,Other graduates,155284,211082
+2023,0,"Arts, Media & Design",AI talent,3530,4897
+2023,0,"Arts, Media & Design",Other graduates,392356,482463
+2023,0,Business & Economics,AI talent,26147,47238
+2023,0,Business & Economics,Other graduates,1172702,1726736
+2023,0,CS / IT,AI talent,111105,163211
+2023,0,CS / IT,Other graduates,387302,539860
+2023,0,Education & Teaching,AI talent,1464,2241
+2023,0,Education & Teaching,Other graduates,185339,233396
+2023,0,Engineering & Technology,AI talent,36678,47583
+2023,0,Engineering & Technology,Other graduates,352614,443142
+2023,0,Health & Medicine,AI talent,6159,8463
+2023,0,Health & Medicine,Other graduates,430772,550269
+2023,0,Humanities & Languages,AI talent,3079,4165
+2023,0,Humanities & Languages,Other graduates,187601,230665
+2023,0,Law,AI talent,1090,1759
+2023,0,Law,Other graduates,177845,233343
+2023,0,Natural Sciences & Math,AI talent,24826,31338
+2023,0,Natural Sciences & Math,Other graduates,298355,344139
+2023,0,Other / Non-degree,AI talent,1165,1766
+2023,0,Other / Non-degree,Other graduates,78794,101005
+2023,0,Psychology & Social Work,AI talent,3382,4576
+2023,0,Psychology & Social Work,Other graduates,319254,389752
+2023,0,Skills & Short Courses,AI talent,938,1478
+2023,0,Skills & Short Courses,Other graduates,12542,17909
+2023,0,Social Sciences,AI talent,3490,5402
+2023,0,Social Sciences,Other graduates,329140,427658
+2023,0,,AI talent,9437,14334
+2023,0,,Other graduates,348776,452379
+2023,1,Agriculture & Environment,AI talent,2273,3269
+2023,1,Agriculture & Environment,Other graduates,120756,156463
+2023,1,Architecture & Built Environment,AI talent,1781,3066
+2023,1,Architecture & Built Environment,Other graduates,128764,188943
+2023,1,"Arts, Media & Design",AI talent,2694,4105
+2023,1,"Arts, Media & Design",Other graduates,350530,443784
+2023,1,Business & Economics,AI talent,16732,37248
+2023,1,Business & Economics,Other graduates,998471,1592154
+2023,1,CS / IT,AI talent,64370,109918
+2023,1,CS / IT,Other graduates,315787,467128
+2023,1,Education & Teaching,AI talent,1175,2053
+2023,1,Education & Teaching,Other graduates,169117,221550
+2023,1,Engineering & Technology,AI talent,23148,33928
+2023,1,Engineering & Technology,Other graduates,295232,392128
+2023,1,Health & Medicine,AI talent,4110,6240
+2023,1,Health & Medicine,Other graduates,350780,484586
+2023,1,Humanities & Languages,AI talent,2408,3515
+2023,1,Humanities & Languages,Other graduates,175817,223145
+2023,1,Law,AI talent,886,1697
+2023,1,Law,Other graduates,151068,211516
+2023,1,Natural Sciences & Math,AI talent,16818,24242
+2023,1,Natural Sciences & Math,Other graduates,239489,289513
+2023,1,Other / Non-degree,AI talent,678,1229
+2023,1,Other / Non-degree,Other graduates,61471,84667
+2023,1,Psychology & Social Work,AI talent,2231,3421
+2023,1,Psychology & Social Work,Other graduates,252789,326926
+2023,1,Skills & Short Courses,AI talent,617,1265
+2023,1,Skills & Short Courses,Other graduates,10514,16164
+2023,1,Social Sciences,AI talent,2486,4383
+2023,1,Social Sciences,Other graduates,274741,379243
+2023,1,,AI talent,6028,10682
+2023,1,,Other graduates,297896,407616
+2023,2,Agriculture & Environment,AI talent,1811,2691
+2023,2,Agriculture & Environment,Other graduates,104293,140256
+2023,2,Architecture & Built Environment,AI talent,1470,2666
+2023,2,Architecture & Built Environment,Other graduates,112278,174507
+2023,2,"Arts, Media & Design",AI talent,2214,3656
+2023,2,"Arts, Media & Design",Other graduates,317667,417269
+2023,2,Business & Economics,AI talent,13291,33298
+2023,2,Business & Economics,Other graduates,869607,1483255
+2023,2,CS / IT,AI talent,49484,91123
+2023,2,CS / IT,Other graduates,271993,419344
+2023,2,Education & Teaching,AI talent,989,1766
+2023,2,Education & Teaching,Other graduates,161141,214950
+2023,2,Engineering & Technology,AI talent,20588,32563
+2023,2,Engineering & Technology,Other graduates,274228,377924
+2023,2,Health & Medicine,AI talent,3238,5323
+2023,2,Health & Medicine,Other graduates,318304,454309
+2023,2,Humanities & Languages,AI talent,2087,3321
+2023,2,Humanities & Languages,Other graduates,162899,213878
+2023,2,Law,AI talent,686,1413
+2023,2,Law,Other graduates,133282,194077
+2023,2,Natural Sciences & Math,AI talent,14427,22316
+2023,2,Natural Sciences & Math,Other graduates,213626,268221
+2023,2,Other / Non-degree,AI talent,530,1098
+2023,2,Other / Non-degree,Other graduates,54431,79094
+2023,2,Psychology & Social Work,AI talent,1897,3215
+2023,2,Psychology & Social Work,Other graduates,218775,291867
+2023,2,Skills & Short Courses,AI talent,424,935
+2023,2,Skills & Short Courses,Other graduates,9183,14923
+2023,2,Social Sciences,AI talent,2104,3876
+2023,2,Social Sciences,Other graduates,243928,354134
+2023,2,,AI talent,4800,8994
+2023,2,,Other graduates,263464,372399
+2023,3,Agriculture & Environment,AI talent,1549,2529
+2023,3,Agriculture & Environment,Other graduates,93239,129334
+2023,3,Architecture & Built Environment,AI talent,1290,2484
+2023,3,Architecture & Built Environment,Other graduates,99411,163849
+2023,3,"Arts, Media & Design",AI talent,2171,3719
+2023,3,"Arts, Media & Design",Other graduates,292563,396958
+2023,3,Business & Economics,AI talent,11292,30922
+2023,3,Business & Economics,Other graduates,752175,1370892
+2023,3,CS / IT,AI talent,38926,76280
+2023,3,CS / IT,Other graduates,239064,382900
+2023,3,Education & Teaching,AI talent,882,1714
+2023,3,Education & Teaching,Other graduates,151374,206772
+2023,3,Engineering & Technology,AI talent,17741,30168
+2023,3,Engineering & Technology,Other graduates,246693,356969
+2023,3,Health & Medicine,AI talent,2652,4732
+2023,3,Health & Medicine,Other graduates,290260,428081
+2023,3,Humanities & Languages,AI talent,1832,3002
+2023,3,Humanities & Languages,Other graduates,152928,206697
+2023,3,Law,AI talent,563,1333
+2023,3,Law,Other graduates,118688,181549
+2023,3,Natural Sciences & Math,AI talent,12541,20992
+2023,3,Natural Sciences & Math,Other graduates,189435,246878
+2023,3,Other / Non-degree,AI talent,523,1077
+2023,3,Other / Non-degree,Other graduates,48979,74501
+2023,3,Psychology & Social Work,AI talent,1631,3001
+2023,3,Psychology & Social Work,Other graduates,190966,262840
+2023,3,Skills & Short Courses,AI talent,363,828
+2023,3,Skills & Short Courses,Other graduates,8039,13991
+2023,3,Social Sciences,AI talent,1777,3722
+2023,3,Social Sciences,Other graduates,216015,327798
+2023,3,,AI talent,3958,7814
+2023,3,,Other graduates,235096,345220
+2023,4,Agriculture & Environment,AI talent,1506,2529
+2023,4,Agriculture & Environment,Other graduates,85837,124237
+2023,4,Architecture & Built Environment,AI talent,1074,2307
+2023,4,Architecture & Built Environment,Other graduates,90095,157573
+2023,4,"Arts, Media & Design",AI talent,1898,3507
+2023,4,"Arts, Media & Design",Other graduates,268808,380216
+2023,4,Business & Economics,AI talent,9403,28507
+2023,4,Business & Economics,Other graduates,660952,1288021
+2023,4,CS / IT,AI talent,30676,64461
+2023,4,CS / IT,Other graduates,207057,348187
+2023,4,Education & Teaching,AI talent,761,1529
+2023,4,Education & Teaching,Other graduates,139312,194445
+2023,4,Engineering & Technology,AI talent,15283,27891
+2023,4,Engineering & Technology,Other graduates,228140,347262
+2023,4,Health & Medicine,AI talent,2136,4271
+2023,4,Health & Medicine,Other graduates,260788,398778
+2023,4,Humanities & Languages,AI talent,1721,2966
+2023,4,Humanities & Languages,Other graduates,140681,198202
+2023,4,Law,AI talent,506,1244
+2023,4,Law,Other graduates,103574,167170
+2023,4,Natural Sciences & Math,AI talent,11559,20537
+2023,4,Natural Sciences & Math,Other graduates,171531,233435
+2023,4,Other / Non-degree,AI talent,427,1047
+2023,4,Other / Non-degree,Other graduates,44673,71173
+2023,4,Psychology & Social Work,AI talent,1413,2758
+2023,4,Psychology & Social Work,Other graduates,169895,242082
+2023,4,Skills & Short Courses,AI talent,282,771
+2023,4,Skills & Short Courses,Other graduates,7412,13276
+2023,4,Social Sciences,AI talent,1498,3422
+2023,4,Social Sciences,Other graduates,192815,307727
+2023,4,,AI talent,3378,7047
+2023,4,,Other graduates,213642,326944
+2023,5,Agriculture & Environment,AI talent,1310,2374
+2023,5,Agriculture & Environment,Other graduates,77935,117551
+2023,5,Architecture & Built Environment,AI talent,898,2158
+2023,5,Architecture & Built Environment,Other graduates,80049,149326
+2023,5,"Arts, Media & Design",AI talent,1714,3455
+2023,5,"Arts, Media & Design",Other graduates,247653,363106
+2023,5,Business & Economics,AI talent,7619,26014
+2023,5,Business & Economics,Other graduates,596957,1236069
+2023,5,CS / IT,AI talent,23802,54423
+2023,5,CS / IT,Other graduates,185035,327424
+2023,5,Education & Teaching,AI talent,711,1406
+2023,5,Education & Teaching,Other graduates,133446,190186
+2023,5,Engineering & Technology,AI talent,12576,25197
+2023,5,Engineering & Technology,Other graduates,204672,332594
+2023,5,Health & Medicine,AI talent,1907,3940
+2023,5,Health & Medicine,Other graduates,235865,372242
+2023,5,Humanities & Languages,AI talent,1584,2911
+2023,5,Humanities & Languages,Other graduates,131985,192703
+2023,5,Law,AI talent,379,1109
+2023,5,Law,Other graduates,94769,159784
+2023,5,Natural Sciences & Math,AI talent,9923,19248
+2023,5,Natural Sciences & Math,Other graduates,155800,222429
+2023,5,Other / Non-degree,AI talent,428,1036
+2023,5,Other / Non-degree,Other graduates,41780,69688
+2023,5,Psychology & Social Work,AI talent,1172,2521
+2023,5,Psychology & Social Work,Other graduates,156736,229883
+2023,5,Skills & Short Courses,AI talent,252,623
+2023,5,Skills & Short Courses,Other graduates,7007,13122
+2023,5,Social Sciences,AI talent,1390,3402
+2023,5,Social Sciences,Other graduates,176812,294584
+2023,5,,AI talent,2914,6580
+2023,5,,Other graduates,199616,315386
+2024,0,Agriculture & Environment,AI talent,3544,4587
+2024,0,Agriculture & Environment,Other graduates,151423,185039
+2024,0,Architecture & Built Environment,AI talent,2996,4465
+2024,0,Architecture & Built Environment,Other graduates,158616,215853
+2024,0,"Arts, Media & Design",AI talent,3966,5714
+2024,0,"Arts, Media & Design",Other graduates,391749,482779
+2024,0,Business & Economics,AI talent,30969,56749
+2024,0,Business & Economics,Other graduates,1199096,1768272
+2024,0,CS / IT,AI talent,146749,218197
+2024,0,CS / IT,Other graduates,411652,576736
+2024,0,Education & Teaching,AI talent,1691,2702
+2024,0,Education & Teaching,Other graduates,175673,222730
+2024,0,Engineering & Technology,AI talent,41689,54398
+2024,0,Engineering & Technology,Other graduates,354448,444772
+2024,0,Health & Medicine,AI talent,7334,10001
+2024,0,Health & Medicine,Other graduates,441318,559263
+2024,0,Humanities & Languages,AI talent,3319,4658
+2024,0,Humanities & Languages,Other graduates,186606,229362
+2024,0,Law,AI talent,1318,2220
+2024,0,Law,Other graduates,179276,244889
+2024,0,Natural Sciences & Math,AI talent,26620,33694
+2024,0,Natural Sciences & Math,Other graduates,314807,362536
+2024,0,Other / Non-degree,AI talent,1593,2469
+2024,0,Other / Non-degree,Other graduates,83061,106660
+2024,0,Psychology & Social Work,AI talent,3719,5102
+2024,0,Psychology & Social Work,Other graduates,335140,408551
+2024,0,Skills & Short Courses,AI talent,1109,1831
+2024,0,Skills & Short Courses,Other graduates,12275,17736
+2024,0,Social Sciences,AI talent,4159,6448
+2024,0,Social Sciences,Other graduates,335426,437521
+2024,0,,AI talent,11772,18270
+2024,0,,Other graduates,369204,477043
+2024,1,Agriculture & Environment,AI talent,2658,3823
+2024,1,Agriculture & Environment,Other graduates,122723,159195
+2024,1,Architecture & Built Environment,AI talent,2037,3408
+2024,1,Architecture & Built Environment,Other graduates,131604,194114
+2024,1,"Arts, Media & Design",AI talent,3055,4723
+2024,1,"Arts, Media & Design",Other graduates,342577,435834
+2024,1,Business & Economics,AI talent,20044,43899
+2024,1,Business & Economics,Other graduates,990429,1592885
+2024,1,CS / IT,AI talent,87009,149806
+2024,1,CS / IT,Other graduates,330041,496478
+2024,1,Education & Teaching,AI talent,1263,2160
+2024,1,Education & Teaching,Other graduates,161248,211931
+2024,1,Engineering & Technology,AI talent,27736,40566
+2024,1,Engineering & Technology,Other graduates,292777,389804
+2024,1,Health & Medicine,AI talent,4745,7430
+2024,1,Health & Medicine,Other graduates,351441,484135
+2024,1,Humanities & Languages,AI talent,2715,4038
+2024,1,Humanities & Languages,Other graduates,168106,214035
+2024,1,Law,AI talent,874,1685
+2024,1,Law,Other graduates,143236,205831
+2024,1,Natural Sciences & Math,AI talent,18473,26616
+2024,1,Natural Sciences & Math,Other graduates,241475,290465
+2024,1,Other / Non-degree,AI talent,951,1633
+2024,1,Other / Non-degree,Other graduates,63081,86834
+2024,1,Psychology & Social Work,AI talent,2588,3974
+2024,1,Psychology & Social Work,Other graduates,264476,340580
+2024,1,Skills & Short Courses,AI talent,692,1330
+2024,1,Skills & Short Courses,Other graduates,10239,15962
+2024,1,Social Sciences,AI talent,2881,5149
+2024,1,Social Sciences,Other graduates,273216,378451
+2024,1,,AI talent,7748,13610
+2024,1,,Other graduates,307931,421535
+2024,2,Agriculture & Environment,AI talent,2032,3141
+2024,2,Agriculture & Environment,Other graduates,109517,149598
+2024,2,Architecture & Built Environment,AI talent,1593,3066
+2024,2,Architecture & Built Environment,Other graduates,117926,184520
+2024,2,"Arts, Media & Design",AI talent,2501,4096
+2024,2,"Arts, Media & Design",Other graduates,319596,421559
+2024,2,Business & Economics,AI talent,14717,38214
+2024,2,Business & Economics,Other graduates,892674,1560946
+2024,2,CS / IT,AI talent,57706,110852
+2024,2,CS / IT,Other graduates,289292,456218
+2024,2,Education & Teaching,AI talent,1093,2038
+2024,2,Education & Teaching,Other graduates,156632,211744
+2024,2,Engineering & Technology,AI talent,20985,33831
+2024,2,Engineering & Technology,Other graduates,275346,385942
+2024,2,Health & Medicine,AI talent,3767,6231
+2024,2,Health & Medicine,Other graduates,321805,466187
+2024,2,Humanities & Languages,AI talent,2337,3718
+2024,2,Humanities & Languages,Other graduates,161306,213252
+2024,2,Law,AI talent,765,1708
+2024,2,Law,Other graduates,134487,204092
+2024,2,Natural Sciences & Math,AI talent,15270,24460
+2024,2,Natural Sciences & Math,Other graduates,220902,278809
+2024,2,Other / Non-degree,AI talent,644,1308
+2024,2,Other / Non-degree,Other graduates,55706,81666
+2024,2,Psychology & Social Work,AI talent,2053,3448
+2024,2,Psychology & Social Work,Other graduates,232135,312747
+2024,2,Skills & Short Courses,AI talent,547,1287
+2024,2,Skills & Short Courses,Other graduates,9510,15695
+2024,2,Social Sciences,AI talent,2239,4489
+2024,2,Social Sciences,Other graduates,247553,364018
+2024,2,,AI talent,5581,10959
+2024,2,,Other graduates,278263,398422
+2024,3,Agriculture & Environment,AI talent,1658,2697
+2024,3,Agriculture & Environment,Other graduates,94974,134822
+2024,3,Architecture & Built Environment,AI talent,1322,2645
+2024,3,Architecture & Built Environment,Other graduates,101763,169270
+2024,3,"Arts, Media & Design",AI talent,2110,3707
+2024,3,"Arts, Media & Design",Other graduates,290116,397336
+2024,3,Business & Economics,AI talent,11345,33209
+2024,3,Business & Economics,Other graduates,766822,1433373
+2024,3,CS / IT,AI talent,43125,90431
+2024,3,CS / IT,Other graduates,246160,405190
+2024,3,Education & Teaching,AI talent,909,1820
+2024,3,Education & Teaching,Other graduates,150699,207010
+2024,3,Engineering & Technology,AI talent,18307,32127
+2024,3,Engineering & Technology,Other graduates,250116,366452
+2024,3,Health & Medicine,AI talent,2944,5409
+2024,3,Health & Medicine,Other graduates,297030,442380
+2024,3,Humanities & Languages,AI talent,1986,3448
+2024,3,Humanities & Languages,Other graduates,149606,205182
+2024,3,Law,AI talent,636,1510
+2024,3,Law,Other graduates,119010,188589
+2024,3,Natural Sciences & Math,AI talent,13055,22231
+2024,3,Natural Sciences & Math,Other graduates,196523,258649
+2024,3,Other / Non-degree,AI talent,444,1080
+2024,3,Other / Non-degree,Other graduates,49122,75955
+2024,3,Psychology & Social Work,AI talent,1718,3228
+2024,3,Psychology & Social Work,Other graduates,201816,280417
+2024,3,Skills & Short Courses,AI talent,375,916
+2024,3,Skills & Short Courses,Other graduates,8442,14448
+2024,3,Social Sciences,AI talent,1878,4006
+2024,3,Social Sciences,Other graduates,219976,339817
+2024,3,,AI talent,4368,9024
+2024,3,,Other graduates,244953,362126
+2024,4,Agriculture & Environment,AI talent,1386,2475
+2024,4,Agriculture & Environment,Other graduates,85260,124619
+2024,4,Architecture & Built Environment,AI talent,1179,2475
+2024,4,Architecture & Built Environment,Other graduates,90104,159366
+2024,4,"Arts, Media & Design",AI talent,1973,3749
+2024,4,"Arts, Media & Design",Other graduates,269023,380395
+2024,4,Business & Economics,AI talent,9717,30994
+2024,4,Business & Economics,Other graduates,671341,1333408
+2024,4,CS / IT,AI talent,33767,75399
+2024,4,CS / IT,Other graduates,215959,369726
+2024,4,Education & Teaching,AI talent,825,1696
+2024,4,Education & Teaching,Other graduates,142606,200385
+2024,4,Engineering & Technology,AI talent,15699,29974
+2024,4,Engineering & Technology,Other graduates,223848,345391
+2024,4,Health & Medicine,AI talent,2351,4711
+2024,4,Health & Medicine,Other graduates,269631,416028
+2024,4,Humanities & Languages,AI talent,1739,3125
+2024,4,Humanities & Languages,Other graduates,140982,198858
+2024,4,Law,AI talent,494,1345
+2024,4,Law,Other graduates,105973,176133
+2024,4,Natural Sciences & Math,AI talent,11058,20838
+2024,4,Natural Sciences & Math,Other graduates,174291,238795
+2024,4,Other / Non-degree,AI talent,471,1100
+2024,4,Other / Non-degree,Other graduates,44556,71908
+2024,4,Psychology & Social Work,AI talent,1485,3015
+2024,4,Psychology & Social Work,Other graduates,177738,254220
+2024,4,Skills & Short Courses,AI talent,352,862
+2024,4,Skills & Short Courses,Other graduates,7388,13504
+2024,4,Social Sciences,AI talent,1598,3847
+2024,4,Social Sciences,Other graduates,196056,315760
+2024,4,,AI talent,3644,7949
+2024,4,,Other graduates,219092,336257
+2024,5,Agriculture & Environment,AI talent,1337,2450
+2024,5,Agriculture & Environment,Other graduates,78895,120455
+2024,5,Architecture & Built Environment,AI talent,982,2354
+2024,5,Architecture & Built Environment,Other graduates,81588,153644
+2024,5,"Arts, Media & Design",AI talent,1734,3498
+2024,5,"Arts, Media & Design",Other graduates,248073,365774
+2024,5,Business & Economics,AI talent,8246,28652
+2024,5,Business & Economics,Other graduates,594141,1258764
+2024,5,CS / IT,AI talent,26699,63820
+2024,5,CS / IT,Other graduates,188152,338531
+2024,5,Education & Teaching,AI talent,708,1513
+2024,5,Education & Teaching,Other graduates,131764,188397
+2024,5,Engineering & Technology,AI talent,13502,27765
+2024,5,Engineering & Technology,Other graduates,207232,337752
+2024,5,Health & Medicine,AI talent,1968,4259
+2024,5,Health & Medicine,Other graduates,244395,388612
+2024,5,Humanities & Languages,AI talent,1683,3129
+2024,5,Humanities & Languages,Other graduates,129663,190860
+2024,5,Law,AI talent,456,1302
+2024,5,Law,Other graduates,93146,162807
+2024,5,Natural Sciences & Math,AI talent,10109,20226
+2024,5,Natural Sciences & Math,Other graduates,157779,226228
+2024,5,Other / Non-degree,AI talent,358,1034
+2024,5,Other / Non-degree,Other graduates,40994,69332
+2024,5,Psychology & Social Work,AI talent,1289,2743
+2024,5,Psychology & Social Work,Other graduates,158463,234764
+2024,5,Skills & Short Courses,AI talent,251,783
+2024,5,Skills & Short Courses,Other graduates,6797,12877
+2024,5,Social Sciences,AI talent,1353,3456
+2024,5,Social Sciences,Other graduates,176898,298773
+2024,5,,AI talent,3093,7088
+2024,5,,Other graduates,199490,318663
+2025,0,Agriculture & Environment,AI talent,3735,4877
+2025,0,Agriculture & Environment,Other graduates,153006,186319
+2025,0,Architecture & Built Environment,AI talent,2971,4593
+2025,0,Architecture & Built Environment,Other graduates,156805,213242
+2025,0,"Arts, Media & Design",AI talent,3983,6071
+2025,0,"Arts, Media & Design",Other graduates,381705,470296
+2025,0,Business & Economics,AI talent,34295,64227
+2025,0,Business & Economics,Other graduates,1254692,1847009
+2025,0,CS / IT,AI talent,171671,257979
+2025,0,CS / IT,Other graduates,431620,602297
+2025,0,Education & Teaching,AI talent,1722,2912
+2025,0,Education & Teaching,Other graduates,166855,211913
+2025,0,Engineering & Technology,AI talent,45805,60988
+2025,0,Engineering & Technology,Other graduates,370956,465246
+2025,0,Health & Medicine,AI talent,8202,11134
+2025,0,Health & Medicine,Other graduates,445307,562000
+2025,0,Humanities & Languages,AI talent,3431,4972
+2025,0,Humanities & Languages,Other graduates,181717,223874
+2025,0,Law,AI talent,1530,2697
+2025,0,Law,Other graduates,182623,250276
+2025,0,Natural Sciences & Math,AI talent,27808,35863
+2025,0,Natural Sciences & Math,Other graduates,327732,376816
+2025,0,Other / Non-degree,AI talent,2153,3301
+2025,0,Other / Non-degree,Other graduates,94175,119857
+2025,0,Psychology & Social Work,AI talent,4478,6428
+2025,0,Psychology & Social Work,Other graduates,353562,429804
+2025,0,Skills & Short Courses,AI talent,1354,2282
+2025,0,Skills & Short Courses,Other graduates,12700,18090
+2025,0,Social Sciences,AI talent,4687,7573
+2025,0,Social Sciences,Other graduates,352958,460813
+2025,0,,AI talent,13720,21488
+2025,0,,Other graduates,402042,518136
+2025,1,Agriculture & Environment,AI talent,2608,3838
+2025,1,Agriculture & Environment,Other graduates,119950,155277
+2025,1,Architecture & Built Environment,AI talent,2293,3974
+2025,1,Architecture & Built Environment,Other graduates,130821,192980
+2025,1,"Arts, Media & Design",AI talent,3298,5319
+2025,1,"Arts, Media & Design",Other graduates,329589,418596
+2025,1,Business & Economics,AI talent,23153,51779
+2025,1,Business & Economics,Other graduates,996175,1597941
+2025,1,CS / IT,AI talent,110724,192889
+2025,1,CS / IT,Other graduates,342522,516504
+2025,1,Education & Teaching,AI talent,1459,2581
+2025,1,Education & Teaching,Other graduates,148568,196755
+2025,1,Engineering & Technology,AI talent,31093,45832
+2025,1,Engineering & Technology,Other graduates,288623,383341
+2025,1,Health & Medicine,AI talent,5397,8469
+2025,1,Health & Medicine,Other graduates,348144,475595
+2025,1,Humanities & Languages,AI talent,2908,4476
+2025,1,Humanities & Languages,Other graduates,160777,204036
+2025,1,Law,AI talent,1027,2113
+2025,1,Law,Other graduates,137473,209422
+2025,1,Natural Sciences & Math,AI talent,19613,28372
+2025,1,Natural Sciences & Math,Other graduates,245223,293997
+2025,1,Other / Non-degree,AI talent,1232,2229
+2025,1,Other / Non-degree,Other graduates,66262,90489
+2025,1,Psychology & Social Work,AI talent,2778,4409
+2025,1,Psychology & Social Work,Other graduates,268212,345420
+2025,1,Skills & Short Courses,AI talent,817,1610
+2025,1,Skills & Short Courses,Other graduates,9916,15490
+2025,1,Social Sciences,AI talent,3304,5915
+2025,1,Social Sciences,Other graduates,273878,377825
+2025,1,,AI talent,9574,16935
+2025,1,,Other graduates,314406,429948
+2025,2,Agriculture & Environment,AI talent,2377,3719
+2025,2,Agriculture & Environment,Other graduates,109379,149354
+2025,2,Architecture & Built Environment,AI talent,1851,3491
+2025,2,Architecture & Built Environment,Other graduates,119172,187438
+2025,2,"Arts, Media & Design",AI talent,2791,4717
+2025,2,"Arts, Media & Design",Other graduates,306666,405266
+2025,2,Business & Economics,AI talent,17177,44064
+2025,2,Business & Economics,Other graduates,878194,1542446
+2025,2,CS / IT,AI talent,75714,146097
+2025,2,CS / IT,Other graduates,298706,477614
+2025,2,Education & Teaching,AI talent,1147,2139
+2025,2,Education & Teaching,Other graduates,146644,199104
+2025,2,Engineering & Technology,AI talent,24970,39906
+2025,2,Engineering & Technology,Other graduates,272800,381300
+2025,2,Health & Medicine,AI talent,4243,7385
+2025,2,Health & Medicine,Other graduates,317793,458312
+2025,2,Humanities & Languages,AI talent,2474,3940
+2025,2,Humanities & Languages,Other graduates,151749,200862
+2025,2,Law,AI talent,774,1710
+2025,2,Law,Other graduates,125235,196295
+2025,2,Natural Sciences & Math,AI talent,16457,26096
+2025,2,Natural Sciences & Math,Other graduates,218344,273328
+2025,2,Other / Non-degree,AI talent,859,1648
+2025,2,Other / Non-degree,Other graduates,56225,82215
+2025,2,Psychology & Social Work,AI talent,2328,3960
+2025,2,Psychology & Social Work,Other graduates,239392,321366
+2025,2,Skills & Short Courses,AI talent,600,1280
+2025,2,Skills & Short Courses,Other graduates,9213,15207
+2025,2,Social Sciences,AI talent,2600,5218
+2025,2,Social Sciences,Other graduates,244793,358675
+2025,2,,AI talent,7109,13681
+2025,2,,Other graduates,283850,405942
+2025,3,Agriculture & Environment,AI talent,1872,3119
+2025,3,Agriculture & Environment,Other graduates,98551,141418
+2025,3,Architecture & Built Environment,AI talent,1414,3002
+2025,3,Architecture & Built Environment,Other graduates,105635,177567
+2025,3,"Arts, Media & Design",AI talent,2221,4015
+2025,3,"Arts, Media & Design",Other graduates,288740,395608
+2025,3,Business & Economics,AI talent,12639,38266
+2025,3,Business & Economics,Other graduates,783078,1496736
+2025,3,CS / IT,AI talent,50574,109232
+2025,3,CS / IT,Other graduates,261277,438302
+2025,3,Education & Teaching,AI talent,1053,2079
+2025,3,Education & Teaching,Other graduates,144543,201262
+2025,3,Engineering & Technology,AI talent,18883,33661
+2025,3,Engineering & Technology,Other graduates,251318,372484
+2025,3,Health & Medicine,AI talent,3399,6207
+2025,3,Health & Medicine,Other graduates,297296,447256
+2025,3,Humanities & Languages,AI talent,2104,3680
+2025,3,Humanities & Languages,Other graduates,146292,201213
+2025,3,Law,AI talent,674,1738
+2025,3,Law,Other graduates,118271,196042
+2025,3,Natural Sciences & Math,AI talent,13566,23979
+2025,3,Natural Sciences & Math,Other graduates,200275,263750
+2025,3,Other / Non-degree,AI talent,550,1300
+2025,3,Other / Non-degree,Other graduates,49843,77722
+2025,3,Psychology & Social Work,AI talent,1849,3438
+2025,3,Psychology & Social Work,Other graduates,212079,296494
+2025,3,Skills & Short Courses,AI talent,504,1255
+2025,3,Skills & Short Courses,Other graduates,8587,15059
+2025,3,Social Sciences,AI talent,1941,4463
+2025,3,Social Sciences,Other graduates,222238,346090
+2025,3,,AI talent,4971,10857
+2025,3,,Other graduates,255632,381839
+2025,4,Agriculture & Environment,AI talent,1474,2634
+2025,4,Agriculture & Environment,Other graduates,86208,128414
+2025,4,Architecture & Built Environment,AI talent,1151,2564
+2025,4,Architecture & Built Environment,Other graduates,91631,163701
+2025,4,"Arts, Media & Design",AI talent,1936,3706
+2025,4,"Arts, Media & Design",Other graduates,264533,376340
+2025,4,Business & Economics,AI talent,9928,33471
+2025,4,Business & Economics,Other graduates,683177,1384681
+2025,4,CS / IT,AI talent,37689,89161
+2025,4,CS / IT,Other graduates,223398,390796
+2025,4,Education & Teaching,AI talent,859,1810
+2025,4,Education & Teaching,Other graduates,140812,198554
+2025,4,Engineering & Technology,AI talent,16160,31808
+2025,4,Engineering & Technology,Other graduates,226511,353264
+2025,4,Health & Medicine,AI talent,2672,5394
+2025,4,Health & Medicine,Other graduates,275154,426548
+2025,4,Humanities & Languages,AI talent,1806,3404
+2025,4,Humanities & Languages,Other graduates,136653,194758
+2025,4,Law,AI talent,554,1498
+2025,4,Law,Other graduates,104449,181173
+2025,4,Natural Sciences & Math,AI talent,11558,21906
+2025,4,Natural Sciences & Math,Other graduates,178821,246549
+2025,4,Other / Non-degree,AI talent,399,1097
+2025,4,Other / Non-degree,Other graduates,44749,73145
+2025,4,Psychology & Social Work,AI talent,1566,3238
+2025,4,Psychology & Social Work,Other graduates,186473,268839
+2025,4,Skills & Short Courses,AI talent,328,910
+2025,4,Skills & Short Courses,Other graduates,7701,13971
+2025,4,Social Sciences,AI talent,1690,4079
+2025,4,Social Sciences,Other graduates,199301,325126
+2025,4,,AI talent,3911,8865
+2025,4,,Other graduates,226188,348809
+2025,5,Agriculture & Environment,AI talent,1255,2472
+2025,5,Agriculture & Environment,Other graduates,77521,119209
+2025,5,Architecture & Built Environment,AI talent,1085,2504
+2025,5,Architecture & Built Environment,Other graduates,81412,154087
+2025,5,"Arts, Media & Design",AI talent,1774,3773
+2025,5,"Arts, Media & Design",Other graduates,246988,362149
+2025,5,Business & Economics,AI talent,8501,31363
+2025,5,Business & Economics,Other graduates,604299,1294690
+2025,5,CS / IT,AI talent,29504,74720
+2025,5,CS / IT,Other graduates,197118,357994
+2025,5,Education & Teaching,AI talent,767,1693
+2025,5,Education & Teaching,Other graduates,134094,192854
+2025,5,Engineering & Technology,AI talent,13883,29516
+2025,5,Engineering & Technology,Other graduates,203699,335242
+2025,5,Health & Medicine,AI talent,2080,4696
+2025,5,Health & Medicine,Other graduates,251249,401971
+2025,5,Humanities & Languages,AI talent,1540,3045
+2025,5,Humanities & Languages,Other graduates,129345,189200
+2025,5,Law,AI talent,457,1443
+2025,5,Law,Other graduates,93976,169363
+2025,5,Natural Sciences & Math,AI talent,9743,20368
+2025,5,Natural Sciences & Math,Other graduates,159366,228806
+2025,5,Other / Non-degree,AI talent,419,1107
+2025,5,Other / Non-degree,Other graduates,40657,69251
+2025,5,Psychology & Social Work,AI talent,1362,3071
+2025,5,Psychology & Social Work,Other graduates,164600,243995
+2025,5,Skills & Short Courses,AI talent,309,841
+2025,5,Skills & Short Courses,Other graduates,6826,13057
+2025,5,Social Sciences,AI talent,1420,3796
+2025,5,Social Sciences,Other graduates,179296,303802
+2025,5,,AI talent,3326,7864
+2025,5,,Other graduates,203116,324507
+2026,0,Agriculture & Environment,AI talent,2358,3186
+2026,0,Agriculture & Environment,Other graduates,95285,116838
+2026,0,Architecture & Built Environment,AI talent,2050,3223
+2026,0,Architecture & Built Environment,Other graduates,103010,138480
+2026,0,"Arts, Media & Design",AI talent,2647,4112
+2026,0,"Arts, Media & Design",Other graduates,229820,284597
+2026,0,Business & Economics,AI talent,25003,47594
+2026,0,Business & Economics,Other graduates,883554,1306136
+2026,0,CS / IT,AI talent,117112,177142
+2026,0,CS / IT,Other graduates,309906,434352
+2026,0,Education & Teaching,AI talent,1455,2433
+2026,0,Education & Teaching,Other graduates,106510,137433
+2026,0,Engineering & Technology,AI talent,31424,42506
+2026,0,Engineering & Technology,Other graduates,258715,325981
+2026,0,Health & Medicine,AI talent,5262,7615
+2026,0,Health & Medicine,Other graduates,294687,372056
+2026,0,Humanities & Languages,AI talent,2235,3320
+2026,0,Humanities & Languages,Other graduates,106900,134389
+2026,0,Law,AI talent,1349,2403
+2026,0,Law,Other graduates,126184,169275
+2026,0,Natural Sciences & Math,AI talent,17789,23507
+2026,0,Natural Sciences & Math,Other graduates,212945,248574
+2026,0,Other / Non-degree,AI talent,1783,2776
+2026,0,Other / Non-degree,Other graduates,72575,93003
+2026,0,Psychology & Social Work,AI talent,3207,4777
+2026,0,Psychology & Social Work,Other graduates,236590,289309
+2026,0,Skills & Short Courses,AI talent,873,1471
+2026,0,Skills & Short Courses,Other graduates,9180,13085
+2026,0,Social Sciences,AI talent,3513,5890
+2026,0,Social Sciences,Other graduates,242479,322792
+2026,0,,AI talent,9365,14655
+2026,0,,Other graduates,259108,337290
+2026,1,Agriculture & Environment,AI talent,2444,3477
+2026,1,Agriculture & Environment,Other graduates,102299,131489
+2026,1,Architecture & Built Environment,AI talent,1925,3433
+2026,1,Architecture & Built Environment,Other graduates,111599,162203
+2026,1,"Arts, Media & Design",AI talent,2873,4828
+2026,1,"Arts, Media & Design",Other graduates,265959,336778
+2026,1,Business & Economics,AI talent,22591,50085
+2026,1,Business & Economics,Other graduates,904870,1434110
+2026,1,CS / IT,AI talent,111748,192573
+2026,1,CS / IT,Other graduates,315938,469708
+2026,1,Education & Teaching,AI talent,1180,2252
+2026,1,Education & Teaching,Other graduates,125221,166067
+2026,1,Engineering & Technology,AI talent,30004,44105
+2026,1,Engineering & Technology,Other graduates,261753,343175
+2026,1,Health & Medicine,AI talent,5147,7944
+2026,1,Health & Medicine,Other graduates,306934,413608
+2026,1,Humanities & Languages,AI talent,2442,3884
+2026,1,Humanities & Languages,Other graduates,129490,165310
+2026,1,Law,AI talent,944,2040
+2026,1,Law,Other graduates,121898,182554
+2026,1,Natural Sciences & Math,AI talent,17537,25504
+2026,1,Natural Sciences & Math,Other graduates,216406,257312
+2026,1,Other / Non-degree,AI talent,1398,2450
+2026,1,Other / Non-degree,Other graduates,65042,87428
+2026,1,Psychology & Social Work,AI talent,2916,4667
+2026,1,Psychology & Social Work,Other graduates,241948,309760
+2026,1,Skills & Short Courses,AI talent,912,1761
+2026,1,Skills & Short Courses,Other graduates,8921,13682
+2026,1,Social Sciences,AI talent,3233,5873
+2026,1,Social Sciences,Other graduates,247174,338964
+2026,1,,AI talent,9309,16551
+2026,1,,Other graduates,287662,391760
+2026,2,Agriculture & Environment,AI talent,2088,3293
+2026,2,Agriculture & Environment,Other graduates,95722,129264
+2026,2,Architecture & Built Environment,AI talent,1824,3434
+2026,2,Architecture & Built Environment,Other graduates,106739,164968
+2026,2,"Arts, Media & Design",AI talent,2529,4388
+2026,2,"Arts, Media & Design",Other graduates,261704,343258
+2026,2,Business & Economics,AI talent,18071,45384
+2026,2,Business & Economics,Other graduates,803694,1378553
+2026,2,CS / IT,AI talent,88302,166258
+2026,2,CS / IT,Other graduates,286924,452390
+2026,2,Education & Teaching,AI talent,1228,2297
+2026,2,Education & Teaching,Other graduates,125046,169945
+2026,2,Engineering & Technology,AI talent,25470,39801
+2026,2,Engineering & Technology,Other graduates,245195,336346
+2026,2,Health & Medicine,AI talent,4438,7462
+2026,2,Health & Medicine,Other graduates,290537,410510
+2026,2,Humanities & Languages,AI talent,2288,3727
+2026,2,Humanities & Languages,Other graduates,127975,168100
+2026,2,Law,AI talent,779,1830
+2026,2,Law,Other graduates,108352,177566
+2026,2,Natural Sciences & Math,AI talent,15765,24351
+2026,2,Natural Sciences & Math,Other graduates,199605,246657
+2026,2,Other / Non-degree,AI talent,998,1986
+2026,2,Other / Non-degree,Other graduates,53935,77830
+2026,2,Psychology & Social Work,AI talent,2211,3821
+2026,2,Psychology & Social Work,Other graduates,218388,291108
+2026,2,Skills & Short Courses,AI talent,644,1421
+2026,2,Skills & Short Courses,Other graduates,8251,13546
+2026,2,Social Sciences,AI talent,2618,5201
+2026,2,Social Sciences,Other graduates,221195,319669
+2026,2,,AI talent,7760,14696
+2026,2,,Other graduates,260341,368793
+2026,3,Agriculture & Environment,AI talent,1944,3255
+2026,3,Agriculture & Environment,Other graduates,90695,128260
+2026,3,Architecture & Built Environment,AI talent,1537,3119
+2026,3,Architecture & Built Environment,Other graduates,99054,163660
+2026,3,"Arts, Media & Design",AI talent,2344,4178
+2026,3,"Arts, Media & Design",Other graduates,253306,344308
+2026,3,Business & Economics,AI talent,13725,38983
+2026,3,Business & Economics,Other graduates,718400,1345565
+2026,3,CS / IT,AI talent,62041,128827
+2026,3,CS / IT,Other graduates,254988,424213
+2026,3,Education & Teaching,AI talent,943,1887
+2026,3,Education & Teaching,Other graduates,127918,177390
+2026,3,Engineering & Technology,AI talent,20662,35268
+2026,3,Engineering & Technology,Other graduates,232834,336978
+2026,3,Health & Medicine,AI talent,3504,6582
+2026,3,Health & Medicine,Other graduates,275797,407519
+2026,3,Humanities & Languages,AI talent,2014,3367
+2026,3,Humanities & Languages,Other graduates,125194,170897
+2026,3,Law,AI talent,620,1556
+2026,3,Law,Other graduates,102455,171217
+2026,3,Natural Sciences & Math,AI talent,13590,22981
+2026,3,Natural Sciences & Math,Other graduates,182738,235606
+2026,3,Other / Non-degree,AI talent,735,1535
+2026,3,Other / Non-degree,Other graduates,47109,72316
+2026,3,Psychology & Social Work,AI talent,1936,3529
+2026,3,Psychology & Social Work,Other graduates,201500,278590
+2026,3,Skills & Short Courses,AI talent,493,1159
+2026,3,Skills & Short Courses,Other graduates,7748,13355
+2026,3,Social Sciences,AI talent,2162,4649
+2026,3,Social Sciences,Other graduates,202976,309596
+2026,3,,AI talent,5943,12102
+2026,3,,Other graduates,240387,354501
+2026,4,Agriculture & Environment,AI talent,1547,2781
+2026,4,Agriculture & Environment,Other graduates,84196,124766
+2026,4,Architecture & Built Environment,AI talent,1181,2724
+2026,4,Architecture & Built Environment,Other graduates,89872,157992
+2026,4,"Arts, Media & Design",AI talent,1784,3484
+2026,4,"Arts, Media & Design",Other graduates,246136,345645
+2026,4,Business & Economics,AI talent,10250,34345
+2026,4,Business & Economics,Other graduates,661816,1331261
+2026,4,CS / IT,AI talent,41694,97001
+2026,4,CS / IT,Other graduates,226527,393684
+2026,4,Education & Teaching,AI talent,889,1912
+2026,4,Education & Teaching,Other graduates,128537,181837
+2026,4,Engineering & Technology,AI talent,15616,29888
+2026,4,Engineering & Technology,Other graduates,217484,333234
+2026,4,Health & Medicine,AI talent,2798,5548
+2026,4,Health & Medicine,Other graduates,263513,404434
+2026,4,Humanities & Languages,AI talent,1736,3167
+2026,4,Humanities & Languages,Other graduates,124431,175600
+2026,4,Law,AI talent,572,1583
+2026,4,Law,Other graduates,98797,173699
+2026,4,Natural Sciences & Math,AI talent,11309,21227
+2026,4,Natural Sciences & Math,Other graduates,172081,232868
+2026,4,Other / Non-degree,AI talent,452,1172
+2026,4,Other / Non-degree,Other graduates,42826,69581
+2026,4,Psychology & Social Work,AI talent,1554,3066
+2026,4,Psychology & Social Work,Other graduates,184200,263764
+2026,4,Skills & Short Courses,AI talent,434,1176
+2026,4,Skills & Short Courses,Other graduates,7484,13458
+2026,4,Social Sciences,AI talent,1593,3931
+2026,4,Social Sciences,Other graduates,189106,304558
+2026,4,,AI talent,4208,9660
+2026,4,,Other graduates,222024,340118
+2026,5,Agriculture & Environment,AI talent,1226,2353
+2026,5,Agriculture & Environment,Other graduates,75373,115032
+2026,5,Architecture & Built Environment,AI talent,994,2335
+2026,5,Architecture & Built Environment,Other graduates,78781,147164
+2026,5,"Arts, Media & Design",AI talent,1626,3302
+2026,5,"Arts, Media & Design",Other graduates,229833,334393
+2026,5,Business & Economics,AI talent,8136,30207
+2026,5,Business & Economics,Other graduates,589370,1247699
+2026,5,CS / IT,AI talent,31783,80376
+2026,5,CS / IT,Other graduates,196141,354335
+2026,5,Education & Teaching,AI talent,754,1681
+2026,5,Education & Teaching,Other graduates,126832,181101
+2026,5,Engineering & Technology,AI talent,13643,28584
+2026,5,Engineering & Technology,Other graduates,198328,319928
+2026,5,Health & Medicine,AI talent,2231,4849
+2026,5,Health & Medicine,Other graduates,247127,389077
+2026,5,Humanities & Languages,AI talent,1496,2994
+2026,5,Humanities & Languages,Other graduates,118759,173309
+2026,5,Law,AI talent,484,1387
+2026,5,Law,Other graduates,89334,162914
+2026,5,Natural Sciences & Math,AI talent,9503,19454
+2026,5,Natural Sciences & Math,Other graduates,155525,220354
+2026,5,Other / Non-degree,AI talent,344,1025
+2026,5,Other / Non-degree,Other graduates,39048,66227
+2026,5,Psychology & Social Work,AI talent,1318,2883
+2026,5,Psychology & Social Work,Other graduates,164279,241619
+2026,5,Skills & Short Courses,AI talent,286,831
+2026,5,Skills & Short Courses,Other graduates,6752,12586
+2026,5,Social Sciences,AI talent,1367,3580
+2026,5,Social Sciences,Other graduates,173018,290350
+2026,5,,AI talent,3285,7989
+2026,5,,Other graduates,200715,315815

@@ -53,6 +53,15 @@ def cs_split(df, keys):          # CS against the pooled other 14 fields, from t
 
 
 first5_ai = share(stock, ["cal_year", "grp"])
+
+# check behind the footnote: the same shares with the mix of years since graduation (0-5) held at its 2015-19 average
+PIVOT, LAST_FULL = 2021, int(rep["meta"]["data_end"][:4]) - 1          # the data end mid-year, so the last calendar year is partial
+g = stock.groupby(["cal_year", "stage", "grp"])[["junior_n", "n"]].sum().reset_index()
+w = stock[stock.cal_year.between(2015, 2019)].groupby("stage").n.sum()
+g["part"] = g.junior_n / g.n * g.stage.map(w / w.sum())
+fixed = 100 * g.groupby(["cal_year", "grp"]).part.sum().unstack()
+fixed_mix = {k: round(float(fixed.loc[LAST_FULL, k] - fixed.loc[PIVOT, k]), 1) for k in fixed.columns}
+print("change", PIVOT, "to", LAST_FULL, "with the stage mix held fixed:", fixed_mix)
 cl = stock.dropna(subset=["fgroup"])                       # graduates with a classified field
 by_field, cs = share(cl, ["cal_year", "fgroup"]), cs_split(cl, ["cal_year"])
 unclassified_pct = 100 * stock[stock.fgroup.isna()].n.sum() / stock.n.sum()
@@ -111,7 +120,8 @@ points = dict(groups=pgroups, rows=[[round(float(px[i]), 3), round(float(py[i]),
 
 out = dict(
     points=points,
-    meta=dict(rep["meta"], unclassified_pct=round(unclassified_pct, 1), internships=int(fl.n.sum()), last_cohort_months=last_window, partial_cohorts=partial),
+    meta=dict(rep["meta"], unclassified_pct=round(unclassified_pct, 1), internships=int(fl.n.sum()), last_cohort_months=last_window, partial_cohorts=partial,
+              pivot=PIVOT, last_full_year=LAST_FULL, fixed_mix=fixed_mix),
     junior_ai=rec(junior_ai),                    # older measure, kept for the comparison view on slide 1
     first5_ai=rec(first5_ai),
     stock_cs=rec(cs),
