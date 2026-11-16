@@ -16,7 +16,7 @@ const by = k => (a, b) => a[k] - b[k];
 const CFG = {displayModeBar: false, responsive: true};
 /* one line under each chart saying what is counted, for whom and over what window; it follows the selected view */
 const HOW = {
-  s1: {share: 'For each year: every job held by graduates from that year or the five before. The line is the share that are junior jobs (the lowest two of seven levels). A graduate with two jobs counts twice.',
+  s1: {share: 'For each year: every job held by graduates from that year or the five before. The line is the share that are junior jobs (the lowest two of seven levels).',
        gap: 'Share of junior jobs for AI talent minus the share for other graduates, in percentage points. Below zero means AI talent has the lower share. Same jobs as in the first-five-years view.',
        old: 'For each year: every job started since 2015 and held by anyone who graduated since 2005, whatever their experience. The line is the share that are junior jobs. This group gains a year of experience each year.'},
   s2: {stock: 'For each year: every job held by graduates from that year or the five before, by degree group (highest degree). The line is the share that are junior jobs (the lowest two of seven levels).',
