@@ -5,7 +5,7 @@ Future of Europe's Workforce" (The Merode, Brussels, 18 November 2026).
 
 Live: https://ruggsea.github.io/reading-the-signals/
 
-Five slides, one interactive chart each. Arrow keys move between slides; keys 1 to 6 press the buttons of the
+Six slides: a cover, four with one interactive chart each, and a closing slide. Slide text is limited to a title and a one-line source at the request of interface (16 Nov 2026). Arrow keys move between slides; keys 1 to 6 press the buttons of the
 current slide in order. Everything is vendored (Reveal.js, Plotly, fonts), so the deck also runs with no
 network: `python3 -m http.server` in this folder.
 
