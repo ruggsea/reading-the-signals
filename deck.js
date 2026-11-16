@@ -10,15 +10,10 @@ const rem = () => parseFloat(getComputedStyle(document.documentElement).fontSize
 const nf = n => Math.round(n).toLocaleString('en-US');
 const p1 = v => v.toFixed(1) + '%';
 const pts1 = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(1);
-const mil = n => n >= 1e6 ? (n / 1e6).toFixed(n >= 1e7 ? 1 : 2) + ' million' : nf(n);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const rgba = (h, a) => 'rgba(' + [1, 3, 5].map(i => parseInt(h.substr(i, 2), 16)).join(',') + ',' + a + ')';
 const by = k => (a, b) => a[k] - b[k];
-const ordinal = n => { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
 const CFG = {displayModeBar: false, responsive: true};
-const DATA_NAME = `Revelio Labs, online professional profiles, ${D.meta.basis.replace(' refresh', '')}`;
-const SOURCE = `Source: ${DATA_NAME}. Graduates of universities in 31 European countries and the US since 2005`;
-const GRADS = '110.3 million';   /* graduates in the report's population (report README) */
 
 function lay(extra) {
   extra = extra || {};
@@ -69,7 +64,6 @@ function countTo(el, to, fmt) {
 }
 
 /* ------------------------------------------------------------ title */
-$('m-int').textContent = mil(D.meta.internships).replace(' million', 'M');
 (function () {
   const c0 = [255, 127, 72], c1 = [224, 227, 255], cols = 48, rows = 3;
   let h = '', seed = 7;
@@ -78,7 +72,7 @@ $('m-int').textContent = mil(D.meta.internships).replace(' million', 'M');
     const t = Math.min(1, Math.max(0, c / (cols - 1) + (rnd() - .5) * .35));
     h += '<i style="background:rgb(' + c0.map((v, k) => Math.round(v + (c1[k] - v) * t)).join(',') + ')"></i>';
   }
-  $('mosaic').innerHTML = h;
+  document.querySelectorAll('.mosaic').forEach(e => { e.innerHTML = h; });
 })();
 
 /* ------------------------------------------------------------ 1: junior share, AI talent vs other graduates */
@@ -91,27 +85,21 @@ function drawS1(morph) {
   const old = S1.view === 'old', src = old ? D.junior_ai : D.first5_ai, el = $('s1-plot'), r = rem();
   const ai = src.filter(d => d.grp === 'AI talent').sort(by('cal_year')), ot = src.filter(d => d.grp === 'Other graduates').sort(by('cal_year'));
   const a0 = ai[0], a1 = ai[ai.length - 1], o0 = ot[0], o1 = ot[ot.length - 1], y0 = a0.cal_year, y1 = a1.cal_year;
-  const at = (rows, y) => rows.find(d => d.cal_year === y).junior_pct, at2 = (rows, y) => rows.find(d => d.cal_year === y).n, vals = ai.concat(ot).map(d => d.junior_pct);
+  const vals = ai.concat(ot).map(d => d.junior_pct);
   const rng = [Math.floor(Math.min(...vals) / 5) * 5, Math.ceil(Math.max(...vals) / 5) * 5 + (old ? 0 : 5)];
   const ytitle = old ? 'Share of all graduates since 2005 in work who are in a junior role' : 'Share of early-career graduates in work who are in a junior role';
   if (S1.view === 'gap') {
     const gap = ai.map((d, i) => ({cal_year: d.cal_year, v: d.junior_pct - ot[i].junior_pct}));
-    $('s1-sub').innerHTML = `The difference between the two lines. AI talent was <b>${Math.abs(gap.find(d => d.cal_year === PIVOT).v).toFixed(1)} percentage points</b> below other graduates in ${PIVOT}, about where it had been since ${y0}, and <b>${Math.abs(gap.find(d => d.cal_year === FULL).v).toFixed(1)} points</b> below in ${FULL}.`;
     Plotly.react(el, [{type: 'bar', x: gap.map(d => d.cal_year), y: gap.map(d => d.v), marker: {color: P.orange},
       text: gap.map(d => pts1(d.v)), textposition: 'outside', textfont: {size: r * 0.95, color: P.black}, cliponaxis: false, hovertemplate: '%{x}: %{y:.1f} points<extra></extra>'}],
       lay({span: [y0, y1], ytitle: 'Share in junior roles: AI talent minus other graduates, percentage points', margin: {l: r * 5, r: r * 2, t: r * 1.2, b: r * 2.4},
         yaxis: {range: [Math.floor(Math.min(...gap.map(d => d.v)) - 2), 0], ticksuffix: ''}, bargap: .35, shapes: [provBand(y1)], annotations: [provNote(y1)]}), CFG);
   } else {
-    $('s1-sub').innerHTML = old
-      ? `The same question for <b>everyone</b> who graduated since 2005. Each year they gain a year of experience, so most of this fall is people moving above junior level. Use the first-five-years view to compare.`
-      : `Graduates in their first five years at work: out of every 100 in work, how many are in a junior role (the two lowest of seven seniority levels). Steady until ${PIVOT}; by ${FULL} down <b>${Math.abs(at(ai, FULL) - at(ai, PIVOT)).toFixed(1)} percentage points</b> for AI talent and <b>${Math.abs(at(ot, FULL) - at(ot, PIVOT)).toFixed(1)}</b> for other graduates.`;
     const marks = (old ? [] : [{type: 'line', xref: 'x', yref: 'paper', x0: PIVOT, x1: PIVOT, y0: 0, y1: 1, line: {color: P.ink30, width: 1, dash: 'dot'}}]).concat([provBand(y1)]);
     Plotly.react(el, [line(ot, 'cal_year', 'Other graduates', P.steel, null, 'jobs'), line(ai, 'cal_year', 'AI talent', P.orange, null, 'jobs')],
       lay({span: [y0, y1], ytitle, yaxis: {range: rng}, shapes: marks, transition: morph === true ? MORPH : undefined, annotations: endLabels([{x: y1, y: o1.junior_pct, text: 'Other graduates <b>' + p1(o1.junior_pct) + '</b>', color: P.steel, big: 1},
         {x: y1, y: a1.junior_pct, text: 'AI talent <b>' + p1(a1.junior_pct) + '</b>', color: P.orange, big: 1}], rng).concat([startLabel(o0, 'cal_year', P.steel, a0), startLabel(a0, 'cal_year', P.orange, o0), provNote(y1)])}), CFG);
   }
-  $('s1-src').textContent = `${SOURCE}. ` + (old ? `Every job started since 2015 is counted, for all graduates since 2005. ` : `Every job held in the graduation year or the five years after is counted, once per year (${mil(at2(ai, FULL) + at2(ot, FULL))} in ${FULL}). With the same mix of years since graduation in every year, the fall from ${PIVOT} to ${FULL} is ${Math.abs(D.meta.fixed_mix['AI talent']).toFixed(1)} points for AI talent and ${Math.abs(D.meta.fixed_mix['Other graduates']).toFixed(1)} for other graduates. `) +
-    `Junior role: the two lowest of seven seniority levels. AI talent: people whose profile today matches interface's AI-talent definition, counted as such in earlier years too.` + (S1.view === 'gap' ? '' : ` The vertical axis starts at ${rng[0]}%.`);
   if (morph === true) { el.classList.remove('drawin', 'morph'); void el.offsetWidth; el.classList.add('morph'); }
   fitPlot(el);
 }
@@ -124,10 +112,7 @@ function drawS2(fadeOthers) {
   const stock = S2.measure === 'stock', xk = stock ? 'cal_year' : 'cohort', el = $('s2-plot'), r = rem(), unit = stock ? 'jobs' : 'graduates';
   const csRows = stock ? D.stock_cs : D.entry_cs, fld = stock ? D.stock_field : D.entry_field;
   const ytitle = stock ? 'Share of early-career graduates in work who are in a junior role' : 'Share of new graduates whose first job is a junior role';
-  const lead = stock ? 'Graduates in their first five years at work: out of every 100 in work, how many are in a junior role.' : 'Graduates who found work: out of every 100, how many started in a junior role. A starting job is any job begun from 6 months before to 2 years after graduating.';
   const xs = fld.map(d => d[xk]), first = Math.min(...xs), last = Math.max(...xs);
-  /* change window: since 2021 for people in work (flat before); 2019 to 2024 graduates for first jobs (the series peaks around 2019; 2024 is the last year with a complete two-year window) */
-  const from = stock ? PIVOT : 2019, to = stock ? FULL : 2024;
   const rng = [Math.floor(Math.min(...fld.map(d => d.junior_pct)) / 5) * 5, Math.ceil(Math.max(...fld.map(d => d.junior_pct)) / 5) * 5];
   const xt = stock ? {title: {text: 'Year', font: {size: r * 0.9}}} : {dtick: 2, title: {text: 'Year of graduation', font: {size: r * 0.9}}};
   const shapes = stock ? [{type: 'line', xref: 'x', yref: 'paper', x0: PIVOT, x1: PIVOT, y0: 0, y1: 1, line: {color: P.ink30, width: 1, dash: 'dot'}}, provBand(last)]
@@ -137,18 +122,13 @@ function drawS2(fadeOthers) {
   el.classList.remove('fadeothers');
   if (S2.view === 'cs') {
     const c = csRows.filter(d => d.grp === 'CS').sort(by(xk)), n = csRows.filter(d => d.grp === 'non-CS').sort(by(xk));
-    const c0 = c[0], c1 = c[c.length - 1], n0 = n[0], n1 = n[n.length - 1], at = (rows, x) => rows.find(d => d[xk] === x).junior_pct;
-    $('s2-sub').innerHTML = lead + (stock ? ` From ${from} to ${to} the share fell` : ` For those who graduated in ${to} compared with ${from}, the share is down`) + ` <b>${Math.abs(at(c, to) - at(c, from)).toFixed(1)} percentage points</b> for computer science and <b>${Math.abs(at(n, to) - at(n, from)).toFixed(1)}</b> for all other degrees.`;
+    const c0 = c[0], c1 = c[c.length - 1], n0 = n[0], n1 = n[n.length - 1];
     Plotly.react(el, [line(n, xk, 'All other degrees', P.steel, null, unit), line(c, xk, 'Computer science', P.orange, null, unit)],
       lay({span: [first, last], ytitle, xaxis: xt, yaxis: {range: rng}, shapes, annotations: endLabels([{x: n1[xk], y: n1.junior_pct, text: 'All other degrees <b>' + p1(n1.junior_pct) + '</b>', color: P.steel, big: 1},
         {x: c1[xk], y: c1.junior_pct, text: 'Computer science <b>' + p1(c1.junior_pct) + '</b>', color: P.orange, big: 1}], rng).concat([startLabel(n0, xk, P.steel, c0), startLabel(c0, xk, P.orange, n0)], partial)}), CFG);
   } else {
     const groups = [...new Set(fld.map(d => d.fgroup))].sort((a, b) => (a === CS) - (b === CS) || a.localeCompare(b));
     const val = (g, x) => fld.find(d => d.fgroup === g && d[xk] === x).junior_pct, nice = g => g === CS ? 'Computer science' : g;
-    const chg = groups.map(g => ({g, d: val(g, to) - val(g, from)})).sort((a, b) => a.d - b.d);
-    const rank = chg.findIndex(d => d.g === CS) + 1, top3 = chg.slice(0, 3).map(d => `${esc(nice(d.g))} ${Math.abs(d.d).toFixed(1)}`).join(', ');
-    $('s2-sub').innerHTML = `${lead} Largest falls${stock ? ` from ${from} to ${to}` : `, ${to} graduates compared with ${from}`}, in percentage points: <b>${top3}</b>.` +
-      (rank > 3 ? ` Computer science: <b>${Math.abs(chg[rank - 1].d).toFixed(1)}</b>, ${ordinal(rank)} of 15.` : '');
     const col = g => g === CS ? P.orange : g === 'Law' ? P.petrol : P.ink30, wid = g => g === CS ? r * 0.3 : g === 'Law' ? r * 0.22 : r * 0.12;
     const traces = groups.map(g => line(fld.filter(d => d.fgroup === g).sort(by(xk)), xk, nice(g), col(g), {mode: 'lines', line: {color: col(g), width: wid(g)}}, unit));
     const labels = hot => endLabels(groups.map(g => ({x: last, y: val(g, last), text: g === CS ? '<b>Computer science ' + p1(val(g, last)) + '</b>' : esc(g) + ' ' + p1(val(g, last)),
@@ -159,10 +139,6 @@ function drawS2(fadeOthers) {
       Plotly.relayout(el, {annotations: labels(g)}); });
     el.on('plotly_unhover', () => { Plotly.restyle(el, {'line.color': groups.map(col), 'line.width': groups.map(wid)}); Plotly.relayout(el, {annotations: labels()}); });
   }
-  const win = D.meta.last_cohort_months;
-  $('s2-src').textContent = `${SOURCE}. Degrees are sorted into 15 groups by the degree name each graduate entered, in any language; each person counts under their highest degree. Junior role: the two lowest of seven seniority levels. ` +
-    (stock ? `Every job held in the graduation year or the five years after is counted, once per year; ${D.meta.unclassified_pct}% belong to people with no usable degree name and are left out. `
-           : `If a graduate began several jobs in that window, the lowest level counts; internships are included. ${D.meta.partial_cohorts.join(' and ')} graduates have ${win[0]} to ${win[1]} months of history so far. `) + `The vertical axis starts at ${rng[0]}%.`;
   /* arriving on the 15-field view from the two-line view of the same measure: computer science stays put, the other 14 fade in */
   if (fadeOthers === true) { el.classList.remove('drawin', 'morph'); void el.offsetWidth; el.classList.add('fadeothers'); }
   fitPlot(el);
@@ -239,10 +215,6 @@ function drawS3() {
   countTo($('k-job'), t.job, p1); $('k-job-c').textContent = cmp(base && p1(base.job));
   countTo($('k-same'), t.same, p1); $('k-same-c').textContent = cmp(base && p1(base.same));
   countTo($('k-up'), t.up, p1); $('k-up-c').textContent = cmp(base && p1(base.up));
-  $('s3-sub').innerHTML = later
-    ? `Each person's first internship, and what their profile shows next. People who take a junior job are followed for two more years: do they move up?`
-    : `Each person's first internship, and what their profile shows next. For those who got a job: was it with the employer where they interned?`;
-  $('s3-src').textContent = `Source: ${DATA_NAME}. Each person's first internship, started between 2015 and 2023 and ended by October 2023, so that everyone can be followed for three more years. Country is where the internship took place. "Nothing listed next" can mean out of work, working somewhere not on the profile, or a profile that was not updated.`;
   fitPlot(el);
 }
 chips('s3-period', v => { S3.period = v.split('-').map(Number); drawS3(); });
@@ -354,7 +326,7 @@ function initMap() {
   Object.entries(MODES).forEach(([key, m], i) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'chip' + (i ? '' : ' on'); b.textContent = m.pill;
     b.onclick = () => { mode = key; [...pills.children].forEach(x => x.classList.toggle('on', x === b)); colour(); }; pills.appendChild(b); });
   chips('s4-shape', v => { shape = v; if (v === 'pts' && mode !== 'field') { mode = 'field'; [...pills.children].forEach((x, i) => x.classList.toggle('on', i === 0)); colour(); }
-    [...pills.children].forEach((x, i) => { x.disabled = v === 'pts' && i > 0; }); tip.style.display = 'none'; text(); morph(v === 'pts' ? 1 : 0); });
+    [...pills.children].forEach((x, i) => { x.disabled = v === 'pts' && i > 0; }); tip.style.display = 'none'; morph(v === 'pts' ? 1 : 0); });
   const SL = FM.search.map(r => r.f.toLowerCase()), inp = $('q'), sug = $('sug'); let sel = -1, cur = [];
   function suggest() { const v = inp.value.trim().toLowerCase(); sug.innerHTML = ''; sel = -1; cur = []; if (!v) { sug.style.display = 'none'; marker = null; paint(); return; }
     const pre = [], sub = []; for (let i = 0; i < SL.length && pre.length < 8; i++) { const j = SL[i].indexOf(v); if (j === 0) pre.push(i); else if (j > 0 && sub.length < 8) sub.push(i); }
@@ -365,14 +337,7 @@ function initMap() {
   inp.addEventListener('keydown', e => { e.stopPropagation(); const li = [...sug.children];
     if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && li.length) { e.preventDefault(); sel = (sel + (e.key === 'ArrowDown' ? 1 : -1) + li.length) % li.length; li.forEach((x, i) => x.classList.toggle('hi', i === sel)); }
     else if (e.key === 'Enter' && cur.length) { e.preventDefault(); choose(cur[Math.max(sel, 0)]); } else if (e.key === 'Escape') { sug.style.display = 'none'; inp.blur(); } });
-  const tot = H.reduce((a, h) => a + h.n26, 0);
-  function text() {
-    $('s4-sub').innerHTML = shape === 'hex'
-      ? `Graduates write their degree in their own words, in any language: <b>${nf(FM.n_fields)}</b> different names, ignoring capitals and spacing. Names with similar wording and meaning sit close together; each hexagon groups nearby names.`
-      : `Each dot is one degree name as graduates wrote it; bigger dots are used by more people. <b>${nf(PT.length)}</b> names are shown, with common names more likely to appear.`;
-    $('s4-src').textContent = `Source: ${DATA_NAME}. A language model reads each degree name and places similar names together: closeness means similar wording and meaning, not similar careers. ` +
-      (shape === 'hex' ? (FM.holdout ? `The map was drawn from the ${nf(FM.n_layout)} most common names. Every other name was then added to the neighbourhood it most resembles; in a test on names with a known place, ${Math.round(100 * FM.holdout.within1)}% landed within one hexagon. Counts and shares use the Oct. 2026 data and cover all ${mil(FM.graduates)} graduates except ${nf(FM.graduates - tot)} who list no usable degree name.` : `The map is drawn from degree names in the Sept. 2025 data release and covers ${mil(tot)} of the ${GRADS} graduates; counts and shares use the Oct. 2026 data.`) : 'Dots are a sample of the most common names; their positions and sizes come from the Sept. 2025 data release.'); }
-  text(); mapResize = resize; new ResizeObserver(resize).observe(cv); resize(); colour();
+  mapResize = resize; new ResizeObserver(resize).observe(cv); resize(); colour();
 }
 
 /* ------------------------------------------------------------ reveal wiring */

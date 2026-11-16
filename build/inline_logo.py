@@ -12,7 +12,7 @@ if not os.path.exists(LOGO):       # first run: lift the logo out of the existin
     open(LOGO, "w", encoding="utf-8").write(re.search(r'<span class="logo".*?</svg></span>', page, flags=re.S).group(0))
 logo = open(LOGO, encoding="utf-8").read()
 src = open(os.path.join(ROOT, "build", "index.src.html"), encoding="utf-8").read()
-assert src.count("<!--LOGO-->") == 5 and logo.count("<svg") == 2
+assert src.count("<!--LOGO-->") == 6 and logo.count("<svg") == 2
 tmp = os.path.join(ROOT, "index.html.tmp")
 open(tmp, "w", encoding="utf-8").write(src.replace("<!--LOGO-->", logo))
 os.replace(tmp, os.path.join(ROOT, "index.html"))
