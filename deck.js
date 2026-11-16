@@ -14,6 +14,23 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':
 const rgba = (h, a) => 'rgba(' + [1, 3, 5].map(i => parseInt(h.substr(i, 2), 16)).join(',') + ',' + a + ')';
 const by = k => (a, b) => a[k] - b[k];
 const CFG = {displayModeBar: false, responsive: true};
+/* one line under each chart saying what is counted, for whom and over what window; it follows the selected view */
+const HOW = {
+  s1: {share: 'For each year: every job held by graduates from that year or the five before. The line is the share that are junior jobs (the lowest two of seven levels). A graduate with two jobs counts twice.',
+       gap: 'Share of junior jobs for AI talent minus the share for other graduates, in percentage points. Below zero means AI talent has the lower share. Same jobs as in the first-five-years view.',
+       old: 'For each year: every job started since 2015 and held by anyone who graduated since 2005, whatever their experience. The line is the share that are junior jobs. This group gains a year of experience each year.'},
+  s2: {stock: 'For each year: every job held by graduates from that year or the five before, by degree group (highest degree). The line is the share that are junior jobs (the lowest two of seven levels).',
+       entry: 'For each graduation year: graduates who started a job from 6 months before to 24 months after graduating, internships included. The line is the share whose lowest-level job in that window was a junior job.'},
+  s3: {later: 'Left: first internships. Middle: the next step that began within 12 months of the internship ending. Right: of those in a junior job, whether a job above junior level began within 24 months.',
+       employer: 'Left: first internships. Middle: the next step that began within 12 months of the internship ending. Right: of those who got a job, whether it was with the internship employer.'},
+  s4: {field: 'Each hexagon groups degree names with similar wording and meaning, in any language. Colour: the degree group with the most graduates.',
+       pre: 'Each hexagon groups similar degree names. Colour: of 2015–19 graduates with those names who had a starting job, the share whose starting job was a junior job. Grey: under 30 graduates.',
+       post: 'Each hexagon groups similar degree names. Colour: of 2023–24 graduates with those names who had a starting job, the share whose starting job was a junior job. Grey: under 30 graduates.',
+       chg: 'Each hexagon groups similar degree names. Colour: the share with a junior starting job among 2023–24 graduates minus the share among 2015–19 graduates, in percentage points.',
+       ai: 'Each hexagon groups similar degree names. Colour: the share of graduates with those names who are AI talent. Grey: under 30 graduates.',
+       pts: 'Each dot is one degree name as a graduate wrote it. Bigger dots: more graduates wrote it. Dots close together have similar wording and meaning.'}};
+const how = (slide, key) => { $(slide + '-how').textContent = HOW[slide][key]; };
+
 
 function lay(extra) {
   extra = extra || {};
@@ -87,12 +104,12 @@ function drawS1(morph) {
   const a0 = ai[0], a1 = ai[ai.length - 1], o0 = ot[0], o1 = ot[ot.length - 1], y0 = a0.cal_year, y1 = a1.cal_year;
   const vals = ai.concat(ot).map(d => d.junior_pct);
   const rng = [Math.floor(Math.min(...vals) / 5) * 5, Math.ceil(Math.max(...vals) / 5) * 5 + (old ? 0 : 5)];
-  const ytitle = old ? 'Share of all graduates since 2005 in work who are in a junior role' : 'Share of early-career graduates in work who are in a junior role';
+  const ytitle = old ? 'Share of jobs that are junior jobs, all graduates since 2005' : 'Share of jobs that are junior jobs, graduates in their first five years';
   if (S1.view === 'gap') {
     const gap = ai.map((d, i) => ({cal_year: d.cal_year, v: d.junior_pct - ot[i].junior_pct}));
     Plotly.react(el, [{type: 'bar', x: gap.map(d => d.cal_year), y: gap.map(d => d.v), marker: {color: P.orange},
       text: gap.map(d => pts1(d.v)), textposition: 'outside', textfont: {size: r * 0.95, color: P.black}, cliponaxis: false, hovertemplate: '%{x}: %{y:.1f} points<extra></extra>'}],
-      lay({span: [y0, y1], ytitle: 'Share in junior roles: AI talent minus other graduates, percentage points', margin: {l: r * 5, r: r * 2, t: r * 1.2, b: r * 2.4},
+      lay({span: [y0, y1], ytitle: 'Share of junior jobs: AI talent minus other graduates, percentage points', margin: {l: r * 5, r: r * 2, t: r * 1.2, b: r * 2.4},
         yaxis: {range: [Math.floor(Math.min(...gap.map(d => d.v)) - 2), 0], ticksuffix: ''}, bargap: .35, shapes: [provBand(y1)], annotations: [provNote(y1)]}), CFG);
   } else {
     const marks = (old ? [] : [{type: 'line', xref: 'x', yref: 'paper', x0: PIVOT, x1: PIVOT, y0: 0, y1: 1, line: {color: P.ink30, width: 1, dash: 'dot'}}]).concat([provBand(y1)]);
@@ -100,6 +117,7 @@ function drawS1(morph) {
       lay({span: [y0, y1], ytitle, yaxis: {range: rng}, shapes: marks, transition: morph === true ? MORPH : undefined, annotations: endLabels([{x: y1, y: o1.junior_pct, text: 'Other graduates <b>' + p1(o1.junior_pct) + '</b>', color: P.steel, big: 1},
         {x: y1, y: a1.junior_pct, text: 'AI talent <b>' + p1(a1.junior_pct) + '</b>', color: P.orange, big: 1}], rng).concat([startLabel(o0, 'cal_year', P.steel, a0), startLabel(a0, 'cal_year', P.orange, o0), provNote(y1)])}), CFG);
   }
+  how('s1', S1.view);
   if (morph === true) { el.classList.remove('drawin', 'morph'); void el.offsetWidth; el.classList.add('morph'); }
   fitPlot(el);
 }
@@ -111,7 +129,7 @@ const S2 = {measure: 'stock', view: 'cs'};
 function drawS2(fadeOthers) {
   const stock = S2.measure === 'stock', xk = stock ? 'cal_year' : 'cohort', el = $('s2-plot'), r = rem(), unit = stock ? 'jobs' : 'graduates';
   const csRows = stock ? D.stock_cs : D.entry_cs, fld = stock ? D.stock_field : D.entry_field;
-  const ytitle = stock ? 'Share of early-career graduates in work who are in a junior role' : 'Share of new graduates whose first job is a junior role';
+  const ytitle = stock ? 'Share of jobs that are junior jobs, graduates in their first five years' : 'Share of graduates whose starting job is a junior job';
   const xs = fld.map(d => d[xk]), first = Math.min(...xs), last = Math.max(...xs);
   const rng = [Math.floor(Math.min(...fld.map(d => d.junior_pct)) / 5) * 5, Math.ceil(Math.max(...fld.map(d => d.junior_pct)) / 5) * 5];
   const xt = stock ? {title: {text: 'Year', font: {size: r * 0.9}}} : {dtick: 2, title: {text: 'Year of graduation', font: {size: r * 0.9}}};
@@ -139,6 +157,7 @@ function drawS2(fadeOthers) {
       Plotly.relayout(el, {annotations: labels(g)}); });
     el.on('plotly_unhover', () => { Plotly.restyle(el, {'line.color': groups.map(col), 'line.width': groups.map(wid)}); Plotly.relayout(el, {annotations: labels()}); });
   }
+  how('s2', S2.measure);
   /* arriving on the 15-field view from the two-line view of the same measure: computer science stays put, the other 14 fade in */
   if (fadeOthers === true) { el.classList.remove('drawin', 'morph'); void el.offsetWidth; el.classList.add('fadeothers'); }
   fitPlot(el);
@@ -215,6 +234,7 @@ function drawS3() {
   countTo($('k-job'), t.job, p1); $('k-job-c').textContent = cmp(base && p1(base.job));
   countTo($('k-same'), t.same, p1); $('k-same-c').textContent = cmp(base && p1(base.same));
   countTo($('k-up'), t.up, p1); $('k-up-c').textContent = cmp(base && p1(base.up));
+  how('s3', S3.third);
   fitPlot(el);
 }
 chips('s3-period', v => { S3.period = v.split('-').map(Number); drawS3(); });
@@ -240,9 +260,9 @@ function initMap() {
   const aid = [0, quant(H.map(h => h.ai), .98)];
   const SEQ = ramp([P.ecru, P.orange, P.brown]), DIV = ramp([P.petrol, '#f4f4f4', P.orange]), AI = ramp([P.lav, P.blue, P.petrol]);
   const num = (v, d) => v.toFixed(d), NA = 'rgba(32,32,32,.12)';
-  const MODES = {field: {pill: 'Field of study'},
-    pre: {pill: 'Started in a junior role, 2015–19 graduates', get: h => h.j_pre, col: v => SEQ((v - jd[0]) / (jd[1] - jd[0])), dom: jd, ramp: SEQ, fmt: v => num(v, 0) + '%'},
-    post: {pill: 'Started in a junior role, 2023–24 graduates', get: h => h.j_post, col: v => SEQ((v - jd[0]) / (jd[1] - jd[0])), dom: jd, ramp: SEQ, fmt: v => num(v, 0) + '%'},
+  const MODES = {field: {pill: 'Degree group'},
+    pre: {pill: 'Junior starting job, 2015–19 graduates', get: h => h.j_pre, col: v => SEQ((v - jd[0]) / (jd[1] - jd[0])), dom: jd, ramp: SEQ, fmt: v => num(v, 0) + '%'},
+    post: {pill: 'Junior starting job, 2023–24 graduates', get: h => h.j_post, col: v => SEQ((v - jd[0]) / (jd[1] - jd[0])), dom: jd, ramp: SEQ, fmt: v => num(v, 0) + '%'},
     chg: {pill: 'Change from 2015–19 to 2023–24', get: chg, col: v => DIV((v + cm) / (2 * cm)), dom: [-cm, cm], ramp: DIV, fmt: v => (v > 0 ? '+' : '') + num(v, 0) + ' percentage points'},
     ai: {pill: 'Share who are AI talent', get: h => h.ai, col: v => AI((v - aid[0]) / (aid[1] - aid[0])), dom: aid, ramp: AI, fmt: v => num(v, 0) + '%'}};
   /* one label per field, at its most populated hexagon */
@@ -279,14 +299,14 @@ function initMap() {
       ctx.lineWidth = 2; ctx.strokeStyle = P.black; ctx.beginPath(); ctx.arc(sx, sy, r * .8, 0, 7); ctx.stroke();
       ctx.font = '500 ' + r * .95 + 'px Inter, sans-serif'; const w = ctx.measureText(marker.label).width, lx = Math.min(Math.max(sx - w / 2, r), W - w - r);
       ctx.fillStyle = P.black; ctx.fillRect(lx - r * .4, sy - r * 2.9, w + r * .8, r * 1.6); ctx.fillStyle = '#fff'; ctx.fillText(marker.label, lx, sy - r * 1.8); } }
-  function colour() { cols = H.map(h => { if (mode === 'field') return GC[h.group]; const m = MODES[mode], v = m.get(h); return v == null ? NA : m.col(v); }); paint(); legend(); }
+  function colour() { cols = H.map(h => { if (mode === 'field') return GC[h.group]; const m = MODES[mode], v = m.get(h); return v == null ? NA : m.col(v); }); paint(); legend(); how('s4', shape === 'pts' ? 'pts' : mode); }
   function legend() { const el = $('maplegend'); el.innerHTML = '';
     if (mode === 'field') { el.className = 'legend'; groups.forEach(g => { const c = document.createElement('button'); c.type = 'button'; c.className = 'lchip' + (focus && focus !== g ? ' dim' : '');
       c.innerHTML = `<i style="background:${GC[g]}"></i>${esc(nice(g))}`; c.onclick = () => { focus = focus === g ? null : g; legend(); paint(); }; el.appendChild(c); }); return; }
     el.className = 'scale'; const m = MODES[mode]; let sw = '';
     for (let i = 0; i < 24; i++) sw += `<i style="background:${m.ramp(i / 23)}"></i>`;
     el.innerHTML = `<div class="sw">${sw}</div><div class="ends"><span>${m.fmt(m.dom[0])}</span><span>${m.fmt(m.dom[1])}</span></div>` +
-      `<div class="nt">${mode === 'chg' ? 'Dark teal: a smaller share started in a junior role than in 2015–19. Orange: a larger share. ' : ''}Pale grey: fewer than 30 graduates with a first job in those years. Values beyond the two ends use the end colours.` +
+      `<div class="nt">${mode === 'chg' ? 'Dark teal: a smaller share had a junior starting job than in 2015–19. Orange: a larger share. ' : ''}Pale grey: fewer than 30 graduates with a starting job in those years. Values beyond the two ends use the end colours.` +
       (focus ? ` Showing ${esc(nice(focus))} only.` : '') + '</div>'; }
   function resize() { const r = cv.getBoundingClientRect(); if (r.width < 10 || r.height < 10) return; dpr = window.devicePixelRatio || 1; cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr); W = r.width; HT = r.height; if (!touched) fit(); else fitK = fitScale(); paint(); }
   function zoomAt(px, py, f) { const nk = Math.max(fitK * .8, Math.min(fitK * 80, k * f)), r = nk / k; tx = px - (px - tx) * r; ty = py - (py - ty) * r; k = nk; touched = true; paint(); }
@@ -310,7 +330,7 @@ function initMap() {
       tip.innerHTML = `<b>${esc(nice(PG[p[2]]))}</b><div style="margin:.3rem 0">“${esc(p[4])}”</div><div class="tf">written exactly like this by ${nf(p[3])} graduate${p[3] === 1 ? '' : 's'}</div>`; place(px, py); return; }
     const i = hitHex(px, py); if (i < 0) { tip.style.display = 'none'; return; } const h = H[i], row = (l, v, f) => `<div><span class="tf">${l}</span> ${v == null ? 'fewer than 30 graduates' : f(v)}</div>`;
     const c = chg(h); tip.innerHTML = `<b>${esc(nice(h.group))}</b><div style="margin:.3rem 0">${h.top.map(s => '“' + esc(s) + '”').join('<br>')}</div><div class="tf">${nf(h.fields)} degree names · ${nf(h.n26)} graduates</div>` +
-      row('Started in a junior role, 2015–19 graduates:', h.j_pre, v => num(v, 1) + '%') + row('Started in a junior role, 2023–24 graduates:', h.j_post, v => num(v, 1) + '%') + row('Change:', c, v => (v > 0 ? '+' : '') + num(v, 1) + ' points') + row('AI talent:', h.ai, v => num(v, 1) + '%');
+      row('Junior starting job, 2015–19 graduates:', h.j_pre, v => num(v, 1) + '%') + row('Junior starting job, 2023–24 graduates:', h.j_post, v => num(v, 1) + '%') + row('Change:', c, v => (v > 0 ? '+' : '') + num(v, 1) + ' points') + row('AI talent:', h.ai, v => num(v, 1) + '%');
     place(px, py); }
   let drag = null, moved = 0;
   const pos = e => { const r = cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
@@ -326,7 +346,7 @@ function initMap() {
   Object.entries(MODES).forEach(([key, m], i) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'chip' + (i ? '' : ' on'); b.textContent = m.pill;
     b.onclick = () => { mode = key; [...pills.children].forEach(x => x.classList.toggle('on', x === b)); colour(); }; pills.appendChild(b); });
   chips('s4-shape', v => { shape = v; if (v === 'pts' && mode !== 'field') { mode = 'field'; [...pills.children].forEach((x, i) => x.classList.toggle('on', i === 0)); colour(); }
-    [...pills.children].forEach((x, i) => { x.disabled = v === 'pts' && i > 0; }); tip.style.display = 'none'; morph(v === 'pts' ? 1 : 0); });
+    [...pills.children].forEach((x, i) => { x.disabled = v === 'pts' && i > 0; }); tip.style.display = 'none'; how('s4', v === 'pts' ? 'pts' : mode); morph(v === 'pts' ? 1 : 0); });
   const SL = FM.search.map(r => r.f.toLowerCase()), inp = $('q'), sug = $('sug'); let sel = -1, cur = [];
   function suggest() { const v = inp.value.trim().toLowerCase(); sug.innerHTML = ''; sel = -1; cur = []; if (!v) { sug.style.display = 'none'; marker = null; paint(); return; }
     const pre = [], sub = []; for (let i = 0; i < SL.length && pre.length < 8; i++) { const j = SL[i].indexOf(v); if (j === 0) pre.push(i); else if (j > 0 && sub.length < 8) sub.push(i); }
