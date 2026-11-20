@@ -94,14 +94,15 @@ function countTo(el, to, fmt) {
 
 /* ------------------------------------------------------------ where: the same region and country choice on every chart */
 const F = D.flows, CY = D.cy, MIN_N = 500;   /* a line is drawn only if every point rests on at least MIN_N jobs (or graduates) */
-const REG = {'r:EU31': {label: 'Europe (31 countries)', set: new Set(F.eu31)}, 'r:EU27': {label: 'EU-27', set: new Set(F.eu27)},
-  'r:US': {label: 'United States', set: new Set(['United States'])}, 'r:ALL': {label: 'All countries worldwide', set: null}};
+/* 'r:ALL' = no location filter: every graduate in the data (universities in the 31 European countries and the US), wherever the job is */
+const REG = {'r:ALL': {label: 'All graduates in the data', set: null}, 'r:EU31': {label: 'Europe (31 countries)', set: new Set(F.eu31)},
+  'r:EU27': {label: 'EU-27', set: new Set(F.eu27)}, 'r:US': {label: 'United States', set: new Set(['United States'])}};
 const whereLabel = w => w.startsWith('r:') ? REG[w].label : w.slice(2);
 const whereSet = w => w.startsWith('r:') ? REG[w].set : new Set([w.slice(2)]);
 function fillWhere(id, state, redraw) {
   const sel = $(id), og = (label, items) => { const g = document.createElement('optgroup'); g.label = label;
     items.forEach(([v, t]) => { const o = document.createElement('option'); o.value = v; o.textContent = t; g.appendChild(o); }); sel.appendChild(g); };
-  og('Regions', Object.entries(REG).map(([k, v]) => [k, v.label]));
+  og('Job location', Object.entries(REG).map(([k, v]) => [k, v.label]));
   og('European countries', F.eu31.slice().sort().map(c => ['c:' + c, c]));
   sel.value = state.where; sel.onchange = () => { state.where = sel.value; redraw(); };
 }
