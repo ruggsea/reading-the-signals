@@ -70,6 +70,31 @@ unclassified_pct = 100 * stock[stock.fgroup.isna()].n.sum() / stock.n.sum()
 entry_field = pd.read_csv(os.path.join(FIG, "entry_by_fieldgroup_cohort.csv")).dropna(subset=["fgroup"])
 entry_field["junior_n"] = entry_field.junior_pct * entry_field.n / 100
 entry_cs = cs_split(entry_field, ["cohort"])
+
+# ---- slides 2 and 3 by country of the job (pull_country.py): compact rows, summed in the browser for the chosen region.
+# Each file must add up over countries to the series above, so "All countries" shows exactly the numbers shown before.
+c5 = pd.read_csv(os.path.join(DATA, "junior_first5_by_country.csv"))
+cold = pd.read_csv(os.path.join(DATA, "junior_old_by_country.csv"))
+cent = pd.read_csv(os.path.join(DATA, "entry_by_country.csv"))
+t = c5.groupby(["cal_year", "grp"])[["junior_n", "n"]].sum()
+assert (100 * t.junior_n / t.n - first5_ai.set_index(["cal_year", "grp"]).junior_pct).abs().max() < 1e-9
+t = c5.dropna(subset=["fgroup"]).groupby(["cal_year", "fgroup"])[["junior_n", "n"]].sum()
+assert (100 * t.junior_n / t.n - by_field.set_index(["cal_year", "fgroup"]).junior_pct).abs().max() < 1e-9
+t = cold.groupby(["cal_year", "grp"])[["junior_n", "n"]].sum()
+assert (100 * t.junior_n / t.n - junior_ai.set_index(["cal_year", "grp"]).junior_pct).abs().max() < 1e-6
+t = cent.dropna(subset=["fgroup"]).groupby(["cohort", "fgroup"])[["junior_n", "n"]].sum()
+assert (100 * t.junior_n / t.n - entry_field.set_index(["cohort", "fgroup"]).junior_pct).abs().max() < 1e-6
+cy_countries = EU31 + ["United States", "Rest of world"]
+cy_groups = sorted(by_field.fgroup.unique())
+ci_, gi_ = {c: i for i, c in enumerate(cy_countries)}, {g: i for i, g in enumerate(cy_groups)}
+assert set(c5.country) <= set(cy_countries) and set(cent.country) <= set(cy_countries)
+gidx = lambda s: s.map(gi_).fillna(-1).astype(int)          # -1: no usable degree name
+cy = dict(
+    countries=cy_countries, groups=cy_groups,
+    first5=[[ci_[r.country], int(r.cal_year), int(r.g), int(r.grp == "AI talent"), int(r.junior_n), int(r.n)] for r in c5.assign(g=gidx(c5.fgroup)).itertuples()],
+    old=[[ci_[r.country], int(r.cal_year), int(r.grp == "AI talent"), int(r.junior_n), int(r.n)] for r in cold.itertuples()],
+    entry=[[ci_[r.country], int(r.cohort), int(r.g), int(r.junior_n), int(r.n)] for r in cent.assign(g=gidx(cent.fgroup)).itertuples()],
+)
 windows = pd.read_csv(os.path.join(FIG, "cohort_observation_windows_2026.csv")).set_index("cohort")
 # graduation years whose two-year first-job window is not complete at the data end (shaded on the chart)
 partial = [int(c) for c in windows.index[(windows.complete_2y_pct < 100) & (windows.index <= entry_field.cohort.max())]]
@@ -147,12 +172,7 @@ out = dict(
     points=points,
     meta=dict(rep["meta"], unclassified_pct=round(unclassified_pct, 1), internships=int(fl.n.sum()), last_cohort_months=last_window, partial_cohorts=partial,
               pivot=PIVOT, last_full_year=LAST_FULL, fixed_mix=fixed_mix),
-    junior_ai=rec(junior_ai),                    # older measure, kept for the comparison view on slide 1
-    first5_ai=rec(first5_ai),
-    stock_cs=rec(cs),
-    stock_field=rec(by_field),
-    entry_cs=rec(entry_cs[["cohort", "grp", "junior_pct", "n"]]),
-    entry_field=rec(entry_field[["cohort", "fgroup", "junior_pct", "n"]]),
+    cy=cy,
     flows=dict(countries=names, eu31=EU31, eu27=[c for c in EU31 if c not in NON_EU27], s2=S2, co=CO, s3=S3, rows=flows),
     field_map=fm,
 )

@@ -1,0 +1,793 @@
+cal_year,country,grp,junior_n,n
+2015,Austria,AI talent,2468,3334
+2015,Austria,Other graduates,71477,98712
+2015,Belgium,AI talent,3734,5535
+2015,Belgium,Other graduates,192332,251943
+2015,Bulgaria,AI talent,854,1263
+2015,Bulgaria,Other graduates,37664,53329
+2015,Croatia,AI talent,514,694
+2015,Croatia,Other graduates,20596,27182
+2015,Cyprus,AI talent,367,525
+2015,Cyprus,Other graduates,13196,17676
+2015,Czech Republic,AI talent,1995,2874
+2015,Czech Republic,Other graduates,86462,119950
+2015,Denmark,AI talent,4507,6354
+2015,Denmark,Other graduates,217194,287264
+2015,Estonia,AI talent,440,702
+2015,Estonia,Other graduates,11921,18461
+2015,Finland,AI talent,3431,4779
+2015,Finland,Other graduates,123184,158538
+2015,France,AI talent,24624,34473
+2015,France,Other graduates,1249653,1650740
+2015,Germany,AI talent,29289,39411
+2015,Germany,Other graduates,623189,868471
+2015,Greece,AI talent,3261,4158
+2015,Greece,Other graduates,73501,93755
+2015,Hungary,AI talent,1776,2482
+2015,Hungary,Other graduates,59583,81576
+2015,Iceland,AI talent,271,327
+2015,Iceland,Other graduates,6165,8837
+2015,Ireland,AI talent,4293,6286
+2015,Ireland,Other graduates,149345,199507
+2015,Italy,AI talent,11263,15718
+2015,Italy,Other graduates,539283,690265
+2015,Latvia,AI talent,292,464
+2015,Latvia,Other graduates,14686,22140
+2015,Lithuania,AI talent,584,851
+2015,Lithuania,Other graduates,27546,41974
+2015,Luxembourg,AI talent,510,801
+2015,Luxembourg,Other graduates,17634,25825
+2015,Malta,AI talent,237,342
+2015,Malta,Other graduates,11879,15782
+2015,Netherlands,AI talent,12473,18261
+2015,Netherlands,Other graduates,783096,1036480
+2015,Norway,AI talent,2565,3579
+2015,Norway,Other graduates,116613,163514
+2015,Poland,AI talent,6128,9051
+2015,Poland,Other graduates,305912,421717
+2015,Portugal,AI talent,3237,4675
+2015,Portugal,Other graduates,134553,179809
+2015,Rest of world,AI talent,124810,183120
+2015,Rest of world,Other graduates,2599622,3868651
+2015,Romania,AI talent,2344,3409
+2015,Romania,Other graduates,108470,147544
+2015,Slovakia,AI talent,591,823
+2015,Slovakia,Other graduates,26454,37668
+2015,Slovenia,AI talent,423,565
+2015,Slovenia,Other graduates,10569,14550
+2015,Spain,AI talent,12795,19442
+2015,Spain,Other graduates,681292,928758
+2015,Sweden,AI talent,5988,8637
+2015,Sweden,Other graduates,255997,345548
+2015,Switzerland,AI talent,7165,10481
+2015,Switzerland,Other graduates,188582,278766
+2015,United Kingdom,AI talent,35645,53217
+2015,United Kingdom,Other graduates,1726662,2317116
+2015,United States,AI talent,205221,297709
+2015,United States,Other graduates,9441267,12207561
+2016,Austria,AI talent,4225,5958
+2016,Austria,Other graduates,125322,180495
+2016,Belgium,AI talent,6766,10520
+2016,Belgium,Other graduates,337574,457910
+2016,Bulgaria,AI talent,1475,2334
+2016,Bulgaria,Other graduates,68924,99874
+2016,Croatia,AI talent,958,1299
+2016,Croatia,Other graduates,37458,50600
+2016,Cyprus,AI talent,705,1034
+2016,Cyprus,Other graduates,23892,33147
+2016,Czech Republic,AI talent,3775,5605
+2016,Czech Republic,Other graduates,160267,227982
+2016,Denmark,AI talent,8368,12150
+2016,Denmark,Other graduates,399741,538953
+2016,Estonia,AI talent,781,1301
+2016,Estonia,Other graduates,22488,35869
+2016,Finland,AI talent,6059,8815
+2016,Finland,Other graduates,214504,285646
+2016,France,AI talent,40794,60817
+2016,France,Other graduates,2086903,2881992
+2016,Germany,AI talent,53546,74938
+2016,Germany,Other graduates,1139786,1642072
+2016,Greece,AI talent,6043,7875
+2016,Greece,Other graduates,133432,173978
+2016,Hungary,AI talent,3278,4733
+2016,Hungary,Other graduates,111977,157050
+2016,Iceland,AI talent,471,602
+2016,Iceland,Other graduates,11257,16744
+2016,Ireland,AI talent,7723,11780
+2016,Ireland,Other graduates,271209,370020
+2016,Italy,AI talent,20157,28974
+2016,Italy,Other graduates,946079,1239336
+2016,Latvia,AI talent,585,949
+2016,Latvia,Other graduates,27042,41902
+2016,Lithuania,AI talent,1090,1674
+2016,Lithuania,Other graduates,51543,80629
+2016,Luxembourg,AI talent,856,1478
+2016,Luxembourg,Other graduates,30062,46682
+2016,Malta,AI talent,484,708
+2016,Malta,Other graduates,20685,28637
+2016,Netherlands,AI talent,23627,35736
+2016,Netherlands,Other graduates,1460023,1963944
+2016,Norway,AI talent,4465,6591
+2016,Norway,Other graduates,208935,302228
+2016,Poland,AI talent,10926,16943
+2016,Poland,Other graduates,554372,788568
+2016,Portugal,AI talent,6118,9073
+2016,Portugal,Other graduates,242713,333173
+2016,Rest of world,AI talent,219626,336406
+2016,Rest of world,Other graduates,4520269,6997827
+2016,Romania,AI talent,4386,6489
+2016,Romania,Other graduates,201016,279345
+2016,Slovakia,AI talent,1158,1655
+2016,Slovakia,Other graduates,49432,71654
+2016,Slovenia,AI talent,782,1072
+2016,Slovenia,Other graduates,19198,27249
+2016,Spain,AI talent,22931,36364
+2016,Spain,Other graduates,1183054,1656120
+2016,Sweden,AI talent,10903,16396
+2016,Sweden,Other graduates,468544,648719
+2016,Switzerland,AI talent,12931,19697
+2016,Switzerland,Other graduates,344225,525758
+2016,United Kingdom,AI talent,64274,99616
+2016,United Kingdom,Other graduates,3074332,4232631
+2016,United States,AI talent,372234,559175
+2016,United States,Other graduates,17047528,22490832
+2017,Austria,AI talent,5533,8123
+2017,Austria,Other graduates,167850,249819
+2017,Belgium,AI talent,9281,14831
+2017,Belgium,Other graduates,450658,625967
+2017,Bulgaria,AI talent,1927,3180
+2017,Bulgaria,Other graduates,91924,136265
+2017,Croatia,AI talent,1261,1777
+2017,Croatia,Other graduates,49721,68747
+2017,Cyprus,AI talent,1054,1532
+2017,Cyprus,Other graduates,32359,46255
+2017,Czech Republic,AI talent,5181,7928
+2017,Czech Republic,Other graduates,212839,310116
+2017,Denmark,AI talent,11508,17121
+2017,Denmark,Other graduates,527318,725259
+2017,Estonia,AI talent,1103,1850
+2017,Estonia,Other graduates,31205,51499
+2017,Finland,AI talent,8398,12427
+2017,Finland,Other graduates,288918,395210
+2017,France,AI talent,54584,84694
+2017,France,Other graduates,2778277,3939171
+2017,Germany,AI talent,73189,105382
+2017,Germany,Other graduates,1540282,2286264
+2017,Greece,AI talent,8292,11092
+2017,Greece,Other graduates,178506,236916
+2017,Hungary,AI talent,4596,6736
+2017,Hungary,Other graduates,152143,217969
+2017,Iceland,AI talent,593,772
+2017,Iceland,Other graduates,15095,23033
+2017,Ireland,AI talent,10603,16556
+2017,Ireland,Other graduates,359355,499945
+2017,Italy,AI talent,28581,41448
+2017,Italy,Other graduates,1276009,1699418
+2017,Latvia,AI talent,751,1265
+2017,Latvia,Other graduates,36535,58062
+2017,Lithuania,AI talent,1506,2331
+2017,Lithuania,Other graduates,70080,112506
+2017,Luxembourg,AI talent,1229,2135
+2017,Luxembourg,Other graduates,40576,65348
+2017,Malta,AI talent,670,1016
+2017,Malta,Other graduates,28056,39939
+2017,Netherlands,AI talent,31938,49466
+2017,Netherlands,Other graduates,1941711,2658927
+2017,Norway,AI talent,6185,9544
+2017,Norway,Other graduates,279013,413336
+2017,Poland,AI talent,14887,23757
+2017,Poland,Other graduates,749986,1089178
+2017,Portugal,AI talent,8553,12921
+2017,Portugal,Other graduates,334166,467060
+2017,Rest of world,AI talent,292287,460525
+2017,Rest of world,Other graduates,5837913,9329789
+2017,Romania,AI talent,6014,9091
+2017,Romania,Other graduates,269169,381359
+2017,Slovakia,AI talent,1528,2284
+2017,Slovakia,Other graduates,65069,96577
+2017,Slovenia,AI talent,1171,1636
+2017,Slovenia,Other graduates,26847,38631
+2017,Spain,AI talent,31212,51052
+2017,Spain,Other graduates,1566392,2237695
+2017,Sweden,AI talent,15039,23241
+2017,Sweden,Other graduates,623600,882509
+2017,Switzerland,AI talent,17532,27770
+2017,Switzerland,Other graduates,462317,726991
+2017,United Kingdom,AI talent,87430,138182
+2017,United Kingdom,Other graduates,4007258,5644210
+2017,United States,AI talent,508166,782685
+2017,United States,Other graduates,22384938,30123413
+2018,Austria,AI talent,6871,10305
+2018,Austria,Other graduates,203719,311686
+2018,Belgium,AI talent,11606,18855
+2018,Belgium,Other graduates,551664,779606
+2018,Bulgaria,AI talent,2191,3761
+2018,Bulgaria,Other graduates,108968,164657
+2018,Croatia,AI talent,1574,2249
+2018,Croatia,Other graduates,61439,86400
+2018,Cyprus,AI talent,1210,1854
+2018,Cyprus,Other graduates,39894,58355
+2018,Czech Republic,AI talent,6297,9853
+2018,Czech Republic,Other graduates,250106,372516
+2018,Denmark,AI talent,13962,21184
+2018,Denmark,Other graduates,620371,869065
+2018,Estonia,AI talent,1449,2436
+2018,Estonia,Other graduates,38904,65241
+2018,Finland,AI talent,10225,15578
+2018,Finland,Other graduates,349279,487488
+2018,France,AI talent,67921,108471
+2018,France,Other graduates,3406073,4914967
+2018,Germany,AI talent,91449,134917
+2018,Germany,Other graduates,1886617,2868300
+2018,Greece,AI talent,10193,13903
+2018,Greece,Other graduates,218860,294624
+2018,Hungary,AI talent,5657,8432
+2018,Hungary,Other graduates,183578,267533
+2018,Iceland,AI talent,658,909
+2018,Iceland,Other graduates,18021,28124
+2018,Ireland,AI talent,13442,21286
+2018,Ireland,Other graduates,435800,615704
+2018,Italy,AI talent,36591,54033
+2018,Italy,Other graduates,1563869,2111035
+2018,Latvia,AI talent,906,1591
+2018,Latvia,Other graduates,44053,71597
+2018,Lithuania,AI talent,1812,2928
+2018,Lithuania,Other graduates,85622,139591
+2018,Luxembourg,AI talent,1508,2754
+2018,Luxembourg,Other graduates,49665,82472
+2018,Malta,AI talent,785,1241
+2018,Malta,Other graduates,33161,49020
+2018,Netherlands,AI talent,39128,61904
+2018,Netherlands,Other graduates,2343719,3261597
+2018,Norway,AI talent,7665,12069
+2018,Norway,Other graduates,335833,508545
+2018,Poland,AI talent,17997,29724
+2018,Poland,Other graduates,906337,1341651
+2018,Portugal,AI talent,10999,16927
+2018,Portugal,Other graduates,420338,594634
+2018,Rest of world,AI talent,358449,575799
+2018,Rest of world,Other graduates,6921489,11320695
+2018,Romania,AI talent,7343,11295
+2018,Romania,Other graduates,319803,460425
+2018,Slovakia,AI talent,1926,2899
+2018,Slovakia,Other graduates,75921,115112
+2018,Slovenia,AI talent,1405,2039
+2018,Slovenia,Other graduates,33508,48888
+2018,Spain,AI talent,38656,65006
+2018,Spain,Other graduates,1908903,2767979
+2018,Sweden,AI talent,18415,29181
+2018,Sweden,Other graduates,741083,1067941
+2018,Switzerland,AI talent,22043,35744
+2018,Switzerland,Other graduates,564210,907797
+2018,United Kingdom,AI talent,109090,175074
+2018,United Kingdom,Other graduates,4764068,6827803
+2018,United States,AI talent,628767,989307
+2018,United States,Other graduates,26706105,36543224
+2019,Austria,AI talent,7708,12071
+2019,Austria,Other graduates,231909,363634
+2019,Belgium,AI talent,13533,22350
+2019,Belgium,Other graduates,635476,912105
+2019,Bulgaria,AI talent,2477,4338
+2019,Bulgaria,Other graduates,120765,186119
+2019,Croatia,AI talent,1828,2628
+2019,Croatia,Other graduates,69295,98924
+2019,Cyprus,AI talent,1446,2235
+2019,Cyprus,Other graduates,45313,67718
+2019,Czech Republic,AI talent,6994,11308
+2019,Czech Republic,Other graduates,273413,415421
+2019,Denmark,AI talent,15435,23987
+2019,Denmark,Other graduates,680524,970450
+2019,Estonia,AI talent,1762,3011
+2019,Estonia,Other graduates,45164,76851
+2019,Finland,AI talent,11651,17951
+2019,Finland,Other graduates,388834,552628
+2019,France,AI talent,78857,128943
+2019,France,Other graduates,3954572,5771850
+2019,Germany,AI talent,105700,160089
+2019,Germany,Other graduates,2143449,3344417
+2019,Greece,AI talent,11899,16461
+2019,Greece,Other graduates,251685,343087
+2019,Hungary,AI talent,6376,9731
+2019,Hungary,Other graduates,204986,304785
+2019,Iceland,AI talent,727,1015
+2019,Iceland,Other graduates,19475,31180
+2019,Ireland,AI talent,16200,25594
+2019,Ireland,Other graduates,489426,700957
+2019,Italy,AI talent,43159,65058
+2019,Italy,Other graduates,1796778,2458527
+2019,Latvia,AI talent,999,1799
+2019,Latvia,Other graduates,49158,81567
+2019,Lithuania,AI talent,2090,3510
+2019,Lithuania,Other graduates,97485,161975
+2019,Luxembourg,AI talent,1836,3373
+2019,Luxembourg,Other graduates,57554,97458
+2019,Malta,AI talent,895,1446
+2019,Malta,Other graduates,35641,54256
+2019,Netherlands,AI talent,44730,72330
+2019,Netherlands,Other graduates,2638204,3725429
+2019,Norway,AI talent,8799,14098
+2019,Norway,Other graduates,377637,583603
+2019,Poland,AI talent,20286,34425
+2019,Poland,Other graduates,1011002,1527827
+2019,Portugal,AI talent,13135,20610
+2019,Portugal,Other graduates,493704,707185
+2019,Rest of world,AI talent,410223,673967
+2019,Rest of world,Other graduates,7695796,12862354
+2019,Romania,AI talent,8404,13172
+2019,Romania,Other graduates,357149,521905
+2019,Slovakia,AI talent,2180,3369
+2019,Slovakia,Other graduates,83197,128838
+2019,Slovenia,AI talent,1601,2369
+2019,Slovenia,Other graduates,38131,56611
+2019,Spain,AI talent,44664,77054
+2019,Spain,Other graduates,2168329,3191148
+2019,Sweden,AI talent,21039,33829
+2019,Sweden,Other graduates,815417,1195794
+2019,Switzerland,AI talent,25685,42551
+2019,Switzerland,Other graduates,644241,1059317
+2019,United Kingdom,AI talent,127407,206759
+2019,United Kingdom,Other graduates,5334049,7766208
+2019,United States,AI talent,731608,1171991
+2019,United States,Other graduates,29897249,41555411
+2020,Austria,AI talent,8059,13206
+2020,Austria,Other graduates,239408,391128
+2020,Belgium,AI talent,14520,24674
+2020,Belgium,Other graduates,667815,982281
+2020,Bulgaria,AI talent,2550,4573
+2020,Bulgaria,Other graduates,124660,197163
+2020,Croatia,AI talent,1821,2746
+2020,Croatia,Other graduates,69353,102502
+2020,Cyprus,AI talent,1552,2468
+2020,Cyprus,Other graduates,46809,72576
+2020,Czech Republic,AI talent,7362,12127
+2020,Czech Republic,Other graduates,278859,435678
+2020,Denmark,AI talent,15992,25675
+2020,Denmark,Other graduates,708254,1033735
+2020,Estonia,AI talent,1918,3447
+2020,Estonia,Other graduates,47289,83570
+2020,Finland,AI talent,12082,19378
+2020,Finland,Other graduates,397945,581986
+2020,France,AI talent,82528,140212
+2020,France,Other graduates,4058618,6107000
+2020,Germany,AI talent,111028,174609
+2020,Germany,Other graduates,2236215,3621582
+2020,Greece,AI talent,13007,18371
+2020,Greece,Other graduates,257743,361381
+2020,Hungary,AI talent,6676,10434
+2020,Hungary,Other graduates,211441,322796
+2020,Iceland,AI talent,766,1098
+2020,Iceland,Other graduates,19299,32432
+2020,Ireland,AI talent,16672,27320
+2020,Ireland,Other graduates,481895,712440
+2020,Italy,AI talent,45973,71711
+2020,Italy,Other graduates,1832962,2579760
+2020,Latvia,AI talent,1070,1998
+2020,Latvia,Other graduates,51375,87715
+2020,Lithuania,AI talent,2399,4017
+2020,Lithuania,Other graduates,104272,177445
+2020,Luxembourg,AI talent,1927,3760
+2020,Luxembourg,Other graduates,58070,102878
+2020,Malta,AI talent,849,1452
+2020,Malta,Other graduates,33158,53815
+2020,Netherlands,AI talent,47498,79139
+2020,Netherlands,Other graduates,2771283,3989636
+2020,Norway,AI talent,9074,15216
+2020,Norway,Other graduates,390876,622286
+2020,Poland,AI talent,21096,37311
+2020,Poland,Other graduates,1033474,1607745
+2020,Portugal,AI talent,13815,22545
+2020,Portugal,Other graduates,503121,743194
+2020,Rest of world,AI talent,432382,738818
+2020,Rest of world,Other graduates,7712152,13418002
+2020,Romania,AI talent,8630,14071
+2020,Romania,Other graduates,362027,543169
+2020,Slovakia,AI talent,2229,3594
+2020,Slovakia,Other graduates,85154,135728
+2020,Slovenia,AI talent,1720,2600
+2020,Slovenia,Other graduates,39102,60011
+2020,Spain,AI talent,45585,82824
+2020,Spain,Other graduates,2129820,3255320
+2020,Sweden,AI talent,21634,36073
+2020,Sweden,Other graduates,833130,1248148
+2020,Switzerland,AI talent,27686,47690
+2020,Switzerland,Other graduates,681654,1158201
+2020,United Kingdom,AI talent,130142,220459
+2020,United Kingdom,Other graduates,5235681,7913080
+2020,United States,AI talent,770068,1278341
+2020,United States,Other graduates,30430292,43367793
+2021,Austria,AI talent,9080,15212
+2021,Austria,Other graduates,265279,442926
+2021,Belgium,AI talent,16237,28146
+2021,Belgium,Other graduates,744829,1106993
+2021,Bulgaria,AI talent,2927,5361
+2021,Bulgaria,Other graduates,140052,223563
+2021,Croatia,AI talent,2119,3283
+2021,Croatia,Other graduates,78837,117516
+2021,Cyprus,AI talent,1805,2898
+2021,Cyprus,Other graduates,52976,83401
+2021,Czech Republic,AI talent,7945,13461
+2021,Czech Republic,Other graduates,298765,474201
+2021,Denmark,AI talent,17585,29088
+2021,Denmark,Other graduates,764690,1133903
+2021,Estonia,AI talent,2202,3981
+2021,Estonia,Other graduates,53896,96058
+2021,Finland,AI talent,13292,21829
+2021,Finland,Other graduates,434592,645173
+2021,France,AI talent,95749,165145
+2021,France,Other graduates,4734408,7138837
+2021,Germany,AI talent,123165,200279
+2021,Germany,Other graduates,2450217,4084328
+2021,Greece,AI talent,14981,21708
+2021,Greece,Other graduates,296274,418347
+2021,Hungary,AI talent,7565,11981
+2021,Hungary,Other graduates,234829,362462
+2021,Iceland,AI talent,826,1222
+2021,Iceland,Other graduates,21117,36191
+2021,Ireland,AI talent,19750,32904
+2021,Ireland,Other graduates,543671,814503
+2021,Italy,AI talent,55107,87108
+2021,Italy,Other graduates,2126713,3008336
+2021,Latvia,AI talent,1188,2244
+2021,Latvia,Other graduates,56673,97771
+2021,Lithuania,AI talent,2857,4882
+2021,Lithuania,Other graduates,119758,204867
+2021,Luxembourg,AI talent,2314,4587
+2021,Luxembourg,Other graduates,66458,118820
+2021,Malta,AI talent,1018,1714
+2021,Malta,Other graduates,37817,61451
+2021,Netherlands,AI talent,52133,89371
+2021,Netherlands,Other graduates,3022156,4407262
+2021,Norway,AI talent,10119,17338
+2021,Norway,Other graduates,427445,690768
+2021,Poland,AI talent,24630,44115
+2021,Poland,Other graduates,1169655,1837199
+2021,Portugal,AI talent,16481,26877
+2021,Portugal,Other graduates,577751,860621
+2021,Rest of world,AI talent,506406,875990
+2021,Rest of world,Other graduates,8647975,15211900
+2021,Romania,AI talent,10563,17209
+2021,Romania,Other graduates,414609,626015
+2021,Slovakia,AI talent,2540,4144
+2021,Slovakia,Other graduates,91960,148925
+2021,Slovenia,AI talent,1874,2887
+2021,Slovenia,Other graduates,43963,67720
+2021,Spain,AI talent,53683,98517
+2021,Spain,Other graduates,2424195,3735264
+2021,Sweden,AI talent,23971,40771
+2021,Sweden,Other graduates,898681,1363809
+2021,Switzerland,AI talent,30556,54522
+2021,Switzerland,Other graduates,745896,1292614
+2021,United Kingdom,AI talent,153846,263316
+2021,United Kingdom,Other graduates,5959261,9086965
+2021,United States,AI talent,866594,1474462
+2021,United States,Other graduates,33379803,48355182
+2022,Austria,AI talent,9781,16976
+2022,Austria,Other graduates,286745,490660
+2022,Belgium,AI talent,17452,31416
+2022,Belgium,Other graduates,798644,1208691
+2022,Bulgaria,AI talent,3066,5878
+2022,Bulgaria,Other graduates,148039,242212
+2022,Croatia,AI talent,2345,3710
+2022,Croatia,Other graduates,85217,129791
+2022,Cyprus,AI talent,1905,3193
+2022,Cyprus,Other graduates,55808,90431
+2022,Czech Republic,AI talent,8521,14870
+2022,Czech Republic,Other graduates,318146,514643
+2022,Denmark,AI talent,18510,31726
+2022,Denmark,Other graduates,793389,1208155
+2022,Estonia,AI talent,2287,4324
+2022,Estonia,Other graduates,57854,105531
+2022,Finland,AI talent,14146,23720
+2022,Finland,Other graduates,455390,690614
+2022,France,AI talent,102915,185692
+2022,France,Other graduates,5158831,7924166
+2022,Germany,AI talent,131046,222036
+2022,Germany,Other graduates,2605265,4491307
+2022,Greece,AI talent,16290,24379
+2022,Greece,Other graduates,322997,462256
+2022,Hungary,AI talent,8158,13324
+2022,Hungary,Other graduates,252924,397138
+2022,Iceland,AI talent,863,1316
+2022,Iceland,Other graduates,22918,40210
+2022,Ireland,AI talent,21675,37019
+2022,Ireland,Other graduates,589862,896321
+2022,Italy,AI talent,61337,99177
+2022,Italy,Other graduates,2336813,3339207
+2022,Latvia,AI talent,1270,2427
+2022,Latvia,Other graduates,59650,105063
+2022,Lithuania,AI talent,3073,5366
+2022,Lithuania,Other graduates,125759,220432
+2022,Luxembourg,AI talent,2549,5194
+2022,Luxembourg,Other graduates,73569,133735
+2022,Malta,AI talent,1069,1878
+2022,Malta,Other graduates,41285,67753
+2022,Netherlands,AI talent,55381,98422
+2022,Netherlands,Other graduates,3163203,4724212
+2022,Norway,AI talent,10673,19005
+2022,Norway,Other graduates,448355,743678
+2022,Poland,AI talent,25794,48295
+2022,Poland,Other graduates,1233211,1986866
+2022,Portugal,AI talent,18045,30433
+2022,Portugal,Other graduates,639486,963903
+2022,Rest of world,AI talent,498441,900213
+2022,Rest of world,Other graduates,9013667,16216495
+2022,Romania,AI talent,11865,19604
+2022,Romania,Other graduates,445055,683501
+2022,Slovakia,AI talent,2759,4612
+2022,Slovakia,Other graduates,98315,161501
+2022,Slovenia,AI talent,2050,3246
+2022,Slovenia,Other graduates,47306,74240
+2022,Spain,AI talent,58666,111140
+2022,Spain,Other graduates,2660758,4146189
+2022,Sweden,AI talent,25717,44887
+2022,Sweden,Other graduates,957174,1481481
+2022,Switzerland,AI talent,33026,61137
+2022,Switzerland,Other graduates,805156,1426206
+2022,United Kingdom,AI talent,174019,302463
+2022,United Kingdom,Other graduates,6449796,10007157
+2022,United States,AI talent,943021,1641506
+2022,United States,Other graduates,35201623,52038504
+2023,Austria,AI talent,9668,17931
+2023,Austria,Other graduates,284497,511398
+2023,Belgium,AI talent,17193,33036
+2023,Belgium,Other graduates,798836,1252380
+2023,Bulgaria,AI talent,2911,6039
+2023,Bulgaria,Other graduates,142811,246282
+2023,Croatia,AI talent,2231,3817
+2023,Croatia,Other graduates,83738,133575
+2023,Cyprus,AI talent,1889,3373
+2023,Cyprus,Other graduates,55883,93846
+2023,Czech Republic,AI talent,8337,15387
+2023,Czech Republic,Other graduates,315939,528788
+2023,Denmark,AI talent,17570,32754
+2023,Denmark,Other graduates,762013,1212838
+2023,Estonia,AI talent,2139,4445
+2023,Estonia,Other graduates,55568,107020
+2023,Finland,AI talent,13591,24232
+2023,Finland,Other graduates,440285,696295
+2023,France,AI talent,101325,195949
+2023,France,Other graduates,5188465,8226472
+2023,Germany,AI talent,128783,232184
+2023,Germany,Other graduates,2556426,4649799
+2023,Greece,AI talent,16103,25651
+2023,Greece,Other graduates,322899,477864
+2023,Hungary,AI talent,7844,13565
+2023,Hungary,Other graduates,248730,404724
+2023,Iceland,AI talent,864,1426
+2023,Iceland,Other graduates,22666,41651
+2023,Ireland,AI talent,21548,38315
+2023,Ireland,Other graduates,570196,896715
+2023,Italy,AI talent,63006,106987
+2023,Italy,Other graduates,2381808,3488109
+2023,Latvia,AI talent,1285,2575
+2023,Latvia,Other graduates,58629,107654
+2023,Lithuania,AI talent,2990,5576
+2023,Lithuania,Other graduates,122474,225822
+2023,Luxembourg,AI talent,2490,5497
+2023,Luxembourg,Other graduates,74141,139792
+2023,Malta,AI talent,987,1934
+2023,Malta,Other graduates,40075,68807
+2023,Netherlands,AI talent,54728,103657
+2023,Netherlands,Other graduates,3076454,4791501
+2023,Norway,AI talent,10211,19568
+2023,Norway,Other graduates,432838,752923
+2023,Poland,AI talent,24047,49002
+2023,Poland,Other graduates,1187473,2002154
+2023,Portugal,AI talent,17893,31936
+2023,Portugal,Other graduates,646457,1003079
+2023,Rest of world,AI talent,451496,867012
+2023,Rest of world,Other graduates,8748834,16340216
+2023,Romania,AI talent,11680,20106
+2023,Romania,Other graduates,436388,692731
+2023,Slovakia,AI talent,2730,4846
+2023,Slovakia,Other graduates,97631,165626
+2023,Slovenia,AI talent,2016,3394
+2023,Slovenia,Other graduates,47189,76772
+2023,Spain,AI talent,58574,118953
+2023,Spain,Other graduates,2684138,4309172
+2023,Sweden,AI talent,24595,45737
+2023,Sweden,Other graduates,921755,1482642
+2023,Switzerland,AI talent,32858,65119
+2023,Switzerland,Other graduates,809478,1495628
+2023,United Kingdom,AI talent,179996,326774
+2023,United Kingdom,Other graduates,6403912,10270876
+2023,United States,AI talent,960325,1738208
+2023,United States,Other graduates,34790584,52764238
+2024,Austria,AI talent,9330,18792
+2024,Austria,Other graduates,275903,520776
+2024,Belgium,AI talent,16944,34928
+2024,Belgium,Other graduates,793915,1286304
+2024,Bulgaria,AI talent,2764,6291
+2024,Bulgaria,Other graduates,136509,247183
+2024,Croatia,AI talent,2090,3902
+2024,Croatia,Other graduates,80391,134711
+2024,Cyprus,AI talent,1835,3594
+2024,Cyprus,Other graduates,54253,95673
+2024,Czech Republic,AI talent,8105,16189
+2024,Czech Republic,Other graduates,310018,537989
+2024,Denmark,AI talent,16909,34539
+2024,Denmark,Other graduates,733123,1221399
+2024,Estonia,AI talent,2073,4622
+2024,Estonia,Other graduates,53050,106891
+2024,Finland,AI talent,13365,25251
+2024,Finland,Other graduates,420365,690137
+2024,France,AI talent,98109,203393
+2024,France,Other graduates,5079354,8332212
+2024,Germany,AI talent,123488,238820
+2024,Germany,Other graduates,2442244,4697261
+2024,Greece,AI talent,15365,26412
+2024,Greece,Other graduates,315272,483541
+2024,Hungary,AI talent,7401,13748
+2024,Hungary,Other graduates,238594,404786
+2024,Iceland,AI talent,792,1422
+2024,Iceland,Other graduates,21584,41682
+2024,Ireland,AI talent,21965,41090
+2024,Ireland,Other graduates,545754,895121
+2024,Italy,AI talent,64816,115827
+2024,Italy,Other graduates,2386621,3585970
+2024,Latvia,AI talent,1239,2683
+2024,Latvia,Other graduates,56457,108502
+2024,Lithuania,AI talent,2922,5824
+2024,Lithuania,Other graduates,116890,227532
+2024,Luxembourg,AI talent,2535,5938
+2024,Luxembourg,Other graduates,72634,144033
+2024,Malta,AI talent,939,2030
+2024,Malta,Other graduates,38186,69191
+2024,Netherlands,AI talent,52805,107504
+2024,Netherlands,Other graduates,2971530,4793774
+2024,Norway,AI talent,9359,19681
+2024,Norway,Other graduates,409309,748701
+2024,Poland,AI talent,23145,51045
+2024,Poland,Other graduates,1135107,2005525
+2024,Portugal,AI talent,17421,33396
+2024,Portugal,Other graduates,641996,1026810
+2024,Rest of world,AI talent,398916,837712
+2024,Rest of world,Other graduates,8358867,16327647
+2024,Romania,AI talent,11631,21093
+2024,Romania,Other graduates,424563,696301
+2024,Slovakia,AI talent,2629,4948
+2024,Slovakia,Other graduates,94614,166614
+2024,Slovenia,AI talent,1978,3532
+2024,Slovenia,Other graduates,45840,77475
+2024,Spain,AI talent,58293,128171
+2024,Spain,Other graduates,2683260,4420479
+2024,Sweden,AI talent,23885,47291
+2024,Sweden,Other graduates,877909,1466344
+2024,Switzerland,AI talent,32237,69030
+2024,Switzerland,Other graduates,793369,1533714
+2024,United Kingdom,AI talent,182725,350300
+2024,United Kingdom,Other graduates,6264964,10419125
+2024,United States,AI talent,987933,1884867
+2024,United States,Other graduates,34118824,53304925
+2025,Austria,AI talent,8748,19235
+2025,Austria,Other graduates,259154,516789
+2025,Belgium,AI talent,16037,35540
+2025,Belgium,Other graduates,761634,1277778
+2025,Bulgaria,AI talent,2547,6427
+2025,Bulgaria,Other graduates,127683,243045
+2025,Croatia,AI talent,1949,3968
+2025,Croatia,Other graduates,74938,131794
+2025,Cyprus,AI talent,1773,3723
+2025,Cyprus,Other graduates,51008,95109
+2025,Czech Republic,AI talent,7727,16766
+2025,Czech Republic,Other graduates,296475,533160
+2025,Denmark,AI talent,15775,35358
+2025,Denmark,Other graduates,689327,1203996
+2025,Estonia,AI talent,1922,4664
+2025,Estonia,Other graduates,49651,105081
+2025,Finland,AI talent,12760,26083
+2025,Finland,Other graduates,399763,682743
+2025,France,AI talent,90433,203891
+2025,France,Other graduates,4710196,8069080
+2025,Germany,AI talent,112944,239840
+2025,Germany,Other graduates,2270490,4635927
+2025,Greece,AI talent,14319,26872
+2025,Greece,Other graduates,298100,474656
+2025,Hungary,AI talent,6774,13796
+2025,Hungary,Other graduates,223368,395183
+2025,Iceland,AI talent,718,1387
+2025,Iceland,Other graduates,19908,40742
+2025,Ireland,AI talent,21344,42793
+2025,Ireland,Other graduates,513802,880306
+2025,Italy,AI talent,63382,120952
+2025,Italy,Other graduates,2304940,3570727
+2025,Latvia,AI talent,1200,2743
+2025,Latvia,Other graduates,52957,106780
+2025,Lithuania,AI talent,2719,5930
+2025,Lithuania,Other graduates,108167,222725
+2025,Luxembourg,AI talent,2575,6357
+2025,Luxembourg,Other graduates,69734,145088
+2025,Malta,AI talent,843,2077
+2025,Malta,Other graduates,35216,67816
+2025,Netherlands,AI talent,49634,110337
+2025,Netherlands,Other graduates,2809385,4705841
+2025,Norway,AI talent,8451,19701
+2025,Norway,Other graduates,379860,735192
+2025,Poland,AI talent,21746,52228
+2025,Poland,Other graduates,1063357,1963578
+2025,Portugal,AI talent,16474,34413
+2025,Portugal,Other graduates,618588,1020940
+2025,Rest of world,AI talent,351750,819692
+2025,Rest of world,Other graduates,7785820,16009960
+2025,Romania,AI talent,11503,22019
+2025,Romania,Other graduates,401022,682169
+2025,Slovakia,AI talent,2482,5046
+2025,Slovakia,Other graduates,88362,161803
+2025,Slovenia,AI talent,1886,3535
+2025,Slovenia,Other graduates,42767,75317
+2025,Spain,AI talent,56323,136012
+2025,Spain,Other graduates,2585974,4398655
+2025,Sweden,AI talent,22766,48468
+2025,Sweden,Other graduates,837126,1449585
+2025,Switzerland,AI talent,30425,70892
+2025,Switzerland,Other graduates,754540,1532630
+2025,United Kingdom,AI talent,173467,360656
+2025,United Kingdom,Other graduates,5905121,10263960
+2025,United States,AI talent,946858,1945486
+2025,United States,Other graduates,32378025,52384417
+2026,Austria,AI talent,7356,17458
+2026,Austria,Other graduates,220605,463940
+2026,Belgium,AI talent,13376,31924
+2026,Belgium,Other graduates,655673,1141970
+2026,Bulgaria,AI talent,2113,5756
+2026,Bulgaria,Other graduates,109591,217226
+2026,Croatia,AI talent,1542,3512
+2026,Croatia,Other graduates,63772,117113
+2026,Cyprus,AI talent,1424,3250
+2026,Cyprus,Other graduates,42751,83541
+2026,Czech Republic,AI talent,6383,14971
+2026,Czech Republic,Other graduates,261497,484451
+2026,Denmark,AI talent,12698,31504
+2026,Denmark,Other graduates,585008,1067892
+2026,Estonia,AI talent,1554,4124
+2026,Estonia,Other graduates,41649,92703
+2026,Finland,AI talent,10485,23613
+2026,Finland,Other graduates,346209,615586
+2026,France,AI talent,71995,174376
+2026,France,Other graduates,3822396,6887152
+2026,Germany,AI talent,90036,210792
+2026,Germany,Other graduates,1912785,4140914
+2026,Greece,AI talent,11471,23199
+2026,Greece,Other graduates,249883,414388
+2026,Hungary,AI talent,5371,11804
+2026,Hungary,Other graduates,189687,347215
+2026,Iceland,AI talent,552,1204
+2026,Iceland,Other graduates,16940,36214
+2026,Ireland,AI talent,17486,37837
+2026,Ireland,Other graduates,431763,777814
+2026,Italy,AI talent,52544,107874
+2026,Italy,Other graduates,2013335,3215099
+2026,Latvia,AI talent,960,2397
+2026,Latvia,Other graduates,45129,94582
+2026,Lithuania,AI talent,2170,5170
+2026,Lithuania,Other graduates,90143,195217
+2026,Luxembourg,AI talent,2171,5700
+2026,Luxembourg,Other graduates,60282,131003
+2026,Malta,AI talent,657,1847
+2026,Malta,Other graduates,28692,58968
+2026,Netherlands,AI talent,40500,97960
+2026,Netherlands,Other graduates,2422313,4199259
+2026,Norway,AI talent,6887,17576
+2026,Norway,Other graduates,323724,656237
+2026,Poland,AI talent,17614,46168
+2026,Poland,Other graduates,915372,1752788
+2026,Portugal,AI talent,13057,29882
+2026,Portugal,Other graduates,523319,893369
+2026,Rest of world,AI talent,278281,711130
+2026,Rest of world,Other graduates,6601875,14241657
+2026,Romania,AI talent,9204,19013
+2026,Romania,Other graduates,347477,608375
+2026,Slovakia,AI talent,2010,4382
+2026,Slovakia,Other graduates,77255,145657
+2026,Slovenia,AI talent,1547,3119
+2026,Slovenia,Other graduates,37025,67804
+2026,Spain,AI talent,45241,121192
+2026,Spain,Other graduates,2159732,3844114
+2026,Sweden,AI talent,18754,43155
+2026,Sweden,Other graduates,727385,1300917
+2026,Switzerland,AI talent,24929,63971
+2026,Switzerland,Other graduates,645729,1382120
+2026,United Kingdom,AI talent,136284,312451
+2026,United Kingdom,Other graduates,4956662,9034070
+2026,United States,AI talent,758536,1709722
+2026,United States,Other graduates,28102165,47038246

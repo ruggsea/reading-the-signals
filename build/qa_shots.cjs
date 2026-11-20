@@ -4,7 +4,7 @@ const { chromium } = require(process.argv[2] || 'playwright');
 (async () => {
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1600, height: 900 } });
   const errs = []; p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); }); p.on('pageerror', e => errs.push('PAGEERROR ' + e.message));
-  const U = 'http://127.0.0.1:8765/index.html';
+  const U = 'http://127.0.0.1:' + (process.env.PORT || 8765) + '/index.html';
   const shot = async n => { await p.waitForTimeout(1500); await p.screenshot({ path: `qa/${n}.png` }); };
   await p.goto(U); await shot('0-title'); await p.goto(U + '#/5'); await shot('5-thanks');
   await p.goto(U + '#/1'); await shot('1-share');

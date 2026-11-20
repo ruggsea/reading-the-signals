@@ -29,7 +29,7 @@ const HOW = {
        chg: 'Each hexagon groups similar degree names. Colour: the share with a junior starting job among 2023–24 graduates minus the share among 2015–19 graduates, in percentage points.',
        ai: 'Each hexagon groups similar degree names. Colour: the share of graduates with those names who are AI talent. Grey: under 30 graduates.',
        pts: 'Each dot is one degree name as a graduate wrote it. Bigger dots: more graduates wrote it. Dots close together have similar wording and meaning.'}};
-const how = (slide, key) => { $(slide + '-how').textContent = HOW[slide][key]; };
+const how = (slide, key, extra) => { $(slide + '-how').textContent = HOW[slide][key] + (extra || ''); };
 
 
 function lay(extra) {
@@ -92,72 +92,129 @@ function countTo(el, to, fmt) {
   document.querySelectorAll('.mosaic').forEach(e => { e.innerHTML = h; });
 })();
 
+/* ------------------------------------------------------------ where: the same region and country choice on every chart */
+const F = D.flows, CY = D.cy, MIN_N = 500;   /* a line is drawn only if every point rests on at least MIN_N jobs (or graduates) */
+const REG = {'r:EU31': {label: 'Europe (31 countries)', set: new Set(F.eu31)}, 'r:EU27': {label: 'EU-27', set: new Set(F.eu27)},
+  'r:US': {label: 'United States', set: new Set(['United States'])}, 'r:ALL': {label: 'All countries worldwide', set: null}};
+const whereLabel = w => w.startsWith('r:') ? REG[w].label : w.slice(2);
+const whereSet = w => w.startsWith('r:') ? REG[w].set : new Set([w.slice(2)]);
+function fillWhere(id, state, redraw) {
+  const sel = $(id), og = (label, items) => { const g = document.createElement('optgroup'); g.label = label;
+    items.forEach(([v, t]) => { const o = document.createElement('option'); o.value = v; o.textContent = t; g.appendChild(o); }); sel.appendChild(g); };
+  og('Regions', Object.entries(REG).map(([k, v]) => [k, v.label]));
+  og('European countries', F.eu31.slice().sort().map(c => ['c:' + c, c]));
+  sel.value = state.where; sel.onchange = () => { state.where = sel.value; redraw(); };
+}
+/* rows are [country, x, ..., junior_n, n]; keyOf(row) names the line a row belongs to (null = leave out). Returns {line: [{x, junior_pct, n}]} */
+function series(rows, where, xk, keyOf) {
+  const set = whereSet(where), m = new Map();
+  for (const r of rows) {
+    if (set && !set.has(CY.countries[r[0]])) continue;
+    const k = keyOf(r); if (k == null) continue;
+    const id = k + '|' + r[1]; let o = m.get(id);
+    if (!o) m.set(id, o = {k, x: r[1], j: 0, n: 0});
+    o.j += r[r.length - 2]; o.n += r[r.length - 1];
+  }
+  const out = {};
+  for (const o of m.values()) (out[o.k] = out[o.k] || []).push({[xk]: o.x, junior_pct: 100 * o.j / o.n, n: o.n});
+  Object.values(out).forEach(a => a.sort(by(xk)));
+  return out;
+}
+/* keep only lines with a point for every x and at least MIN_N behind each; report the rest */
+function solid(ser, nx) {
+  const kept = {}, dropped = [];
+  Object.keys(ser).forEach(k => { if (ser[k].length === nx && ser[k].every(d => d.n >= MIN_N)) kept[k] = ser[k]; else dropped.push(k); });
+  return {kept, dropped};
+}
+function emptyPlot(el, text) {
+  Plotly.react(el, [], {paper_bgcolor: '#fff', plot_bgcolor: '#fff', xaxis: {visible: false}, yaxis: {visible: false},
+    annotations: [{text, xref: 'paper', yref: 'paper', x: 0.5, y: 0.5, showarrow: false, font: {family: FONT, size: rem() * 1.1, color: P.ink60}}]}, CFG);
+}
+const placeNote = (where, what) => where === 'r:ALL' ? '' : ` ${what} located in ${whereLabel(where).replace('Europe (31 countries)', 'the 31 European countries').replace('EU-27', 'the EU-27').replace(/^United States$/, 'the United States')}.`;
+const tooFew = (names, unit) => names.length ? ` Not shown, under ${MIN_N} ${unit} in some years: ${names.length > 3 ? names.length + ' degree groups' : names.join(', ')}.` : '';
+
 /* ------------------------------------------------------------ 1: junior share, AI talent vs other graduates */
 /* default: the report's like-for-like measure (jobs held in the first five years after graduating); 'old' = the earlier measure, kept to show why it misleads */
-const S1 = {view: 'share'}, PIVOT = D.meta.pivot, FULL = D.meta.last_full_year;
+const S1 = {view: 'share', where: 'r:ALL'}, PIVOT = D.meta.pivot, FULL = D.meta.last_full_year;
 /* band and note over the partial last year of a calendar-year chart */
 const provBand = y => ({type: 'rect', xref: 'x', yref: 'paper', x0: y - 0.5, x1: y + 0.5, y0: 0, y1: 1, fillcolor: rgba(P.mocha, .22), line: {width: 0}, layer: 'below'});
 const provNote = y => ({x: y + 0.5, xanchor: 'right', y: 1, xref: 'x', yref: 'paper', yanchor: 'bottom', text: y + ': January to September, provisional', showarrow: false, font: {size: rem() * 0.8, color: P.brown}});
 function drawS1(morph) {
-  const old = S1.view === 'old', src = old ? D.junior_ai : D.first5_ai, el = $('s1-plot'), r = rem();
-  const ai = src.filter(d => d.grp === 'AI talent').sort(by('cal_year')), ot = src.filter(d => d.grp === 'Other graduates').sort(by('cal_year'));
-  const a0 = ai[0], a1 = ai[ai.length - 1], o0 = ot[0], o1 = ot[ot.length - 1], y0 = a0.cal_year, y1 = a1.cal_year;
-  const vals = ai.concat(ot).map(d => d.junior_pct);
-  const rng = [Math.floor(Math.min(...vals) / 5) * 5, Math.ceil(Math.max(...vals) / 5) * 5 + (old ? 0 : 5)];
+  const old = S1.view === 'old', el = $('s1-plot'), r = rem(), AI = 'AI talent', OT = 'Other graduates';
+  /* first5 rows: [country, year, degree group, AI flag, junior_n, n]; old rows: [country, year, AI flag, junior_n, n] */
+  const all = old ? series(CY.old, S1.where, 'cal_year', row => row[2] ? AI : OT) : series(CY.first5, S1.where, 'cal_year', row => row[3] ? AI : OT);
+  const years = [...new Set(Object.values(all).flat().map(d => d.cal_year))].sort(), y0 = years[0], y1 = years[years.length - 1];
+  const {kept, dropped} = solid(all, years.length), ai = kept[AI], ot = kept[OT];
+  const note = placeNote(S1.where, 'Jobs') + tooFew(dropped, 'jobs');
   const ytitle = old ? 'Share of jobs that are junior jobs, all graduates since 2005' : 'Share of jobs that are junior jobs, graduates in their first five years';
-  if (S1.view === 'gap') {
-    const gap = ai.map((d, i) => ({cal_year: d.cal_year, v: d.junior_pct - ot[i].junior_pct}));
-    Plotly.react(el, [{type: 'bar', x: gap.map(d => d.cal_year), y: gap.map(d => d.v), marker: {color: P.orange},
+  if (!ot || (S1.view === 'gap' && !ai)) emptyPlot(el, `Too few jobs in ${whereLabel(S1.where)} to show this view`);
+  else if (S1.view === 'gap') {
+    const gap = ai.map((d, i) => ({cal_year: d.cal_year, v: d.junior_pct - ot[i].junior_pct})), vs = gap.map(d => d.v);
+    Plotly.react(el, [{type: 'bar', x: gap.map(d => d.cal_year), y: vs, marker: {color: P.orange},
       text: gap.map(d => pts1(d.v)), textposition: 'outside', textfont: {size: r * 0.95, color: P.black}, cliponaxis: false, hovertemplate: '%{x}: %{y:.1f} points<extra></extra>'}],
       lay({span: [y0, y1], ytitle: 'Share of junior jobs: AI talent minus other graduates, percentage points', margin: {l: r * 5, r: r * 2, t: r * 1.2, b: r * 2.4},
-        yaxis: {range: [Math.floor(Math.min(...gap.map(d => d.v)) - 2), 0], ticksuffix: ''}, bargap: .35, shapes: [provBand(y1)], annotations: [provNote(y1)]}), CFG);
+        yaxis: {range: [Math.floor(Math.min(0, ...vs) - 2), Math.ceil(Math.max(0, ...vs) + (Math.max(...vs) > 0 ? 2 : 0))], ticksuffix: ''}, bargap: .35, shapes: [provBand(y1)], annotations: [provNote(y1)]}), CFG);
   } else {
+    const shown = [[ot, 'Other graduates', P.steel]].concat(ai ? [[ai, 'AI talent', P.orange]] : []), vals = shown.flatMap(s => s[0].map(d => d.junior_pct));
+    const rng = [Math.floor(Math.min(...vals) / 5) * 5, Math.ceil(Math.max(...vals) / 5) * 5 + (old ? 0 : 5)];
     const marks = (old ? [] : [{type: 'line', xref: 'x', yref: 'paper', x0: PIVOT, x1: PIVOT, y0: 0, y1: 1, line: {color: P.ink30, width: 1, dash: 'dot'}}]).concat([provBand(y1)]);
-    Plotly.react(el, [line(ot, 'cal_year', 'Other graduates', P.steel, null, 'jobs'), line(ai, 'cal_year', 'AI talent', P.orange, null, 'jobs')],
-      lay({span: [y0, y1], ytitle, yaxis: {range: rng}, shapes: marks, transition: morph === true ? MORPH : undefined, annotations: endLabels([{x: y1, y: o1.junior_pct, text: 'Other graduates <b>' + p1(o1.junior_pct) + '</b>', color: P.steel, big: 1},
-        {x: y1, y: a1.junior_pct, text: 'AI talent <b>' + p1(a1.junior_pct) + '</b>', color: P.orange, big: 1}], rng).concat([startLabel(o0, 'cal_year', P.steel, a0), startLabel(a0, 'cal_year', P.orange, o0), provNote(y1)])}), CFG);
+    const ends = shown.map(([rows, name, color]) => ({x: y1, y: rows[rows.length - 1].junior_pct, text: name + ' <b>' + p1(rows[rows.length - 1].junior_pct) + '</b>', color, big: 1}));
+    const starts = shown.map(([rows, , color], i) => startLabel(rows[0], 'cal_year', color, shown[1 - i] && shown[1 - i][0][0]));
+    Plotly.react(el, shown.map(([rows, name, color]) => line(rows, 'cal_year', name, color, null, 'jobs')),
+      lay({span: [y0, y1], ytitle, yaxis: {range: rng}, shapes: marks, transition: morph === true ? MORPH : undefined, annotations: endLabels(ends, rng).concat(starts, [provNote(y1)])}), CFG);
   }
-  how('s1', S1.view);
+  how('s1', S1.view, note);
   if (morph === true) { el.classList.remove('drawin', 'morph'); void el.offsetWidth; el.classList.add('morph'); }
   fitPlot(el);
 }
 chips('s1-chips', v => { const prev = S1.view, el = $('s1-plot'); if (v === prev) return; S1.view = v;
   if (v === 'gap' || prev === 'gap') crossfade(el, () => drawS1()); else { clearTimeout(el._cf); el.style.opacity = 1; drawS1(true); } });
+fillWhere('s1-where', S1, () => { const el = $('s1-plot'); if (S1.view === 'gap') crossfade(el, () => drawS1()); else { clearTimeout(el._cf); el.style.opacity = 1; drawS1(true); } });
 
 /* ------------------------------------------------------------ 2: CS vs other fields */
-const S2 = {measure: 'stock', view: 'cs'};
+const S2 = {measure: 'stock', view: 'cs', where: 'r:ALL'};
 function drawS2(fadeOthers) {
   const stock = S2.measure === 'stock', xk = stock ? 'cal_year' : 'cohort', el = $('s2-plot'), r = rem(), unit = stock ? 'jobs' : 'graduates';
-  const csRows = stock ? D.stock_cs : D.entry_cs, fld = stock ? D.stock_field : D.entry_field;
+  /* first5 rows: [country, year, degree group, AI flag, junior_n, n]; entry rows: [country, graduation year, degree group, junior_n, n]; group -1 = no usable degree name */
+  const rows = stock ? CY.first5 : CY.entry, nice = g => g === CS ? 'Computer science' : g;
+  const byGroup = series(rows, S2.where, xk, row => row[2] < 0 ? null : CY.groups[row[2]]);
+  const byCs = series(rows, S2.where, xk, row => row[2] < 0 ? null : CY.groups[row[2]] === CS ? 'CS' : 'non-CS');
+  const xs = [...new Set(Object.values(byCs).flat().map(d => d[xk]))].sort((a, b) => a - b), first = xs[0], last = xs[xs.length - 1];
   const ytitle = stock ? 'Share of jobs that are junior jobs, graduates in their first five years' : 'Share of graduates whose starting job is a junior job';
-  const xs = fld.map(d => d[xk]), first = Math.min(...xs), last = Math.max(...xs);
-  const rng = [Math.floor(Math.min(...fld.map(d => d.junior_pct)) / 5) * 5, Math.ceil(Math.max(...fld.map(d => d.junior_pct)) / 5) * 5];
   const xt = stock ? {title: {text: 'Year', font: {size: r * 0.9}}} : {dtick: 2, title: {text: 'Year of graduation', font: {size: r * 0.9}}};
   const shapes = stock ? [{type: 'line', xref: 'x', yref: 'paper', x0: PIVOT, x1: PIVOT, y0: 0, y1: 1, line: {color: P.ink30, width: 1, dash: 'dot'}}, provBand(last)]
     : [{type: 'rect', xref: 'x', yref: 'paper', x0: Math.min(...D.meta.partial_cohorts) - 0.5, x1: last + 0.5, y0: 0, y1: 1, fillcolor: rgba(P.mocha, .22), line: {width: 0}, layer: 'below'}];
   const partial = stock ? [provNote(last)] : [{x: last + 0.5, xanchor: 'right', y: 1, xref: 'x', yref: 'paper', yanchor: 'bottom', text: D.meta.partial_cohorts.join(' and ') + ' graduates: under 2 years of history so far', showarrow: false, font: {size: r * 0.8, color: P.brown}}];
+  const range = sers => { const v = sers.flat().map(d => d.junior_pct); return [Math.floor(Math.min(...v) / 5) * 5, Math.ceil(Math.max(...v) / 5) * 5]; };
+  const empty = () => emptyPlot(el, `Too few ${unit} in ${whereLabel(S2.where)} to show this view`);
   if (el.removeAllListeners) { el.removeAllListeners('plotly_hover'); el.removeAllListeners('plotly_unhover'); }
   el.classList.remove('fadeothers');
+  let note = placeNote(S2.where, stock ? 'Jobs' : 'Starting jobs');
   if (S2.view === 'cs') {
-    const c = csRows.filter(d => d.grp === 'CS').sort(by(xk)), n = csRows.filter(d => d.grp === 'non-CS').sort(by(xk));
-    const c0 = c[0], c1 = c[c.length - 1], n0 = n[0], n1 = n[n.length - 1];
-    Plotly.react(el, [line(n, xk, 'All other degrees', P.steel, null, unit), line(c, xk, 'Computer science', P.orange, null, unit)],
-      lay({span: [first, last], ytitle, xaxis: xt, yaxis: {range: rng}, shapes, annotations: endLabels([{x: n1[xk], y: n1.junior_pct, text: 'All other degrees <b>' + p1(n1.junior_pct) + '</b>', color: P.steel, big: 1},
-        {x: c1[xk], y: c1.junior_pct, text: 'Computer science <b>' + p1(c1.junior_pct) + '</b>', color: P.orange, big: 1}], rng).concat([startLabel(n0, xk, P.steel, c0), startLabel(c0, xk, P.orange, n0)], partial)}), CFG);
+    const {kept, dropped} = solid(byCs, xs.length), c = kept.CS, n = kept['non-CS'];
+    note += tooFew(dropped.map(k => k === 'CS' ? 'Computer science' : 'All other degrees'), unit);
+    if (!c || !n) empty();
+    else { const rng = range([c, n]), c0 = c[0], c1 = c[c.length - 1], n0 = n[0], n1 = n[n.length - 1];
+      Plotly.react(el, [line(n, xk, 'All other degrees', P.steel, null, unit), line(c, xk, 'Computer science', P.orange, null, unit)],
+        lay({span: [first, last], ytitle, xaxis: xt, yaxis: {range: rng}, shapes, annotations: endLabels([{x: n1[xk], y: n1.junior_pct, text: 'All other degrees <b>' + p1(n1.junior_pct) + '</b>', color: P.steel, big: 1},
+          {x: c1[xk], y: c1.junior_pct, text: 'Computer science <b>' + p1(c1.junior_pct) + '</b>', color: P.orange, big: 1}], rng).concat([startLabel(n0, xk, P.steel, c0), startLabel(c0, xk, P.orange, n0)], partial)}), CFG); }
   } else {
-    const groups = [...new Set(fld.map(d => d.fgroup))].sort((a, b) => (a === CS) - (b === CS) || a.localeCompare(b));
-    const val = (g, x) => fld.find(d => d.fgroup === g && d[xk] === x).junior_pct, nice = g => g === CS ? 'Computer science' : g;
-    const col = g => g === CS ? P.orange : g === 'Law' ? P.petrol : P.ink30, wid = g => g === CS ? r * 0.3 : g === 'Law' ? r * 0.22 : r * 0.12;
-    const traces = groups.map(g => line(fld.filter(d => d.fgroup === g).sort(by(xk)), xk, nice(g), col(g), {mode: 'lines', line: {color: col(g), width: wid(g)}}, unit));
-    const labels = hot => endLabels(groups.map(g => ({x: last, y: val(g, last), text: g === CS ? '<b>Computer science ' + p1(val(g, last)) + '</b>' : esc(g) + ' ' + p1(val(g, last)),
-      color: g === CS ? P.orange : g === hot ? P.blue : g === 'Law' ? P.petrol : P.ink60, big: g === CS || g === hot || g === 'Law'})), rng, 0.058).concat(partial);
-    Plotly.react(el, traces, lay({span: [first, last], ytitle, xaxis: xt, yaxis: {range: rng}, shapes, hovermode: 'closest', annotations: labels()}), CFG);
-    el.on('plotly_hover', ev => { const i = ev.points[0].curveNumber, g = groups[i]; if (g === CS || g === 'Law') return;
-      Plotly.restyle(el, {'line.color': groups.map((x, j) => j === i ? P.blue : col(x)), 'line.width': groups.map((x, j) => j === i ? r * 0.26 : wid(x))});
-      Plotly.relayout(el, {annotations: labels(g)}); });
-    el.on('plotly_unhover', () => { Plotly.restyle(el, {'line.color': groups.map(col), 'line.width': groups.map(wid)}); Plotly.relayout(el, {annotations: labels()}); });
+    const {kept, dropped} = solid(byGroup, xs.length);
+    const groups = Object.keys(kept).sort((a, b) => (a === CS) - (b === CS) || a.localeCompare(b));
+    note += tooFew(dropped.map(nice), unit);
+    if (!groups.length) empty();
+    else { const rng = range(Object.values(kept)), val = g => kept[g][kept[g].length - 1].junior_pct;
+      const col = g => g === CS ? P.orange : g === 'Law' ? P.petrol : P.ink30, wid = g => g === CS ? r * 0.3 : g === 'Law' ? r * 0.22 : r * 0.12;
+      const traces = groups.map(g => line(kept[g], xk, nice(g), col(g), {mode: 'lines', line: {color: col(g), width: wid(g)}}, unit));
+      const labels = hot => endLabels(groups.map(g => ({x: last, y: val(g), text: g === CS ? '<b>Computer science ' + p1(val(g)) + '</b>' : esc(g) + ' ' + p1(val(g)),
+        color: g === CS ? P.orange : g === hot ? P.blue : g === 'Law' ? P.petrol : P.ink60, big: g === CS || g === hot || g === 'Law'})), rng, 0.058).concat(partial);
+      Plotly.react(el, traces, lay({span: [first, last], ytitle, xaxis: xt, yaxis: {range: rng}, shapes, hovermode: 'closest', annotations: labels()}), CFG);
+      el.on('plotly_hover', ev => { const i = ev.points[0].curveNumber, g = groups[i]; if (g === CS || g === 'Law') return;
+        Plotly.restyle(el, {'line.color': groups.map((x, j) => j === i ? P.blue : col(x)), 'line.width': groups.map((x, j) => j === i ? r * 0.26 : wid(x))});
+        Plotly.relayout(el, {annotations: labels(g)}); });
+      el.on('plotly_unhover', () => { Plotly.restyle(el, {'line.color': groups.map(col), 'line.width': groups.map(wid)}); Plotly.relayout(el, {annotations: labels()}); }); }
   }
-  how('s2', S2.measure);
+  how('s2', S2.measure, note);
   /* arriving on the 15-field view from the two-line view of the same measure: computer science stays put, the other 14 fade in */
   if (fadeOthers === true) { el.classList.remove('drawin', 'morph'); void el.offsetWidth; el.classList.add('fadeothers'); }
   fitPlot(el);
@@ -165,21 +222,13 @@ function drawS2(fadeOthers) {
 chips('s2-measure', v => { if (v === S2.measure) return; S2.measure = v; crossfade($('s2-plot'), () => drawS2()); });
 chips('s2-view', v => { if (v === S2.view) return; S2.view = v; const el = $('s2-plot');
   if (v === 'all') { clearTimeout(el._cf); el.style.opacity = 1; drawS2(true); } else crossfade(el, () => drawS2()); });
+fillWhere('s2-where', S2, () => crossfade($('s2-plot'), () => drawS2()));
 
 /* ------------------------------------------------------------ 3: internships */
-const F = D.flows, S3 = {where: 'r:EU31', period: [2015, 2023], third: 'later'};
-const REG = {'r:EU31': {label: 'Europe (31 countries)', set: new Set(F.eu31)}, 'r:EU27': {label: 'EU-27', set: new Set(F.eu27)},
-  'r:US': {label: 'United States', set: new Set(['United States'])}, 'r:ALL': {label: 'All countries worldwide', set: null}};
-(function () {
-  const sel = $('s3-where'), og = (label, items) => { const g = document.createElement('optgroup'); g.label = label;
-    items.forEach(([v, t]) => { const o = document.createElement('option'); o.value = v; o.textContent = t; g.appendChild(o); }); sel.appendChild(g); };
-  og('Regions', Object.entries(REG).map(([k, v]) => [k, v.label]));
-  og('European countries', F.eu31.slice().sort().map(c => ['c:' + c, c]));
-  sel.value = S3.where; sel.onchange = () => { S3.where = sel.value; drawS3(); };
-})();
-const whereLabel = w => w.startsWith('r:') ? REG[w].label : w.slice(2);
+const S3 = {where: 'r:EU31', period: [2015, 2023], third: 'later'};
+fillWhere('s3-where', S3, () => drawS3());
 function tally(where, period) {
-  const set = where.startsWith('r:') ? REG[where].set : new Set([where.slice(2)]);
+  const set = whereSet(where);
   const t = {n: 0, s2: F.s2.map(() => 0), co: F.s2.map(() => F.co.map(() => 0)), s3: F.s3.map(() => 0)};
   for (const [c, y, s, o, k, n] of F.rows) {
     if (y < period[0] || y > period[1] || (set && !set.has(F.countries[c]))) continue;

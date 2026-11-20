@@ -53,3 +53,13 @@ in the layout still give the report's count in every hexagon. Results: `data/hex
 
 `node build/qa_shots.cjs <path to playwright>` renders every slide and interaction to `qa/` (needs the local server on port 8765).
 Edit `build/index.src.html`, not `index.html`.
+
+## Country selector on slides 2 and 3
+
+`build/pull_country.py` (same Snowflake engine, session-temporary objects only) splits the three series by the country of
+the job: every job in the first-five-years measure, every job in the older comparison measure, and for starting jobs the
+first job begun in the window. The 31 European countries and the US are kept by name, everything else is "Rest of world".
+Each file is written only if its totals over countries equal the file the slides used before, so "All countries worldwide"
+shows the same numbers as before. The browser sums the rows for the chosen region; a line is drawn only if every point
+rests on at least 500 jobs (or graduates), and the how-to-read line names what was left out.
+`node build/qa_country.cjs <path to playwright>` renders the selector for large and small countries (`PORT=` sets the port).
